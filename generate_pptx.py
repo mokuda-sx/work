@@ -109,8 +109,36 @@ def main():
     parser.add_argument("--no-image",  action="store_true", help="画像生成をスキップ")
     parser.add_argument("--thumbnail", action="store_true", help="生成後にPNGサムネイルを書き出す（PowerPoint必要、管理者権限不要）")
     parser.add_argument("--save-recipe", help="生成したアウトラインをレシピとして保存するファイル名")
-    parser.add_argument("--git",       action="store_true", help="生成後にgit commit & push")
+    parser.add_argument("--git",          action="store_true", help="生成後にgit commit & push")
+    parser.add_argument("--assemble-only", action="store_true",
+                        help="project_dir/slides/ の既存Tier 2ファイルを結合するだけ（--project 必須）")
     args = parser.parse_args()
+
+    # ─ --assemble-only: 既存 Tier 2 ファイルを結合 ─
+    if args.assemble_only:
+        if not args.project:
+            print("エラー: --assemble-only には --project が必要です")
+            sys.exit(1)
+        safe_project = "".join(c for c in args.project if c not in r'\/:*?"<>|')
+        matching = sorted(SLIDES_DIR.glob(f"*_{safe_project}"), reverse=True)
+        if not matching:
+            print(f"エラー: プロジェクトフォルダーが見つかりません: *_{safe_project}")
+            sys.exit(1)
+        project_dir   = matching[0]
+        slides_subdir = project_dir / "slides"
+        if not slides_subdir.exists():
+            print(f"エラー: slides/ サブフォルダーがありません: {slides_subdir}")
+            sys.exit(1)
+        timestamp   = datetime.now().strftime("%Y%m%d_%H%M")
+        output_path = project_dir / (args.output if args.output else f"{timestamp}_{safe_project}.pptx")
+        print(f"\nTier 2 結合中: {slides_subdir}")
+        from pptx_engine import build_from_slides_dir
+        result_path = build_from_slides_dir(slides_subdir, output_path, export_png=args.thumbnail)
+        print(f"\n完了: {result_path}")
+        subprocess.Popen(["powershell", "-Command", f"Start-Process '{result_path}'"])
+        if args.git:
+            git_commit(result_path, f"Assemble: {args.project}")
+        return
 
     # ─ アウトライン取得 ─
     if args.recipe:
@@ -119,7 +147,16 @@ def main():
         outline = json.loads(recipe_path.read_text(encoding="utf-8"))
     elif args.outline:
         print(f"アウトラインを読み込み: {args.outline}")
-        outline = json.loads(Path(args.outline).read_text(encoding="utf-8"))
+        raw = json.loads(Path(args.outline).read_text(encoding="utf-8"))
+        # Tier 1 形式（{title, description, slides: [{index, type, title, note}]}）の検出
+        if isinstance(raw, dict) and "slides" in raw:
+            print(f"  [Tier 1] インデックス形式を検出: {len(raw['slides'])}スライド")
+            outline = raw["slides"]  # Tier 1 エントリ（各スライドの最小情報）を使用
+            # プロジェクト名が未指定なら title から取得
+            if not args.project:
+                args.project = raw.get("title", "提案書")[:30]
+        else:
+            outline = raw
     elif args.description:
         outline = generate_outline_with_claude(args.description)
         print(f"  → {len(outline)}スライドのアウトライン生成完了")
@@ -156,15 +193,39 @@ def main():
         output_name = f"{timestamp}_{safe_project}.pptx"
     output_path = project_dir / output_name
 
-    # outline.json もプロジェクトフォルダーにコピー保存
+    # outline.json もプロジェクトフォルダーにコピー保存（読み込んだ内容そのまま）
+    raw_outline = json.loads(Path(args.outline).read_text(encoding="utf-8")) if args.outline else outline
     (project_dir / "outline.json").write_text(
-        json.dumps(outline, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(raw_outline, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+
+    # ─ Tier 2 スタブファイル生成（Tier 1 形式の場合のみ） ─
+    # Tier 1 形式の検出: outline が list で各要素に "index" キーがあり body/objects/images がない
+    is_tier1_entries = (
+        isinstance(outline, list) and outline
+        and all("index" in s and "body" not in s and "objects" not in s for s in outline)
+    )
+    slides_subdir = project_dir / "slides"
+    if is_tier1_entries:
+        slides_subdir.mkdir(exist_ok=True)
+        for s in outline:
+            idx  = s.get("index", 0)
+            stype = s.get("type", "content")
+            fname = f"{idx:02d}_{stype}.json"
+            fpath = slides_subdir / fname
+            if not fpath.exists():  # 既存の展開済みファイルは上書きしない
+                fpath.write_text(json.dumps(s, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  [Tier 2] スタブ作成: {slides_subdir} ({len(outline)}枚)")
+        print(f"  ↑ 各 .json を展開後、--assemble-only --project \"{args.project}\" で結合してください")
 
     # ─ PPTX生成 ─
     print(f"\nPPTX生成中...")
-    from pptx_engine import build_pptx, export_thumbnails
-    result_path = build_pptx(outline, output_path, export_png=args.thumbnail)
+    if is_tier1_entries and slides_subdir.exists():
+        from pptx_engine import build_from_slides_dir
+        result_path = build_from_slides_dir(slides_subdir, output_path, export_png=args.thumbnail)
+    else:
+        from pptx_engine import build_pptx
+        result_path = build_pptx(outline, output_path, export_png=args.thumbnail)
     print(f"\n完了: {result_path}")
 
     # ─ 自動オープン ─

@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 outline_*.json
+# Tier 2 個別スライド JSON（生成物・コミット不要）
+slides/*/slides/
 gh_cli/
 gh.zip
 # デバッグ・テスト用スクリプト

@@ -332,6 +332,26 @@ def add_slide(prs: Presentation, slide_data: dict):
 
     return slide
 
+# ─── スライドディレクトリから結合 ──────────────────────
+def build_from_slides_dir(slides_dir: Path, output_path: Path,
+                          export_png: bool = False) -> Path:
+    """
+    slides_dir 内の NN_*.json を番号順に読み込んで PPTX を組み立てる（Tier 2 結合）。
+    ファイル名の先頭数字でソートするため、00_title.json → 01_agenda.json の順が保証される。
+    Returns: 保存したファイルのPath
+    """
+    slides_dir = Path(slides_dir)
+    json_files = sorted(slides_dir.glob("*.json"), key=lambda p: p.name)
+    if not json_files:
+        raise FileNotFoundError(f"スライドファイルが見つかりません: {slides_dir}")
+    outline = []
+    for f in json_files:
+        slide_data = json.loads(f.read_text(encoding="utf-8"))
+        if isinstance(slide_data, dict):
+            outline.append(slide_data)
+    print(f"  {len(outline)}枚のスライドを読み込み: {slides_dir}")
+    return build_pptx(outline, output_path, export_png=export_png)
+
 # ─── メイン生成関数 ───────────────────────────────────
 def build_pptx(outline: list[dict], output_path: str | Path,
                export_png: bool = False) -> Path:

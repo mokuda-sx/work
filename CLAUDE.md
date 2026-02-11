@@ -9,57 +9,99 @@ PowerPoint ファイルを生成する。
 
 ## Claude Code への指示（ここが最重要）
 
-**ユーザーが提案書・スライドの作成を依頼したら、以下の対話フローで進めること。**
+**ユーザーが提案書・スライドの作成を依頼したら、以下の2階層フローで進めること。**
 
-### ステップ1: アウトライン生成 → ファイル保存
+```
+Tier 1（軽量インデックス）→ Tier 2（スライド単位の詳細）→ PPTX 結合
+```
 
-ユーザーの要望をもとに、以下のスキーマに従った JSON アウトラインを Claude Code 自身が生成する。
-`generate_pptx.py` の Claude API 呼び出しは使わない（Claude Code 自身が考える）。
+### ステップ1: Tier 1 アウトライン生成（全体の骨格）
 
-アウトラインが複雑・難しい場合は先に `skills/outline_guide.md` を Read してから設計する。
+ユーザーの要望をもとに **Tier 1 形式** の JSON を Claude Code 自身が生成する。
+アウトラインが複雑な場合は先に `skills/outline_guide.md` を Read してから設計する。
 
-生成したら **スライドタイトルからファイル名を決めてファイルとして保存**し、VSCode で自動的に開く:
-- ファイル名: `outline_<タイトル>.json`（例: `outline_DX推進提案書.json`）
-- 複数のアウトラインを同時に開いた時に区別できるようにタイトルをそのままファイル名にする
+**Tier 1 フォーマット**:
+```json
+{
+  "title": "提案書タイトル（20〜35文字）",
+  "description": "全体の流れ・ナラティブ（1〜3文。各章の接続・目的を説明）",
+  "slides": [
+    {"index": 0, "type": "title",   "title": "提案書タイトル", "note": "表紙"},
+    {"index": 1, "type": "agenda",  "title": "目次",           "note": "3〜5章"},
+    {"index": 2, "type": "chapter", "title": "1. 背景と課題",   "note": ""},
+    {"index": 3, "type": "content", "title": "現状の課題",      "note": "時間・品質・再利用の3点"},
+    {"index": 4, "type": "end",     "title": "ご確認ありがとうございました", "note": ""}
+  ]
+}
+```
 
+生成したら `outline_<タイトル>.json` として保存し、VSCode で開く:
 ```
 code outline_<タイトル>.json
 ```
-その後「[outline_<タイトル>.json](outline_<タイトル>.json) を開きました。確認・編集してください」と伝える。
+「[outline_<タイトル>.json](outline_<タイトル>.json) を開きました。章立てと流れを確認してください」と伝える。
 チャットに JSON を貼り付けない。
 
-### ステップ2: 対話・修正
+### ステップ2: Tier 1 確認・修正
 
-- ユーザーが VSCode で アウトラインファイルを直接編集してもよい
-- チャットで「〇枚目を変えて」などの修正依頼が来たら、Edit ツールでファイルを直接編集する
-- 「確認して」と言われたら Read ツールで内容を読んで要約する
-- 「OK」「これで生成して」などの承認が出たら次のステップへ
+- ユーザーが VSCode で直接編集してもよい
+- チャットで修正依頼が来たら Edit ツールで `outline_<タイトル>.json` を直接編集
+- 「OK」「展開して」などの承認が出たらステップ3へ
 
-### ステップ3: PPTX 生成
+### ステップ3: Tier 2 スライド展開（1枚ずつ詳細化）
 
-承認されたら:
-1. 以下を実行（`<ファイル名>` はステップ1で作ったアウトラインファイル名）:
-   ```
-   python generate_pptx.py --outline outline_<タイトル>.json --project "<タイトル>"
-   ```
-2. 生成完了後、PowerPoint が自動的に開く
-3. ファイルは `slides/YYYYMMDD_<タイトル>/` に保存される
-4. サムネイルも必要な場合は `--thumbnail` を追加（PowerPoint インストール済みであれば管理者権限不要）
+**Tier 1 から1枚ずつ詳細な Tier 2 ファイルを生成する。**
+各スライドにトークンを集中させることで、高密度なスライドも品質を保てる。
 
-例:
+まず `generate_pptx.py --outline` でプロジェクト構造を作成:
+```bash
+python generate_pptx.py --outline "outline_<タイトル>.json" --project "<タイトル>"
 ```
-python generate_pptx.py --outline "outline_DX推進提案書.json" --project "DX推進提案書" --thumbnail
+→ `slides/YYYYMMDD_<タイトル>/slides/` に Tier 2 スタブファイル（`00_title.json`, `01_agenda.json` ...）が生成される。
+
+次に **スライド1枚ずつ**、Tier 2 ファイルを展開（Write/Edit ツールで保存）:
+
+**Tier 2 フォーマット**（1スライド分）:
+```json
+{
+  "index": 3,
+  "type": "content",
+  "title": "スライドタイトル（20〜35文字）",
+  "subtitle": "キーメッセージ（40〜70文字）",
+  "body": "・箇条書き1\n・箇条書き2\n・箇条書き3",
+  "objects": [
+    {"type": "box", "text": "現状", "left": 0.5, "top": 4.5, "width": 2.5, "height": 0.9,
+     "fill_color": "C00000", "font_color": "FFFFFF", "font_size": 13}
+  ],
+  "images": [
+    {"prompt": "...", "model": "gemini-3-pro-image-preview", "left": 7.5, "top": 1.5, "width": 5.3}
+  ]
+}
 ```
 
-### ステップ4: 視覚的セルフコレクション（任意）
+Tier 2 ファイルの保存先: `slides/YYYYMMDD_<タイトル>/slides/NN_<type>.json`
+
+### ステップ4: PPTX 結合
+
+全 Tier 2 ファイルが揃ったら結合:
+```bash
+python generate_pptx.py --assemble-only --project "<タイトル>"
+```
+- `slides/YYYYMMDD_<タイトル>/slides/` 内の全 JSON を番号順に読み込んで PPTX を生成
+- PowerPoint が自動的に開く
+- サムネイル生成: `--thumbnail` を追加
+
+一部スライドだけ修正して再結合する場合も同じコマンド。
+
+### ステップ5: 視覚的セルフコレクション（任意）
 
 サムネイルが生成されていれば Read ツールで PNG を読み込み、レイアウトを目視確認する。
 詳細な評価基準が必要な場合は `skills/critique_rubric.md` を Read してから診断する。
 デザイン改善が必要な場合は `skills/design_principles.md` を参照する。
 
-問題があれば `outline_temp.json` を Edit ツールで修正し、再生成する。
+問題があれば対象スライドの Tier 2 ファイルを Edit → `--assemble-only` で再結合。
 
-### ステップ5: 画像生成の確認
+### 画像生成の確認
 
 デフォルトは画像あり（Gemini API 使用、時間がかかる）。
 ユーザーが「画像なし」「速く」などと言った場合は `--no-image` を付ける。
@@ -78,43 +120,57 @@ python generate_pptx.py --outline "outline_DX推進提案書.json" --project "DX
 
 ---
 
-## 中間言語 JSON スキーマ
+## Tier 2 スライド JSON スキーマ（1スライド分のフル詳細）
+
+各スライドは `slides/YYYYMMDD_<タイトル>/slides/NN_<type>.json` に保存する。
 
 ```json
-[
-  {
-    "type": "title",
-    "title": "提案書タイトル（20〜35文字）",
-    "subtitle": "2026年X月　クライアント名御中"
-  },
-  {
-    "type": "agenda",
-    "title": "目次",
-    "body": "1. 背景と課題\n2. 提案内容\n3. 期待効果\n4. スケジュール"
-  },
-  {
-    "type": "chapter",
-    "title": "1. 背景と課題"
-  },
-  {
-    "type": "content",
-    "title": "スライドタイトル（20〜35文字）",
-    "subtitle": "キーメッセージ（40〜70文字）",
-    "body": "・箇条書き1（30〜50文字）\n・箇条書き2\n・箇条書き3\n・箇条書き4",
-    "objects": [
-      {"type": "box",   "text": "現状", "left": 0.5, "top": 4.5, "width": 2.5, "height": 0.9,
-       "fill_color": "C00000", "font_color": "FFFFFF", "font_size": 13},
-      {"type": "arrow", "left": 3.1, "top": 4.7, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
-      {"type": "box",   "text": "目標", "left": 3.8, "top": 4.5, "width": 2.5, "height": 0.9,
-       "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
-    ],
-    "images": [
-      {
-        "prompt": "Professional business illustration, clean minimal style, related to the slide topic",
-        "model": "gemini-3-pro-image-preview",
-        "left": 7.5, "top": 1.5, "width": 5.3
-      }
-    ]
+{
+  "index": 0,
+  "type": "title",
+  "title": "提案書タイトル（20〜35文字）",
+  "subtitle": "2026年X月　クライアント名御中"
+}
+```
+
+```json
+{
+  "index": 2,
+  "type": "agenda",
+  "title": "目次",
+  "body": "1. 背景と課題\n2. 提案内容\n3. 期待効果\n4. スケジュール"
+}
+```
+
+```json
+{
+  "index": 3,
+  "type": "chapter",
+  "title": "1. 背景と課題"
+}
+```
+
+```json
+{
+  "index": 4,
+  "type": "content",
+  "title": "スライドタイトル（20〜35文字）",
+  "subtitle": "キーメッセージ（40〜70文字）",
+  "body": "・箇条書き1（30〜50文字）\n・箇条書き2\n・箇条書き3\n・箇条書き4",
+  "objects": [
+    {"type": "box",   "text": "現状", "left": 0.5, "top": 4.5, "width": 2.5, "height": 0.9,
+     "fill_color": "C00000", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "arrow", "left": 3.1, "top": 4.7, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box",   "text": "目標", "left": 3.8, "top": 4.5, "width": 2.5, "height": 0.9,
+     "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
+  ],
+  "images": [
+    {
+      "prompt": "Professional business illustration, clean minimal style, related to the slide topic",
+      "model": "gemini-3-pro-image-preview",
+      "left": 7.5, "top": 1.5, "width": 5.3
+    }
+  ]
   },
   {"type": "end"}
 ]
@@ -166,23 +222,23 @@ python generate_pptx.py --outline "outline_DX推進提案書.json" --project "DX
 ## generate_pptx.py の使い方（Claude Code が呼び出すコマンド）
 
 ```bash
-# 対話で作成した outline_temp.json から生成（通常）
-python generate_pptx.py --outline outline_temp.json
+# Tier 1 インデックスからプロジェクト構造を作成（スタブ生成 + 骨格PPTX）
+python generate_pptx.py --outline "outline_DX推進提案書.json" --project "DX推進提案書"
 
-# プロジェクト名を指定（slides/YYYYMMDD_<project>/ に保存）
-python generate_pptx.py --outline outline_temp.json --project "DX提案_A社"
+# Tier 2 展開後に結合（最もよく使う）
+python generate_pptx.py --assemble-only --project "DX推進提案書"
+
+# サムネイル付きで結合
+python generate_pptx.py --assemble-only --project "DX推進提案書" --thumbnail
 
 # 画像生成なし（高速）
-python generate_pptx.py --outline outline_temp.json --no-image
-
-# サムネイル生成（視覚確認用）
-python generate_pptx.py --outline outline_temp.json --thumbnail
+python generate_pptx.py --assemble-only --project "DX推進提案書" --no-image
 
 # 生成後に git commit & push
-python generate_pptx.py --outline outline_temp.json --git
+python generate_pptx.py --assemble-only --project "DX推進提案書" --git
 
 # レシピとして保存
-python generate_pptx.py --outline outline_temp.json --save-recipe my_recipe.json
+python generate_pptx.py --outline "outline_xxx.json" --save-recipe my_recipe.json
 ```
 
 ---
@@ -193,8 +249,14 @@ python generate_pptx.py --outline outline_temp.json --save-recipe my_recipe.json
 work/
 ├── slides/                     ← 生成された PPTX（プロジェクト別）
 │   └── YYYYMMDD_プロジェクト名/
-│       ├── outline.json        ← 使用したアウトライン
-│       ├── *.pptx
+│       ├── outline.json        ← Tier 1 インデックスのコピー（参照用）
+│       ├── slides/             ← Tier 2 個別スライド JSON（gitignore）
+│       │   ├── 00_title.json
+│       │   ├── 01_agenda.json
+│       │   ├── 02_chapter.json
+│       │   ├── 03_content.json
+│       │   └── ...
+│       ├── *.pptx              ← 結合後 PPTX
 │       └── thumbnails/         ← PNG サムネイル（--thumbnail 時）
 ├── recipes/                    ← 再利用可能なアウトライン（レシピ）
 ├── skills/                     ← オンデマンド読み込みのナレッジ
