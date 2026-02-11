@@ -95,8 +95,15 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 
 ### ステップ5: 視覚的セルフコレクション（任意）
 
-サムネイルが生成されていれば Read ツールで PNG を読み込み、レイアウトを目視確認する。
-詳細な評価基準が必要な場合は `skills/critique_rubric.md` を Read してから診断する。
+**重要: PNG の一括読み込みは禁止。コンテキストが枯渇する。**
+
+正しい手順:
+1. `/compact` でコンテキストを整理してから開始
+2. まず `slides/YYYYMMDD_プロジェクト名/outline.json` を Read してストーリーライン・構成を確認（PNG は読まない）
+3. スライドを **1枚ずつ** Read → 診断 → 問題があれば即 Tier 2 Edit → 次へ
+4. 全スライド確認後に `--assemble-only --thumbnail` で再結合
+
+詳細な評価基準: `skills/critique_rubric.md` を Read してから診断する。
 デザイン改善が必要な場合は `skills/design_principles.md` を参照する。
 
 問題があれば対象スライドの Tier 2 ファイルを Edit → `--assemble-only` で再結合。
