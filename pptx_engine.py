@@ -86,11 +86,42 @@ def remove_all_slides(prs: Presentation):
 
 # ─── テキスト設定 ─────────────────────────────────────
 def fill_text_frame(tf, text: str):
-    tf.clear()
+    """
+    テキストフレームにテキストを設定する。
+    tf.clear() を使わず XML レベルで操作することで、テンプレートの
+    フォント・色・サイズ等のスタイル継承（<a:pPr> / lstStyle）を保持する。
+    """
+    from pptx.oxml.ns import qn
+    from lxml import etree
+
     lines = [l for l in text.split('\n') if l.strip()]
-    for i, line in enumerate(lines):
-        p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
-        p.text = line
+    if not lines:
+        return
+
+    txBody = tf._txBody
+    paras  = txBody.findall(qn('a:p'))
+
+    # ── 最初の段落を再利用（<a:pPr> を保持してスタイルを守る） ──
+    if paras:
+        p0 = paras[0]
+        # 既存の run / field を削除（テキスト内容のみ除去、段落書式は残す）
+        for child in list(p0.findall(qn('a:r'))) + list(p0.findall(qn('a:fld'))):
+            p0.remove(child)
+        # 余分な段落を削除
+        for p in paras[1:]:
+            txBody.remove(p)
+    else:
+        p0 = etree.SubElement(txBody, qn('a:p'))
+
+    # 最初の行を run として追加（rPr なし → <a:pPr> / lstStyle から継承）
+    r = etree.SubElement(p0, qn('a:r'))
+    etree.SubElement(r, qn('a:t')).text = lines[0]
+
+    # ── 2行目以降: 新しい段落として追加 ──
+    for line in lines[1:]:
+        p = etree.SubElement(txBody, qn('a:p'))
+        r = etree.SubElement(p, qn('a:r'))
+        etree.SubElement(r, qn('a:t')).text = line
 
 def set_placeholder_text(slide, ph_idx: int, text: str) -> bool:
     for shape in slide.shapes:
