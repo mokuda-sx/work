@@ -1,0 +1,389 @@
+[
+  {
+    "type": "title",
+    "title": "AI提案書自動生成システム紹介",
+    "subtitle": "2026年2月　システム概要 v2.0"
+  },
+  {
+    "type": "agenda",
+    "title": "目次",
+    "body": "1. このシステムが解決する課題\n2. システムアーキテクチャ\n3. 対話フローと使い方\n4. スキルライブラリの仕組み\n5. 今後の展開"
+  },
+  {
+    "type": "chapter",
+    "title": "1. このシステムが解決する課題"
+  },
+  {
+    "type": "content",
+    "title": "提案書作成の「時間と品質」の課題",
+    "subtitle": "内容思考とデザイン作業の混在が生産性を下げ、品質のばらつきを生んでいる",
+    "body": "・提案書1本に平均3〜5時間。内容よりデザイン調整に時間を取られがち\n・テンプレートの使い方が人によってバラバラ → 品質にばらつき\n・過去の良い資料が個人PCに埋もれて再利用されない\n・AIツールは「どこに何を書くか」を指定するのが手間",
+    "objects": [
+      {
+        "type": "box",
+        "text": "従来",
+        "left": 0.5,
+        "top": 4.5,
+        "width": 2.5,
+        "height": 0.9,
+        "fill_color": "C00000",
+        "font_color": "FFFFFF",
+        "font_size": 13
+      },
+      {
+        "type": "arrow",
+        "left": 3.1,
+        "top": 4.68,
+        "width": 0.6,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "このシステム",
+        "left": 3.8,
+        "top": 4.5,
+        "width": 2.8,
+        "height": 0.9,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 13
+      }
+    ],
+    "images": [
+      {
+        "prompt": "Frustrated business person surrounded by messy PowerPoint slides, then happy person with AI assistant generating clean slides automatically, flat minimal illustration, blue tones",
+        "model": "gemini-3-pro-image-preview",
+        "left": 7.3,
+        "top": 1.5,
+        "width": 5.5
+      }
+    ]
+  },
+  {
+    "type": "chapter",
+    "title": "2. システムアーキテクチャ"
+  },
+  {
+    "type": "content",
+    "title": "思考と実行を分離するプロッター・パラダイム",
+    "subtitle": "AIが内容を考え、Pythonが忠実に描画する3層構造で品質と柔軟性を両立",
+    "body": "・【思考層】Claude Code がユーザーと対話 → JSON アウトライン生成\n・【中間言語】JSON でスライド構造・図解・画像プロンプトを定義\n・【実行層】pptx_engine.py が python-pptx で忠実に描画\n・【画像層】Gemini API が各スライドに AI 画像を生成",
+    "objects": [
+      {
+        "type": "box",
+        "text": "思考層\nClaude Code",
+        "left": 0.5,
+        "top": 4.4,
+        "width": 2.2,
+        "height": 1.0,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 11
+      },
+      {
+        "type": "arrow",
+        "left": 2.8,
+        "top": 4.68,
+        "width": 0.5,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "中間言語\nJSON",
+        "left": 3.4,
+        "top": 4.4,
+        "width": 2.0,
+        "height": 1.0,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 11
+      },
+      {
+        "type": "arrow",
+        "left": 5.5,
+        "top": 4.68,
+        "width": 0.5,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "実行層\npptx_engine",
+        "left": 6.1,
+        "top": 4.4,
+        "width": 2.2,
+        "height": 1.0,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 11
+      }
+    ],
+    "images": [
+      {
+        "prompt": "Clean software architecture diagram showing AI thinking layer connected to JSON intermediate language connected to Python execution layer, flat design, blue and orange color scheme",
+        "model": "gemini-3-pro-image-preview",
+        "left": 7.5,
+        "top": 1.5,
+        "width": 5.3
+      }
+    ]
+  },
+  {
+    "type": "chapter",
+    "title": "3. 対話フローと使い方"
+  },
+  {
+    "type": "content",
+    "title": "VSCode上のClaude Codeが全てのインターフェース",
+    "subtitle": "話しかけるだけでJSONアウトライン生成→確認・編集→PPTX生成まで完結",
+    "body": "・Step1: 要望を伝える → Claude Code が outline_temp.json を自動生成・VSCodeで開く\n・Step2: VSCodeで直接編集 or チャットで修正指示 → Edit ツールで即反映\n・Step3: 「生成して」→ python generate_pptx.py 実行 → PowerPoint が自動起動\n・Step4: --thumbnail でPNG生成 → Claude Code が視覚的に確認・問題を指摘",
+    "objects": [
+      {
+        "type": "box",
+        "text": "①要望",
+        "left": 0.5,
+        "top": 4.5,
+        "width": 1.6,
+        "height": 0.8,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 12
+      },
+      {
+        "type": "arrow",
+        "left": 2.2,
+        "top": 4.65,
+        "width": 0.4,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "②JSON編集",
+        "left": 2.7,
+        "top": 4.5,
+        "width": 1.8,
+        "height": 0.8,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 12
+      },
+      {
+        "type": "arrow",
+        "left": 4.6,
+        "top": 4.65,
+        "width": 0.4,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "③PPTX生成",
+        "left": 5.1,
+        "top": 4.5,
+        "width": 1.8,
+        "height": 0.8,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 12
+      },
+      {
+        "type": "arrow",
+        "left": 7.0,
+        "top": 4.65,
+        "width": 0.4,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "④視覚確認",
+        "left": 7.5,
+        "top": 4.5,
+        "width": 1.8,
+        "height": 0.8,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 12
+      }
+    ]
+  },
+  {
+    "type": "chapter",
+    "title": "4. スキルライブラリの仕組み"
+  },
+  {
+    "type": "content",
+    "title": "オンデマンド読み込みでAIがデザイナーの知識を獲得",
+    "subtitle": "必要な時だけ読み込むスキル形式でトークン節約と知識の蓄積を両立する",
+    "body": "・skills/ フォルダーにデザイン原則・評価ルーブリック・構成ガイドを格納\n・通常の生成作業では読み込まない → トークン節約\n・診断時・改善時に必要なスキルだけ Read → AI がその場で専門家に変身\n・発見したノウハウをスキルファイルに追記 → 人が学ぶのと同じ仕組みで成長",
+    "objects": [
+      {
+        "type": "box",
+        "text": "design_principles\nデザイン原則",
+        "left": 0.5,
+        "top": 4.3,
+        "width": 2.5,
+        "height": 1.0,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 11
+      },
+      {
+        "type": "box",
+        "text": "critique_rubric\n診断ルーブリック",
+        "left": 3.2,
+        "top": 4.3,
+        "width": 2.5,
+        "height": 1.0,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 11
+      },
+      {
+        "type": "box",
+        "text": "outline_guide\n構成ガイド",
+        "left": 5.9,
+        "top": 4.3,
+        "width": 2.5,
+        "height": 1.0,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 11
+      }
+    ],
+    "images": [
+      {
+        "prompt": "Modular knowledge library concept with skill cards being loaded on-demand by AI, minimalist flat design, blue tones, book and AI brain icons",
+        "model": "gemini-3-pro-image-preview",
+        "left": 9.0,
+        "top": 1.5,
+        "width": 4.0
+      }
+    ]
+  },
+  {
+    "type": "content",
+    "title": "プロジェクト別フォルダー管理でナレッジを蓄積",
+    "subtitle": "slides/YYYYMMDD_プロジェクト名/ に全成果物を集約し、GitHubで一元管理する",
+    "body": "・slides/ フォルダーにプロジェクト別サブフォルダーを自動生成\n・各フォルダーに outline.json・PPTX・thumbnails/ を保存\n・--project オプションでプロジェクト名を指定可能\n・GitHubにコミット → チーム共有・過去資料の再利用が容易に",
+    "objects": [
+      {
+        "type": "box",
+        "text": "slides/",
+        "left": 0.5,
+        "top": 3.8,
+        "width": 2.0,
+        "height": 0.7,
+        "fill_color": "404040",
+        "font_color": "FFFFFF",
+        "font_size": 12
+      },
+      {
+        "type": "box",
+        "text": "20260212_DX提案/\noutline.json\n*.pptx / thumbnails/",
+        "left": 1.0,
+        "top": 4.7,
+        "width": 3.2,
+        "height": 1.3,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 10
+      },
+      {
+        "type": "box",
+        "text": "20260215_報告書/\noutline.json\n*.pptx / thumbnails/",
+        "left": 4.4,
+        "top": 4.7,
+        "width": 3.2,
+        "height": 1.3,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 10
+      }
+    ]
+  },
+  {
+    "type": "chapter",
+    "title": "5. 今後の展開"
+  },
+  {
+    "type": "content",
+    "title": "AIがデザイナーの美意識を学び続けるシステムへ",
+    "subtitle": "スキルライブラリの充実とフィードバックループで、使うほど賢くなる仕組みを構築する",
+    "body": "・レシピライブラリの充実 → 業種・用途別テンプレートを recipes/ に蓄積\n・スキルの自動更新 → 生成・評価サイクルで発見したノウハウを即追記\n・マルチテンプレート対応 → 会社以外のテンプレートへの拡張\n・スライド単位の差し替え → 既存PPTXの特定スライドだけ更新",
+    "objects": [
+      {
+        "type": "box",
+        "text": "現在\nv2.0",
+        "left": 0.5,
+        "top": 4.5,
+        "width": 2.3,
+        "height": 0.9,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 13
+      },
+      {
+        "type": "arrow",
+        "left": 2.9,
+        "top": 4.68,
+        "width": 0.6,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "近未来\n自動更新",
+        "left": 3.6,
+        "top": 4.5,
+        "width": 2.3,
+        "height": 0.9,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 13
+      },
+      {
+        "type": "arrow",
+        "left": 6.0,
+        "top": 4.68,
+        "width": 0.6,
+        "height": 0.5,
+        "fill_color": "ED7D31"
+      },
+      {
+        "type": "box",
+        "text": "将来\n自律進化",
+        "left": 6.7,
+        "top": 4.5,
+        "width": 2.3,
+        "height": 0.9,
+        "fill_color": "4472C4",
+        "font_color": "FFFFFF",
+        "font_size": 13
+      }
+    ],
+    "images": [
+      {
+        "prompt": "AI system growing and evolving over time, knowledge graph expanding, futuristic but clean business illustration, flat design, blue and orange tones",
+        "model": "gemini-3-pro-image-preview",
+        "left": 9.5,
+        "top": 1.5,
+        "width": 3.5
+      }
+    ]
+  },
+  {
+    "type": "end",
+    "title": "ご確認ありがとうございました",
+    "images": [
+      {
+        "prompt": "Modern collaborative workspace with AI assistant and human working together on presentations, clean minimal illustration, warm blue tones",
+        "model": "gemini-3-pro-image-preview",
+        "position": "auto"
+      }
+    ]
+  }
+]
