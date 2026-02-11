@@ -1,7 +1,7 @@
 .env
 __pycache__/
 *.pyc
-output/
+outline_temp.json
 gh_cli/
 gh.zip
 # デバッグ・テスト用スクリプト
