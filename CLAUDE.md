@@ -18,34 +18,37 @@ PowerPoint ファイルを生成する。
 
 アウトラインが複雑・難しい場合は先に `skills/outline_guide.md` を Read してから設計する。
 
-生成したら **必ず `outline_temp.json` にファイルとして保存**し、VSCode で自動的に開く:
+生成したら **スライドタイトルからファイル名を決めてファイルとして保存**し、VSCode で自動的に開く:
+- ファイル名: `outline_<タイトル>.json`（例: `outline_DX推進提案書.json`）
+- 複数のアウトラインを同時に開いた時に区別できるようにタイトルをそのままファイル名にする
+
 ```
-code outline_temp.json
+code outline_<タイトル>.json
 ```
-その後「[outline_temp.json](outline_temp.json) を開きました。確認・編集してください」と伝える。
+その後「[outline_<タイトル>.json](outline_<タイトル>.json) を開きました。確認・編集してください」と伝える。
 チャットに JSON を貼り付けない。
 
 ### ステップ2: 対話・修正
 
-- ユーザーが VSCode で `outline_temp.json` を直接編集してもよい
-- チャットで「〇枚目を変えて」などの修正依頼が来たら、Edit ツールで `outline_temp.json` を直接編集する
+- ユーザーが VSCode で アウトラインファイルを直接編集してもよい
+- チャットで「〇枚目を変えて」などの修正依頼が来たら、Edit ツールでファイルを直接編集する
 - 「確認して」と言われたら Read ツールで内容を読んで要約する
 - 「OK」「これで生成して」などの承認が出たら次のステップへ
 
 ### ステップ3: PPTX 生成
 
 承認されたら:
-1. 以下を実行:
+1. 以下を実行（`<ファイル名>` はステップ1で作ったアウトラインファイル名）:
    ```
-   python generate_pptx.py --outline outline_temp.json
+   python generate_pptx.py --outline outline_<タイトル>.json --project "<タイトル>"
    ```
 2. 生成完了後、PowerPoint が自動的に開く
-3. ファイルは `slides/YYYYMMDD_<プロジェクト名>/` に保存される
+3. ファイルは `slides/YYYYMMDD_<タイトル>/` に保存される
 4. サムネイルも必要な場合は `--thumbnail` を追加（PowerPoint インストール済みであれば管理者権限不要）
 
-プロジェクト名を指定する場合:
+例:
 ```
-python generate_pptx.py --outline outline_temp.json --project "DX提案_A社"
+python generate_pptx.py --outline "outline_DX推進提案書.json" --project "DX推進提案書" --thumbnail
 ```
 
 ### ステップ4: 視覚的セルフコレクション（任意）

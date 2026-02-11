@@ -148,6 +148,6 @@ PowerShell + PowerPoint COM で実装。pywin32 は不要。
 | 問題 | 状態 | 回避策 |
 |---|---|---|
 | chapter(layout[5]) がシンプルすぎる | 仕様通り（テンプレートのデザイン） | `chapter_photo` を使う |
-| タイトルスライドのタイトル入力先 | ph_idx=0 が BODY タイプだが正常動作 | 現状維持 |
+| タイトルスライドのサブタイトル | ph_idx=1（title/agenda）/ ph_idx=13（content）で別 | layout_key で分岐して設定 ✅修正済み |
 | Gemini API レート制限 | 連続生成時に遅延の可能性 | `--no-image` で一時スキップ |
 | 本文が長すぎるとはみ出す | 未対応 | JSONで文字数を調整（1行30-50文字推奨）|

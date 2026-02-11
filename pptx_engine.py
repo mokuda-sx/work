@@ -321,7 +321,11 @@ def add_slide(prs: Presentation, slide_data: dict):
     slide  = prs.slides.add_slide(layout)
 
     if title:    set_placeholder_text(slide, 0, title)
-    if subtitle: set_placeholder_text(slide, 13, subtitle)
+    if subtitle:
+        # title/agenda レイアウトのサブタイトルは ph_idx=1
+        # content レイアウトのキーメッセージは ph_idx=13
+        subtitle_idx = 1 if layout_key in ("title", "agenda") else 13
+        set_placeholder_text(slide, subtitle_idx, subtitle)
     if body:     set_body_text(slide, body)
     if objects:  add_objects_to_slide(slide, objects)
     if images:   add_images_to_slide(slide, images, layout_index=layout_index)
