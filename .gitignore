@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+output/
+gh_cli/
+gh.zip
+# デバッグ・テスト用スクリプト
+test_*.py
+check_*.py
+inspect_*.py
+run_streamlit.ps1
+# Streamlitエクスポート
+*.csv
+# ログ
+*.log
