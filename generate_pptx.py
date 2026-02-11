@@ -105,9 +105,10 @@ def main():
     parser.add_argument("--recipe",   help="レシピJSONファイルのパス（recipes/xxx.json）")
     parser.add_argument("--outline",  help="既存のアウトラインJSONファイル")
     parser.add_argument("--output",   help="出力ファイル名（省略時は自動命名）")
-    parser.add_argument("--no-image", action="store_true", help="画像生成をスキップ")
+    parser.add_argument("--no-image",  action="store_true", help="画像生成をスキップ")
+    parser.add_argument("--thumbnail", action="store_true", help="生成後にPNGサムネイルを書き出す（要pywin32）")
     parser.add_argument("--save-recipe", help="生成したアウトラインをレシピとして保存するファイル名")
-    parser.add_argument("--git",      action="store_true", help="生成後にgit commit & push")
+    parser.add_argument("--git",       action="store_true", help="生成後にgit commit & push")
     args = parser.parse_args()
 
     # ─ アウトライン取得 ─
@@ -147,9 +148,12 @@ def main():
 
     # ─ PPTX生成 ─
     print(f"\nPPTX生成中...")
-    from pptx_engine import build_pptx
-    result_path = build_pptx(outline, output_path)
-    print(f"\n✅ 完了: {result_path}")
+    from pptx_engine import build_pptx, export_thumbnails
+    result_path = build_pptx(outline, output_path, export_png=args.thumbnail)
+    print(f"\n完了: {result_path}")
+
+    # ─ 自動オープン ─
+    subprocess.Popen(["powershell", "-Command", f"Start-Process '{result_path}'"])
 
     # ─ git commit ─
     if args.git:

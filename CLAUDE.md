@@ -11,30 +11,45 @@ PowerPoint ファイルを生成する。
 
 **ユーザーが提案書・スライドの作成を依頼したら、以下の対話フローで進めること。**
 
-### ステップ1: アウトライン生成
+### ステップ1: アウトライン生成 → ファイル保存
 
 ユーザーの要望をもとに、以下のスキーマに従った JSON アウトラインを Claude Code 自身が生成する。
 `generate_pptx.py` の Claude API 呼び出しは使わない（Claude Code 自身が考える）。
 
-生成したら **JSON をそのまま表示してユーザーに確認を求める**。
+生成したら **必ず `outline_temp.json` にファイルとして保存**し、VSCode で自動的に開く:
+```
+code outline_temp.json
+```
+その後「[outline_temp.json](outline_temp.json) を開きました。確認・編集してください」と伝える。
+チャットに JSON を貼り付けない。
 
 ### ステップ2: 対話・修正
 
-ユーザーから修正要望があれば JSON を修正して再表示。
-「OK」「これで生成して」などの承認が出るまで繰り返す。
+- ユーザーが VSCode で `outline_temp.json` を直接編集してもよい
+- チャットで「〇枚目を変えて」などの修正依頼が来たら、Edit ツールで `outline_temp.json` を直接編集する
+- 「確認して」と言われたら Read ツールで内容を読んで要約する
+- 「OK」「これで生成して」などの承認が出たら次のステップへ
 
 ### ステップ3: PPTX 生成
 
 承認されたら:
-1. `outline_temp.json` として保存（Write ツール使用）
-2. 以下を実行:
+1. 以下を実行:
    ```
    python generate_pptx.py --outline outline_temp.json
    ```
-3. 完了したら output/ のファイルパスをユーザーに伝える
-4. `outline_temp.json` は削除してよい
+2. 生成完了後、PowerPoint が自動的に開く
+3. サムネイルも必要な場合は `--thumbnail` を追加（pywin32 が必要）
 
-### ステップ4: 画像生成の確認
+### ステップ4: 視覚的セルフコレクション（任意）
+
+サムネイルが生成されていれば Read ツールで PNG を読み込み、レイアウトを目視確認する:
+- テキストが枠をはみ出していないか
+- 画像の配置がスライドに合っているか
+- objects（図解）の位置関係が意図通りか
+
+問題があれば `outline_temp.json` を Edit ツールで修正し、再生成する。
+
+### ステップ5: 画像生成の確認
 
 デフォルトは画像あり（Gemini API 使用、時間がかかる）。
 ユーザーが「画像なし」「速く」などと言った場合は `--no-image` を付ける。
@@ -75,9 +90,8 @@ PowerPoint ファイルを生成する。
       {
         "prompt": "Professional business illustration, clean minimal style, related to the slide topic",
         "model": "gemini-3-pro-image-preview",
-        "left": 7.5,
-        "top": 1.5,
-        "width": 5.3
+        "left": 7.5, "top": 1.5, "width": 5.3
+        // または "position": "auto" でテンプレートの「画像挿入位置」に自動配置
       }
     ]
   },
@@ -114,13 +128,17 @@ PowerPoint ファイルを生成する。
 
 ## テンプレートレイアウト（参考）
 
-| layout index | type | 使うプレースホルダ |
-|---|---|---|
-| 0 | title | ph_idx=0（タイトル）, 1（サブタイトル）|
-| 2 | agenda | ph_idx=0（タイトル）, 10（本文）|
-| 4 | chapter | ph_idx=0（タイトル）|
-| 6 | content | ph_idx=0（タイトル）, 13（キーメッセージ）, 14（本文）|
-| 14 | end | なし |
+| layout index | type キー | 名称 | 画像エリア |
+|---|---|---|---|
+| 0 | `title` | タイトル（写真あり）| left=1.012, top=2.253, 11.3×4.6" |
+| 2 | `agenda` | 目次（写真あり）| left=6.981, top=0.443, 5.4×6.6"（右半分）|
+| 4 | `chapter_photo` | 章扉（写真あり）| left=1.012, top=2.411, 11.3×4.6" |
+| 5 | `chapter` | 章扉（写真なし）★デフォルト | なし |
+| 6 | `content` | コンテンツ | なし（images で任意配置）|
+| 14 | `end` | エンドスライド（写真あり）| left=0.997, top=0.831, 11.3×4.6" |
+
+- `position: "auto"` を images に指定するとテンプレートの画像エリアに自動配置
+- chapter は写真なし（シンプル）がデフォルト。写真あり章扉は `type: "chapter_photo"` を使用
 
 ---
 

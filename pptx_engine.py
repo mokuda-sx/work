@@ -17,14 +17,24 @@ PPTX生成エンジン（中間言語JSONからPPTXを生成するコアモジ�
        "font_color": "404040", "font_size": 11}
     ],
     "images": [
-      {"prompt": "English image prompt",
-       "model": "gemini-3-pro-image-preview",
-       "left": 7.0, "top": 1.5, "width": 5.5}
+      {
+        "prompt": "English image prompt",
+        "model": "gemini-3-pro-image-preview",
+        "position": "auto",   # テンプレートの「画像挿入位置」シェイプ座標を自動使用
+        # または明示的座標指定:
+        "left": 7.0, "top": 1.5, "width": 5.5
+      }
     ]
   }
 ]
 
 座標系: 幅13.3 × 高さ7.5インチ（16:9）
+
+テンプレートの「画像挿入位置」シェイプ座標（レイアウト別）:
+  title   [0]:  left=1.012, top=2.253, width=11.348, height=4.646
+  chapter_photo [4]: left=1.012, top=2.411, width=11.348, height=4.646
+  agenda  [2]:  left=6.981, top=0.443, width=5.356, height=6.615
+  end     [14]: left=0.997, top=0.831, width=11.348, height=4.646
 """
 
 import os
@@ -44,11 +54,21 @@ OUTPUT_DIR    = Path(__file__).parent / "output"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 LAYOUT = {
-    "title":   0,
-    "chapter": 4,
-    "agenda":  2,
-    "content": 6,
-    "end":    14,
+    "title":         0,   # ドキュメンテーションタイトルあり（写真あり）
+    "chapter":       5,   # チャプタータイトル（写真なし）★シンプル版
+    "chapter_photo": 4,   # チャプタータイトル（写真あり）
+    "agenda":        2,   # 目次・アジェンダページ（写真あり）
+    "content":       6,   # コンテンツページヘッドラインあり
+    "end":          14,   # エンドスライド（写真あり）
+}
+
+# 「画像挿入位置」シェイプの座標 (layout_index → (left, top, width, height) インチ)
+TEMPLATE_IMAGE_AREAS = {
+    0:  (1.012, 2.253, 11.348, 4.646),   # title
+    4:  (1.012, 2.411, 11.348, 4.646),   # chapter_photo
+    2:  (6.981, 0.443,  5.356, 6.615),   # agenda
+    14: (0.997, 0.831, 11.348, 4.646),   # end
+    16: (0.998, 0.837, 11.348, 4.646),   # end_with_pmark
 }
 
 # ─── テンプレート操作 ─────────────────────────────────
@@ -167,47 +187,115 @@ def generate_image_gemini(prompt: str, model: str = "gemini-3-pro-image-preview"
             return part.inline_data.data
     return None
 
-def add_images_to_slide(slide, images: list[dict]):
+def add_images_to_slide(slide, images: list[dict], layout_index: int = -1):
+    """
+    images: JSON の images フィールド
+    layout_index: テンプレートの「画像挿入位置」座標を参照するためのレイアウトインデックス
+    """
     for img_spec in images:
         prompt = img_spec.get("prompt", "")
         if not prompt:
             continue
-        model     = img_spec.get("model", "gemini-3-pro-image-preview")
-        left_inch = img_spec.get("left",  7.0)
-        top_inch  = img_spec.get("top",   1.5)
-        width_inch= img_spec.get("width", 5.5)
+        model = img_spec.get("model", "gemini-3-pro-image-preview")
+
+        # position="auto" または left が未指定 → テンプレートの画像エリアを使用
+        use_template_area = (
+            img_spec.get("position") == "auto"
+            or ("left" not in img_spec and layout_index in TEMPLATE_IMAGE_AREAS)
+        )
+
+        if use_template_area and layout_index in TEMPLATE_IMAGE_AREAS:
+            left_inch, top_inch, width_inch, height_inch = TEMPLATE_IMAGE_AREAS[layout_index]
+        else:
+            left_inch   = img_spec.get("left",   7.0)
+            top_inch    = img_spec.get("top",    1.5)
+            width_inch  = img_spec.get("width",  5.5)
+            height_inch = img_spec.get("height", None)
+
         img_bytes = generate_image_gemini(prompt, model=model)
         if img_bytes:
-            slide.shapes.add_picture(
-                io.BytesIO(img_bytes),
-                Inches(left_inch), Inches(top_inch), Inches(width_inch)
-            )
+            if height_inch:
+                slide.shapes.add_picture(
+                    io.BytesIO(img_bytes),
+                    Inches(left_inch), Inches(top_inch),
+                    Inches(width_inch), Inches(height_inch)
+                )
+            else:
+                slide.shapes.add_picture(
+                    io.BytesIO(img_bytes),
+                    Inches(left_inch), Inches(top_inch), Inches(width_inch)
+                )
+
+# ─── PNG サムネイル生成 ───────────────────────────────
+def export_thumbnails(pptx_path: Path) -> list[Path]:
+    """
+    PowerPoint COM (win32com) を使って各スライドをPNGに書き出す。
+    戻り値: 生成した PNG パスのリスト（失敗時は空リスト）
+    """
+    try:
+        import win32com.client
+    except ImportError:
+        print("  [thumbnail] pywin32 未インストール。スキップ。pip install pywin32")
+        return []
+
+    thumb_dir = pptx_path.parent / (pptx_path.stem + "_thumbnails")
+    thumb_dir.mkdir(exist_ok=True)
+    print(f"  [thumbnail] PNG生成中: {pptx_path.name}")
+
+    ppt_app = None
+    try:
+        ppt_app = win32com.client.Dispatch("PowerPoint.Application")
+        ppt_app.Visible = True
+        prs_com = ppt_app.Presentations.Open(
+            str(pptx_path.resolve()), ReadOnly=True, WithWindow=False
+        )
+        png_paths = []
+        for i, slide in enumerate(prs_com.Slides, 1):
+            out_png = thumb_dir / f"slide_{i:02d}.png"
+            slide.Export(str(out_png.resolve()), "PNG", 1920, 1080)
+            png_paths.append(out_png)
+            print(f"  [thumbnail] slide {i}: {out_png.name}")
+        prs_com.Close()
+        print(f"  [thumbnail] 完了: {thumb_dir}")
+        return png_paths
+    except Exception as e:
+        print(f"  [thumbnail] エラー: {e}")
+        return []
+    finally:
+        if ppt_app:
+            try:
+                ppt_app.Quit()
+            except Exception:
+                pass
 
 # ─── スライド追加 ─────────────────────────────────────
 def add_slide(prs: Presentation, slide_data: dict):
-    layout_key = slide_data.get("type", "content")
-    title      = slide_data.get("title",    "")
-    subtitle   = slide_data.get("subtitle", "")
-    body       = slide_data.get("body",     "")
-    objects    = parse_objects(slide_data.get("objects", []))
-    images     = slide_data.get("images",   [])
+    layout_key   = slide_data.get("type", "content")
+    title        = slide_data.get("title",    "")
+    subtitle     = slide_data.get("subtitle", "")
+    body         = slide_data.get("body",     "")
+    objects      = parse_objects(slide_data.get("objects", []))
+    images       = slide_data.get("images",   [])
 
-    layout = prs.slide_layouts[LAYOUT.get(layout_key, LAYOUT["content"])]
+    layout_index = LAYOUT.get(layout_key, LAYOUT["content"])
+    layout = prs.slide_layouts[layout_index]
     slide  = prs.slides.add_slide(layout)
 
     if title:    set_placeholder_text(slide, 0, title)
     if subtitle: set_placeholder_text(slide, 13, subtitle)
     if body:     set_body_text(slide, body)
     if objects:  add_objects_to_slide(slide, objects)
-    if images:   add_images_to_slide(slide, images)
+    if images:   add_images_to_slide(slide, images, layout_index=layout_index)
 
     return slide
 
 # ─── メイン生成関数 ───────────────────────────────────
-def build_pptx(outline: list[dict], output_path: str | Path) -> Path:
+def build_pptx(outline: list[dict], output_path: str | Path,
+               export_png: bool = False) -> Path:
     """
     outline: 中間言語JSONリスト
     output_path: 出力先パス
+    export_png: True の場合 PowerPoint COM で PNG サムネイルも生成
     Returns: 保存したファイルのPath
     """
     prs = load_template()
@@ -220,4 +308,8 @@ def build_pptx(outline: list[dict], output_path: str | Path) -> Path:
         add_slide(prs, slide_data)
     output_path = Path(output_path)
     prs.save(str(output_path))
+
+    if export_png:
+        export_thumbnails(output_path)
+
     return output_path
