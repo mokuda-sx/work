@@ -229,44 +229,54 @@ def add_images_to_slide(slide, images: list[dict], layout_index: int = -1):
 # ─── PNG サムネイル生成 ───────────────────────────────
 def export_thumbnails(pptx_path: Path) -> list[Path]:
     """
-    PowerPoint COM (win32com) を使って各スライドをPNGに書き出す。
+    PowerShell 経由で PowerPoint COM を呼び出し、各スライドをPNGに書き出す。
+    管理者権限不要・追加パッケージ不要（PowerPoint がインストール済みであること）。
     戻り値: 生成した PNG パスのリスト（失敗時は空リスト）
     """
-    try:
-        import win32com.client
-    except ImportError:
-        print("  [thumbnail] pywin32 未インストール。スキップ。pip install pywin32")
-        return []
+    import subprocess
 
     thumb_dir = pptx_path.parent / (pptx_path.stem + "_thumbnails")
     thumb_dir.mkdir(exist_ok=True)
     print(f"  [thumbnail] PNG生成中: {pptx_path.name}")
 
-    ppt_app = None
+    pptx_abs  = str(pptx_path.resolve())
+    thumb_abs = str(thumb_dir.resolve())
+
+    ps_script = f"""
+$ErrorActionPreference = 'Stop'
+$ppt = New-Object -ComObject PowerPoint.Application
+$ppt.Visible = [Microsoft.Office.Core.MsoTriState]::msoTrue
+try {{
+    $pres = $ppt.Presentations.Open('{pptx_abs}', $true, $false, $false)
+    $pres.Export('{thumb_abs}', 'PNG', 1920, 1080)
+    $pres.Close()
+    Write-Output "OK:$($pres.Slides.Count)"
+}} finally {{
+    $ppt.Quit()
+    [System.Runtime.Interopservices.Marshal]::ReleaseComObject($ppt) | Out-Null
+}}
+"""
     try:
-        ppt_app = win32com.client.Dispatch("PowerPoint.Application")
-        ppt_app.Visible = True
-        prs_com = ppt_app.Presentations.Open(
-            str(pptx_path.resolve()), ReadOnly=True, WithWindow=False
+        result = subprocess.run(
+            ["powershell", "-NoProfile", "-Command", ps_script],
+            capture_output=True, text=True, timeout=120
         )
-        png_paths = []
-        for i, slide in enumerate(prs_com.Slides, 1):
-            out_png = thumb_dir / f"slide_{i:02d}.png"
-            slide.Export(str(out_png.resolve()), "PNG", 1920, 1080)
-            png_paths.append(out_png)
-            print(f"  [thumbnail] slide {i}: {out_png.name}")
-        prs_com.Close()
-        print(f"  [thumbnail] 完了: {thumb_dir}")
+        if result.returncode != 0:
+            print(f"  [thumbnail] PowerShell エラー: {result.stderr.strip()[:200]}")
+            return []
+
+        png_paths = sorted(thumb_dir.glob("*.PNG")) + sorted(thumb_dir.glob("*.png"))
+        for p in png_paths:
+            print(f"  [thumbnail] {p.name}")
+        print(f"  [thumbnail] 完了: {thumb_dir} ({len(png_paths)}枚)")
         return png_paths
+
+    except subprocess.TimeoutExpired:
+        print("  [thumbnail] タイムアウト（120秒）")
+        return []
     except Exception as e:
         print(f"  [thumbnail] エラー: {e}")
         return []
-    finally:
-        if ppt_app:
-            try:
-                ppt_app.Quit()
-            except Exception:
-                pass
 
 # ─── スライド追加 ─────────────────────────────────────
 def add_slide(prs: Presentation, slide_data: dict):

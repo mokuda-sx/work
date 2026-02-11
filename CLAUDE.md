@@ -38,7 +38,7 @@ code outline_temp.json
    python generate_pptx.py --outline outline_temp.json
    ```
 2. 生成完了後、PowerPoint が自動的に開く
-3. サムネイルも必要な場合は `--thumbnail` を追加（pywin32 が必要）
+3. サムネイルも必要な場合は `--thumbnail` を追加（PowerPoint インストール済みであれば管理者権限不要）
 
 ### ステップ4: 視覚的セルフコレクション（任意）
 
