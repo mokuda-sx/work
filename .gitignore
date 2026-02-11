@@ -13,3 +13,7 @@ run_streamlit.ps1
 *.csv
 # ログ
 *.log
+# 旧出力フォルダー（slides/ に移行済み）
+output/
+# Office一時ファイル
+~$*

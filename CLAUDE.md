@@ -16,6 +16,8 @@ PowerPoint ファイルを生成する。
 ユーザーの要望をもとに、以下のスキーマに従った JSON アウトラインを Claude Code 自身が生成する。
 `generate_pptx.py` の Claude API 呼び出しは使わない（Claude Code 自身が考える）。
 
+アウトラインが複雑・難しい場合は先に `skills/outline_guide.md` を Read してから設計する。
+
 生成したら **必ず `outline_temp.json` にファイルとして保存**し、VSCode で自動的に開く:
 ```
 code outline_temp.json
@@ -38,14 +40,19 @@ code outline_temp.json
    python generate_pptx.py --outline outline_temp.json
    ```
 2. 生成完了後、PowerPoint が自動的に開く
-3. サムネイルも必要な場合は `--thumbnail` を追加（PowerPoint インストール済みであれば管理者権限不要）
+3. ファイルは `slides/YYYYMMDD_<プロジェクト名>/` に保存される
+4. サムネイルも必要な場合は `--thumbnail` を追加（PowerPoint インストール済みであれば管理者権限不要）
+
+プロジェクト名を指定する場合:
+```
+python generate_pptx.py --outline outline_temp.json --project "DX提案_A社"
+```
 
 ### ステップ4: 視覚的セルフコレクション（任意）
 
-サムネイルが生成されていれば Read ツールで PNG を読み込み、レイアウトを目視確認する:
-- テキストが枠をはみ出していないか
-- 画像の配置がスライドに合っているか
-- objects（図解）の位置関係が意図通りか
+サムネイルが生成されていれば Read ツールで PNG を読み込み、レイアウトを目視確認する。
+詳細な評価基準が必要な場合は `skills/critique_rubric.md` を Read してから診断する。
+デザイン改善が必要な場合は `skills/design_principles.md` を参照する。
 
 問題があれば `outline_temp.json` を Edit ツールで修正し、再生成する。
 
@@ -53,6 +60,18 @@ code outline_temp.json
 
 デフォルトは画像あり（Gemini API 使用、時間がかかる）。
 ユーザーが「画像なし」「速く」などと言った場合は `--no-image` を付ける。
+
+---
+
+## スキルライブラリ（オンデマンド読み込み）
+
+必要な時だけ Read ツールで読み込む。通常の生成では読まない（トークン節約）。
+
+| スキル | 読み込むタイミング |
+|---|---|
+| `skills/outline_guide.md` | アウトライン設計が難しい場合 |
+| `skills/critique_rubric.md` | サムネイル診断時 |
+| `skills/design_principles.md` | デザイン改善・図解設計時 |
 
 ---
 
@@ -91,7 +110,6 @@ code outline_temp.json
         "prompt": "Professional business illustration, clean minimal style, related to the slide topic",
         "model": "gemini-3-pro-image-preview",
         "left": 7.5, "top": 1.5, "width": 5.3
-        // または "position": "auto" でテンプレートの「画像挿入位置」に自動配置
       }
     ]
   },
@@ -148,14 +166,45 @@ code outline_temp.json
 # 対話で作成した outline_temp.json から生成（通常）
 python generate_pptx.py --outline outline_temp.json
 
+# プロジェクト名を指定（slides/YYYYMMDD_<project>/ に保存）
+python generate_pptx.py --outline outline_temp.json --project "DX提案_A社"
+
 # 画像生成なし（高速）
 python generate_pptx.py --outline outline_temp.json --no-image
+
+# サムネイル生成（視覚確認用）
+python generate_pptx.py --outline outline_temp.json --thumbnail
 
 # 生成後に git commit & push
 python generate_pptx.py --outline outline_temp.json --git
 
 # レシピとして保存
 python generate_pptx.py --outline outline_temp.json --save-recipe my_recipe.json
+```
+
+---
+
+## フォルダー構成
+
+```
+work/
+├── slides/                     ← 生成された PPTX（プロジェクト別）
+│   └── YYYYMMDD_プロジェクト名/
+│       ├── outline.json        ← 使用したアウトライン
+│       ├── *.pptx
+│       └── thumbnails/         ← PNG サムネイル（--thumbnail 時）
+├── recipes/                    ← 再利用可能なアウトライン（レシピ）
+├── skills/                     ← オンデマンド読み込みのナレッジ
+│   ├── README.md
+│   ├── design_principles.md
+│   ├── critique_rubric.md
+│   └── outline_guide.md
+├── docs/
+│   ├── vision.md               ← プロジェクトビジョン
+│   └── knowhow.md              ← 技術ノウハウ（セッション横断）
+├── outline_temp.json           ← 作業中のアウトライン（gitignore）
+├── pptx_engine.py              ← PPTX生成エンジン
+└── generate_pptx.py            ← CLI エントリーポイント
 ```
 
 ---

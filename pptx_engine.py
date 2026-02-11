@@ -50,8 +50,6 @@ from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE
 
 TEMPLATE_PATH = Path(__file__).parent / "SX_提案書_3.0_16x9.pptx"
-OUTPUT_DIR    = Path(__file__).parent / "output"
-OUTPUT_DIR.mkdir(exist_ok=True)
 
 LAYOUT = {
     "title":         0,   # ドキュメンテーションタイトルあり（写真あり）
@@ -266,7 +264,7 @@ def export_thumbnails(pptx_path: Path) -> list[Path]:
     """
     import subprocess
 
-    thumb_dir = pptx_path.parent / (pptx_path.stem + "_thumbnails")
+    thumb_dir = pptx_path.parent / "thumbnails"
     thumb_dir.mkdir(exist_ok=True)
     print(f"  [thumbnail] PNG生成中: {pptx_path.name}")
 

@@ -23,9 +23,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 RECIPES_DIR = Path(__file__).parent / "recipes"
-OUTPUT_DIR  = Path(__file__).parent / "output"
+SLIDES_DIR  = Path(__file__).parent / "slides"
 RECIPES_DIR.mkdir(exist_ok=True)
-OUTPUT_DIR.mkdir(exist_ok=True)
+SLIDES_DIR.mkdir(exist_ok=True)
 
 # ─── Claude API でアウトライン生成 ────────────────────
 OUTLINE_SYSTEM_PROMPT = """あなたはプロのコンサルタントです。
@@ -105,8 +105,9 @@ def main():
     parser.add_argument("--recipe",   help="レシピJSONファイルのパス（recipes/xxx.json）")
     parser.add_argument("--outline",  help="既存のアウトラインJSONファイル")
     parser.add_argument("--output",   help="出力ファイル名（省略時は自動命名）")
+    parser.add_argument("--project",  help="プロジェクト名（slides/YYYYMMDD_<project>/ に保存）")
     parser.add_argument("--no-image",  action="store_true", help="画像生成をスキップ")
-    parser.add_argument("--thumbnail", action="store_true", help="生成後にPNGサムネイルを書き出す（要pywin32）")
+    parser.add_argument("--thumbnail", action="store_true", help="生成後にPNGサムネイルを書き出す（PowerPoint必要、管理者権限不要）")
     parser.add_argument("--save-recipe", help="生成したアウトラインをレシピとして保存するファイル名")
     parser.add_argument("--git",       action="store_true", help="生成後にgit commit & push")
     args = parser.parse_args()
@@ -139,12 +140,26 @@ def main():
 
     # ─ 出力パス決定 ─
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    title_raw = outline[0].get("title", "提案書")[:20] if outline else "提案書"
+
+    # プロジェクトフォルダー: slides/YYYYMMDD_<project名>/
+    date_str = datetime.now().strftime("%Y%m%d")
+    project_name = args.project if args.project else title_raw
+    # ファイル名に使えない文字を除去
+    safe_project = "".join(c for c in project_name if c not in r'\/:*?"<>|')
+    project_dir = SLIDES_DIR / f"{date_str}_{safe_project}"
+    project_dir.mkdir(exist_ok=True)
+
     if args.output:
         output_name = args.output if args.output.endswith(".pptx") else args.output + ".pptx"
     else:
-        title = outline[0].get("title", "提案書")[:20] if outline else "提案書"
-        output_name = f"{timestamp}_{title}.pptx"
-    output_path = OUTPUT_DIR / output_name
+        output_name = f"{timestamp}_{safe_project}.pptx"
+    output_path = project_dir / output_name
+
+    # outline.json もプロジェクトフォルダーにコピー保存
+    (project_dir / "outline.json").write_text(
+        json.dumps(outline, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     # ─ PPTX生成 ─
     print(f"\nPPTX生成中...")
