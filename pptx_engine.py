@@ -2,39 +2,8 @@
 pptx_engine.py
 PPTX生成エンジン（中間言語JSONからPPTXを生成するコアモジュール）
 
-中間言語スキーマ:
-[
-  {
-    "type": "title" | "agenda" | "chapter" | "content" | "end",
-    "title": "スライドタイトル",
-    "subtitle": "キーメッセージ",
-    "body": "本文\n複数行\n箇条書き",
-    "objects": [
-      {"type": "box",   "text": "ラベル", "left": 0.5, "top": 3.0, "width": 2.5, "height": 0.9,
-       "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 14, "bold": true},
-      {"type": "arrow", "left": 3.1, "top": 3.2, "width": 0.5, "height": 0.5, "fill_color": "ED7D31"},
-      {"type": "text",  "text": "補足", "left": 1.0, "top": 4.0, "width": 4.0, "height": 0.5,
-       "font_color": "404040", "font_size": 11}
-    ],
-    "images": [
-      {
-        "prompt": "English image prompt",
-        "model": "gemini-3-pro-image-preview",
-        "position": "auto",   # テンプレートの「画像挿入位置」シェイプ座標を自動使用
-        # または明示的座標指定:
-        "left": 7.0, "top": 1.5, "width": 5.5
-      }
-    ]
-  }
-]
-
-座標系: 幅13.3 × 高さ7.5インチ（16:9）
-
-テンプレートの「画像挿入位置」シェイプ座標（レイアウト別）:
-  title   [0]:  left=1.012, top=2.253, width=11.348, height=4.646
-  chapter_photo [4]: left=1.012, top=2.411, width=11.348, height=4.646
-  agenda  [2]:  left=6.981, top=0.443, width=5.356, height=6.615
-  end     [14]: left=0.997, top=0.831, width=11.348, height=4.646
+テンプレート設定は templates/<id>/profile.json から読み込む。
+デフォルトテンプレート: sx_proposal
 """
 
 import os
@@ -49,29 +18,52 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE
 
-TEMPLATE_PATH = Path(__file__).parent / "SX_提案書_3.0_16x9.pptx"
+# ─── テンプレート設定 ─────────────────────────────────
+TEMPLATES_DIR = Path(__file__).parent / "templates"
+DEFAULT_TEMPLATE_ID = "sx_proposal"
 
-LAYOUT = {
-    "title":         0,   # ドキュメンテーションタイトルあり（写真あり）
-    "chapter":       5,   # チャプタータイトル（写真なし）★シンプル版
-    "chapter_photo": 4,   # チャプタータイトル（写真あり）
-    "agenda":        2,   # 目次・アジェンダページ（写真あり）
-    "content":       6,   # コンテンツページヘッドラインあり
-    "end":          14,   # エンドスライド（写真あり）
-}
 
-# 「画像挿入位置」シェイプの座標 (layout_index → (left, top, width, height) インチ)
-TEMPLATE_IMAGE_AREAS = {
-    0:  (1.012, 2.253, 11.348, 4.646),   # title
-    4:  (1.012, 2.411, 11.348, 4.646),   # chapter_photo
-    2:  (6.981, 0.443,  5.356, 6.615),   # agenda
-    14: (0.997, 0.831, 11.348, 4.646),   # end
-    16: (0.998, 0.837, 11.348, 4.646),   # end_with_pmark
-}
+class TemplateConfig:
+    """テンプレート設定を profile.json から読み込む"""
+
+    def __init__(self, profile_path: Path):
+        self.profile_dir = profile_path.parent
+        data = json.loads(profile_path.read_text(encoding="utf-8"))
+        self.id = data["id"]
+        self.name = data["name"]
+        self.template_path = self.profile_dir / data["file"]
+        self.slide_size = data["slide_size"]
+        self.content_area = data.get("content_area", {})
+
+        # type_key -> layout_index
+        self.layout = {k: v["index"] for k, v in data["layouts"].items()}
+
+        # type_key -> {role: ph_idx}
+        self.placeholders = {k: v["placeholders"] for k, v in data["layouts"].items()}
+
+        # layout_index(int) -> (left, top, width, height)
+        self.image_areas = {
+            int(k): (v["left"], v["top"], v["width"], v["height"])
+            for k, v in data.get("image_areas", {}).items()
+        }
+
+        self.body_ph_search_order = data.get("body_placeholder_search_order", [10, 14, 1, 2])
+        self.colors = data.get("colors", {})
+
+
+def get_template_config(template_id: str | None = None) -> TemplateConfig:
+    """テンプレートIDからTemplateConfigを取得。未指定時はデフォルト。"""
+    tid = template_id or DEFAULT_TEMPLATE_ID
+    profile_path = TEMPLATES_DIR / tid / "profile.json"
+    if not profile_path.exists():
+        raise FileNotFoundError(f"Template not found: {tid} (expected {profile_path})")
+    return TemplateConfig(profile_path)
 
 # ─── テンプレート操作 ─────────────────────────────────
-def load_template() -> Presentation:
-    return Presentation(str(TEMPLATE_PATH))
+def load_template(config: TemplateConfig | None = None) -> Presentation:
+    if config is None:
+        config = get_template_config()
+    return Presentation(str(config.template_path))
 
 def remove_all_slides(prs: Presentation):
     r_ns = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'
@@ -128,8 +120,8 @@ def set_placeholder_text(slide, ph_idx: int, text: str) -> bool:
             return True
     return False
 
-def set_body_text(slide, text: str):
-    for idx in [10, 14, 1, 2]:
+def set_body_text(slide, text: str, search_order: list[int] | None = None):
+    for idx in (search_order or [10, 14, 1, 2]):
         if set_placeholder_text(slide, idx, text):
             return
 
@@ -244,12 +236,16 @@ def _center_crop_to_ratio(img_bytes: bytes, target_w: float, target_h: float) ->
 
 
 def add_images_to_slide(slide, images: list[dict], layout_index: int = -1,
+                        config: TemplateConfig | None = None,
                         slides_dir: Path | None = None):
     """
     images: JSON の images フィールド
     layout_index: テンプレートの「画像挿入位置」座標を参照するためのレイアウトインデックス
+    config: テンプレート設定（image_areas等を参照）
     slides_dir: 画像キャッシュの保存先（指定時、生成画像を保存＆次回再利用）
     """
+    if config is None:
+        config = get_template_config()
     for img_spec in images:
         # "file" キーがあればローカルファイルを優先使用
         file_path = img_spec.get("file", "")
@@ -289,13 +285,14 @@ def add_images_to_slide(slide, images: list[dict], layout_index: int = -1,
             continue
 
         # position="auto" または left が未指定 → テンプレートの画像エリアを使用
+        image_areas = config.image_areas
         use_template_area = (
             img_spec.get("position") == "auto"
-            or ("left" not in img_spec and layout_index in TEMPLATE_IMAGE_AREAS)
+            or ("left" not in img_spec and layout_index in image_areas)
         )
 
-        if use_template_area and layout_index in TEMPLATE_IMAGE_AREAS:
-            left_inch, top_inch, width_inch, height_inch = TEMPLATE_IMAGE_AREAS[layout_index]
+        if use_template_area and layout_index in image_areas:
+            left_inch, top_inch, width_inch, height_inch = image_areas[layout_index]
         else:
             left_inch   = img_spec.get("left",   7.0)
             top_inch    = img_spec.get("top",    1.5)
@@ -369,7 +366,12 @@ try {{
         return []
 
 # ─── スライド追加 ─────────────────────────────────────
-def add_slide(prs: Presentation, slide_data: dict, slides_dir: Path | None = None):
+def add_slide(prs: Presentation, slide_data: dict,
+              config: TemplateConfig | None = None,
+              slides_dir: Path | None = None):
+    if config is None:
+        config = get_template_config()
+
     layout_key   = slide_data.get("type", "content")
     title        = slide_data.get("title",    "")
     subtitle     = slide_data.get("subtitle", "")
@@ -377,26 +379,34 @@ def add_slide(prs: Presentation, slide_data: dict, slides_dir: Path | None = Non
     objects      = parse_objects(slide_data.get("objects", []))
     images       = slide_data.get("images",   [])
 
-    layout_index = LAYOUT.get(layout_key, LAYOUT["content"])
+    layout_index = config.layout.get(layout_key, config.layout["content"])
     layout = prs.slide_layouts[layout_index]
     slide  = prs.slides.add_slide(layout)
 
-    if title:    set_placeholder_text(slide, 0, title)
+    # タイトル
+    title_ph = config.placeholders.get(layout_key, {}).get("title", 0)
+    if title:
+        set_placeholder_text(slide, title_ph, title)
+
+    # サブタイトル（プレースホルダーはレイアウトにより異なる）
     if subtitle:
-        # title/agenda レイアウトのサブタイトルは ph_idx=1
-        # content レイアウトのキーメッセージは ph_idx=13
-        subtitle_idx = 1 if layout_key in ("title", "agenda") else 13
-        set_placeholder_text(slide, subtitle_idx, subtitle)
-    if body:     set_body_text(slide, body)
-    if objects:  add_objects_to_slide(slide, objects)
-    if images:   add_images_to_slide(slide, images, layout_index=layout_index,
-                                     slides_dir=slides_dir)
+        subtitle_ph = config.placeholders.get(layout_key, {}).get("subtitle", 13)
+        set_placeholder_text(slide, subtitle_ph, subtitle)
+
+    if body:
+        set_body_text(slide, body, search_order=config.body_ph_search_order)
+    if objects:
+        add_objects_to_slide(slide, objects)
+    if images:
+        add_images_to_slide(slide, images, layout_index=layout_index,
+                            config=config, slides_dir=slides_dir)
 
     return slide
 
 # ─── スライドディレクトリから結合 ──────────────────────
 def build_from_slides_dir(slides_dir: Path, output_path: Path,
-                          export_png: bool = False) -> Path:
+                          export_png: bool = False,
+                          template_id: str | None = None) -> Path:
     """
     slides_dir 内の NN_*.json を番号順に読み込んで PPTX を組み立てる（Tier 2 結合）。
     ファイル名の先頭数字でソートするため、00_title.json → 01_agenda.json の順が保証される。
@@ -413,27 +423,31 @@ def build_from_slides_dir(slides_dir: Path, output_path: Path,
             outline.append(slide_data)
     print(f"  {len(outline)}枚のスライドを読み込み: {slides_dir}")
     return build_pptx(outline, output_path, export_png=export_png,
-                      slides_dir=slides_dir)
+                      slides_dir=slides_dir, template_id=template_id)
 
 # ─── メイン生成関数 ───────────────────────────────────
 def build_pptx(outline: list[dict], output_path: str | Path,
                export_png: bool = False,
-               slides_dir: Path | None = None) -> Path:
+               slides_dir: Path | None = None,
+               template_id: str | None = None) -> Path:
     """
     outline: 中間言語JSONリスト
     output_path: 出力先パス
     export_png: True の場合 PowerPoint COM で PNG サムネイルも生成
     slides_dir: 画像キャッシュの保存/参照先
+    template_id: テンプレートID（templates/<id>/profile.json）
     Returns: 保存したファイルのPath
     """
-    prs = load_template()
+    config = get_template_config(template_id)
+    print(f"  Template: {config.name}")
+    prs = load_template(config)
     remove_all_slides(prs)
     for i, slide_data in enumerate(outline):
         if not isinstance(slide_data, dict):
             continue
         slide_type = slide_data.get("type", "content")
         print(f"  [{i+1}/{len(outline)}] {slide_type}: {slide_data.get('title', '')[:30]}")
-        add_slide(prs, slide_data, slides_dir=slides_dir)
+        add_slide(prs, slide_data, config=config, slides_dir=slides_dir)
     output_path = Path(output_path)
     prs.save(str(output_path))
 

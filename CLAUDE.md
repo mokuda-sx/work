@@ -2,8 +2,35 @@
 
 ## このプロジェクトでできること
 
-Claude Code との対話で、会社テンプレート（SX_提案書_3.0_16x9.pptx）から
-PowerPoint ファイルを生成する。
+Claude Code との対話で、PowerPoint テンプレートから提案書を生成する。
+複数テンプレート対応（自社・他社テンプレートの切り替え可能）。
+
+---
+
+## テンプレート管理
+
+### テンプレート構成
+```
+templates/
+├── sx_proposal/              # デフォルト（SX提案書 3.0 16:9）
+│   ├── template.pptx         # テンプレートファイル
+│   ├── profile.json          # 機械可読: layouts, placeholders, image_areas, colors
+│   └── design_guide.md       # AI可読: テンプレート固有のデザインルール
+└── <other_template>/         # 追加テンプレート
+    ├── template.pptx
+    ├── profile.json
+    └── design_guide.md
+```
+
+### テンプレート指定方法
+- **CLI**: `python generate_pptx.py --assemble-only --project "xxx" --template "client_acme"`
+- **チャット**: ユーザーが「ACMEテンプレートで」→ `--template client_acme` を使う
+- **デフォルト**: outline.json の `"template"` フィールド → 未指定時 `sx_proposal`
+
+### テンプレート登録（ユーザーが「このpptxをテンプレート登録して」と言ったら）
+1. `python template_analyzer.py analyze "path.pptx" --id "<id>" --name "<name>"`
+2. 生成された `templates/<id>/profile.json` を確認・調整
+3. `templates/<id>/design_guide.md` にテンプレート固有のデザインルールを記述
 
 ---
 
@@ -119,11 +146,21 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 
 必要な時だけ Read ツールで読み込む。通常の生成では読まない（トークン節約）。
 
+### 共通スキル（全テンプレート共通）
 | スキル | 読み込むタイミング |
 |---|---|
 | `skills/outline_guide.md` | アウトライン設計が難しい場合 |
 | `skills/critique_rubric.md` | サムネイル診断時 |
-| `skills/design_principles.md` | デザイン改善・図解設計時 |
+| `skills/design_principles.md` | デザイン改善・図解設計時（共通原則）|
+
+### テンプレート固有スキル
+| スキル | 読み込むタイミング |
+|---|---|
+| `templates/<id>/design_guide.md` | スライド設計時（座標・色コード・レイアウト）|
+| `templates/<id>/profile.json` | エンジンが自動参照（Claude Codeが読む必要は通常なし）|
+
+**AI判断ルール**: スライド設計時はまずテンプレートの `design_guide.md` を読む（具体的座標がある）。
+デザインの原則・手法が必要な場合は追加で `skills/design_principles.md` を読む。
 
 ---
 
@@ -193,9 +230,9 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 
 ### 座標系
 
-- スライドサイズ: 幅 13.3 × 高さ 7.5 インチ（16:9）
-- コンテンツエリア: top 1.5〜7.0
-- 画像はスライド右半分（left 7.0 以上）に配置する
+- スライドサイズ・コンテンツエリアはテンプレートの `profile.json` に定義
+- 画像はスライド右半分に配置する
+- 具体的座標はテンプレートの `design_guide.md` を参照
 
 ### 構成ルール
 
@@ -210,16 +247,10 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 
 ---
 
-## テンプレートレイアウト（参考）
+## テンプレートレイアウト
 
-| layout index | type キー | 名称 | 画像エリア |
-|---|---|---|---|
-| 0 | `title` | タイトル（写真あり）| left=1.012, top=2.253, 11.3×4.6" |
-| 2 | `agenda` | 目次（写真あり）| left=6.981, top=0.443, 5.4×6.6"（右半分）|
-| 4 | `chapter_photo` | 章扉（写真あり）| left=1.012, top=2.411, 11.3×4.6" |
-| 5 | `chapter` | 章扉（写真なし）★デフォルト | なし |
-| 6 | `content` | コンテンツ | なし（images で任意配置）|
-| 14 | `end` | エンドスライド（写真あり）| left=0.997, top=0.831, 11.3×4.6" |
+テンプレート固有のレイアウト情報は `templates/<id>/design_guide.md` に記載。
+`profile.json` にはエンジンが使う機械可読な座標・プレースホルダー情報がある。
 
 - `position: "auto"` を images に指定するとテンプレートの画像エリアに自動配置
 - chapter は写真なし（シンプル）がデフォルト。写真あり章扉は `type: "chapter_photo"` を使用
@@ -241,11 +272,17 @@ python generate_pptx.py --assemble-only --project "DX推進提案書" --thumbnai
 # 画像生成なし（高速）
 python generate_pptx.py --assemble-only --project "DX推進提案書" --no-image
 
+# 別テンプレートで結合
+python generate_pptx.py --assemble-only --project "xxx" --template "client_acme"
+
 # 生成後に git commit & push
 python generate_pptx.py --assemble-only --project "DX推進提案書" --git
 
 # レシピとして保存
 python generate_pptx.py --outline "outline_xxx.json" --save-recipe my_recipe.json
+
+# テンプレート解析（新規登録用）
+python template_analyzer.py analyze "path/to/template.pptx" --id "my_template" --name "Template Name"
 ```
 
 ---
@@ -254,27 +291,29 @@ python generate_pptx.py --outline "outline_xxx.json" --save-recipe my_recipe.jso
 
 ```
 work/
+├── templates/                  ← テンプレート管理（テンプレート別）
+│   └── sx_proposal/
+│       ├── template.pptx       ← テンプレートファイル
+│       ├── profile.json        ← 機械可読設定（layouts, colors, coords）
+│       └── design_guide.md     ← テンプレート固有デザインルール
 ├── slides/                     ← 生成された PPTX（プロジェクト別）
 │   └── YYYYMMDD_プロジェクト名/
-│       ├── outline.json        ← Tier 1 インデックスのコピー（参照用）
+│       ├── outline.json        ← Tier 1 インデックス（template フィールドあり）
 │       ├── slides/             ← Tier 2 個別スライド JSON（gitignore）
 │       │   ├── 00_title.json
 │       │   ├── 01_agenda.json
-│       │   ├── 02_chapter.json
-│       │   ├── 03_content.json
 │       │   └── ...
 │       ├── *.pptx              ← 結合後 PPTX
 │       └── thumbnails/         ← PNG サムネイル（--thumbnail 時）
 ├── recipes/                    ← 再利用可能なアウトライン（レシピ）
-├── skills/                     ← オンデマンド読み込みのナレッジ
-│   ├── README.md
-│   ├── design_principles.md
-│   ├── critique_rubric.md
-│   └── outline_guide.md
+├── skills/                     ← 共通スキル（全テンプレート共通）
+│   ├── design_principles.md    ← デザイン共通原則
+│   ├── critique_rubric.md      ← 診断手法
+│   └── outline_guide.md        ← 構成パターン
 ├── docs/
 │   ├── vision.md               ← プロジェクトビジョン
 │   └── knowhow.md              ← 技術ノウハウ（セッション横断）
-├── outline_temp.json           ← 作業中のアウトライン（gitignore）
+├── template_analyzer.py        ← テンプレート登録ツール
 ├── pptx_engine.py              ← PPTX生成エンジン
 └── generate_pptx.py            ← CLI エントリーポイント
 ```

@@ -112,6 +112,7 @@ def main():
     parser.add_argument("--git",          action="store_true", help="生成後にgit commit & push")
     parser.add_argument("--assemble-only", action="store_true",
                         help="project_dir/slides/ の既存Tier 2ファイルを結合するだけ（--project 必須）")
+    parser.add_argument("--template",     help="テンプレートID（templates/<id>/）。省略時は outline.json の値 or sx_proposal")
     args = parser.parse_args()
 
     # ─ --assemble-only: 既存 Tier 2 ファイルを結合 ─
@@ -129,11 +130,25 @@ def main():
         if not slides_subdir.exists():
             print(f"エラー: slides/ サブフォルダーがありません: {slides_subdir}")
             sys.exit(1)
+        # テンプレートID: CLI指定 > outline.json > デフォルト
+        outline_json = project_dir / "outline.json"
+        project_template = None
+        if outline_json.exists():
+            try:
+                odata = json.loads(outline_json.read_text(encoding="utf-8"))
+                if isinstance(odata, dict):
+                    project_template = odata.get("template")
+            except Exception:
+                pass
+        template_id = args.template or project_template
+
         timestamp   = datetime.now().strftime("%Y%m%d_%H%M")
         output_path = project_dir / (args.output if args.output else f"{timestamp}_{safe_project}.pptx")
         print(f"\nTier 2 結合中: {slides_subdir}")
         from pptx_engine import build_from_slides_dir
-        result_path = build_from_slides_dir(slides_subdir, output_path, export_png=args.thumbnail)
+        result_path = build_from_slides_dir(slides_subdir, output_path,
+                                            export_png=args.thumbnail,
+                                            template_id=template_id)
         print(f"\n完了: {result_path}")
         subprocess.Popen(["powershell", "-Command", f"Start-Process '{result_path}'"])
         if args.git:
@@ -193,11 +208,14 @@ def main():
         output_name = f"{timestamp}_{safe_project}.pptx"
     output_path = project_dir / output_name
 
-    # outline.json もプロジェクトフォルダーにコピー保存（読み込んだ内容そのまま）
+    # outline.json もプロジェクトフォルダーにコピー保存（テンプレート情報を付与）
     raw_outline = json.loads(Path(args.outline).read_text(encoding="utf-8")) if args.outline else outline
+    if isinstance(raw_outline, dict):
+        raw_outline.setdefault("template", args.template or "sx_proposal")
     (project_dir / "outline.json").write_text(
         json.dumps(raw_outline, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    template_id = args.template or (raw_outline.get("template") if isinstance(raw_outline, dict) else None)
 
     # ─ Tier 2 スタブファイル生成（Tier 1 形式の場合のみ） ─
     # Tier 1 形式の検出: outline が list で各要素に "index" キーがあり body/objects/images がない
@@ -222,10 +240,13 @@ def main():
     print(f"\nPPTX生成中...")
     if is_tier1_entries and slides_subdir.exists():
         from pptx_engine import build_from_slides_dir
-        result_path = build_from_slides_dir(slides_subdir, output_path, export_png=args.thumbnail)
+        result_path = build_from_slides_dir(slides_subdir, output_path,
+                                            export_png=args.thumbnail,
+                                            template_id=template_id)
     else:
         from pptx_engine import build_pptx
-        result_path = build_pptx(outline, output_path, export_png=args.thumbnail)
+        result_path = build_pptx(outline, output_path, export_png=args.thumbnail,
+                                 template_id=template_id)
     print(f"\n完了: {result_path}")
 
     # ─ 自動オープン ─

@@ -1,0 +1,36 @@
+{
+  "id": "sx_proposal",
+  "name": "SX提案書 3.0 (16:9)",
+  "file": "template.pptx",
+  "slide_size": {"width": 13.333, "height": 7.5},
+  "content_area": {"top": 1.5, "bottom": 7.0, "left": 0.5, "right": 12.8},
+  "layouts": {
+    "title":         {"index": 0,  "placeholders": {"title": 0, "subtitle": 1}},
+    "agenda":        {"index": 2,  "placeholders": {"title": 0, "body": 10}},
+    "chapter":       {"index": 5,  "placeholders": {"title": 0, "subtitle": 1}},
+    "chapter_photo": {"index": 4,  "placeholders": {"title": 0, "subtitle": 1}},
+    "content":       {"index": 6,  "placeholders": {"title": 0, "subtitle": 13, "body": 14}},
+    "end":           {"index": 14, "placeholders": {"title": 0}}
+  },
+  "image_areas": {
+    "0":  {"left": 1.012, "top": 2.253, "width": 11.348, "height": 4.646},
+    "2":  {"left": 6.981, "top": 0.443, "width": 5.356,  "height": 6.615},
+    "4":  {"left": 1.012, "top": 2.411, "width": 11.348, "height": 4.646},
+    "14": {"left": 0.997, "top": 0.831, "width": 11.348, "height": 4.646},
+    "16": {"left": 0.998, "top": 0.837, "width": 11.348, "height": 4.646}
+  },
+  "body_placeholder_search_order": [10, 14, 1, 2],
+  "colors": {
+    "primary": "C00000",
+    "secondary": "4472C4",
+    "accent": "ED7D31",
+    "neutral": "404040",
+    "background": "FFFFFF"
+  },
+  "color_semantics": {
+    "C00000": "problem/risk/current-state (Before)",
+    "4472C4": "solution/proposal/target (After)",
+    "ED7D31": "transition/arrow-only",
+    "404040": "supplementary/neutral"
+  }
+}
