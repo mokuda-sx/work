@@ -28,9 +28,9 @@
     "background": "FFFFFF"
   },
   "color_semantics": {
-    "C00000": "problem/risk/current-state (Before)",
-    "4472C4": "solution/proposal/target (After)",
-    "ED7D31": "transition/arrow-only",
-    "404040": "supplementary/neutral"
+    "C00000": "SXブランドレッド（強い警告のみ、滅多に使わない）",
+    "4472C4": "提案・解決・目標（objectsのメインカラー）",
+    "ED7D31": "遷移・矢印のみ",
+    "404040": "現状・課題・補足・中立テキスト"
   }
 }

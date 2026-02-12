@@ -97,14 +97,16 @@ python generate_pptx.py --outline "outline_<タイトル>.json" --project "<タ�
   "subtitle": "キーメッセージ（40〜70文字）",
   "body": "・箇条書き1\n・箇条書き2\n・箇条書き3",
   "objects": [
-    {"type": "box", "text": "現状", "left": 0.5, "top": 4.5, "width": 2.5, "height": 0.9,
-     "fill_color": "C00000", "font_color": "FFFFFF", "font_size": 13}
-  ],
-  "images": [
-    {"prompt": "...", "model": "gemini-3-pro-image-preview", "left": 7.5, "top": 1.5, "width": 5.3}
+    {"type": "box", "text": "現状", "left": 3.8, "top": 4.5, "width": 2.5, "height": 0.9,
+     "fill_color": "404040", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "arrow", "left": 6.4, "top": 4.7, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box", "text": "目標", "left": 7.1, "top": 4.5, "width": 2.5, "height": 0.9,
+     "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
   ]
 }
 ```
+
+> **注意**: objects と images は同一スライドに混在させない（パターン A/B/C から選択）。
 
 Tier 2 ファイルの保存先: `slides/YYYYMMDD_<タイトル>/slides/NN_<type>.json`
 
@@ -152,6 +154,7 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 | `skills/outline_guide.md` | アウトライン設計が難しい場合 |
 | `skills/critique_rubric.md` | サムネイル診断時 |
 | `skills/design_principles.md` | デザイン改善・図解設計時（共通原則）|
+| `skills/project_rules.md` | プロジェクト作成・フォルダ整理時 |
 
 ### テンプレート固有スキル
 | スキル | 読み込むタイミング |
@@ -161,6 +164,26 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 
 **AI判断ルール**: スライド設計時はまずテンプレートの `design_guide.md` を読む（具体的座標がある）。
 デザインの原則・手法が必要な場合は追加で `skills/design_principles.md` を読む。
+
+---
+
+## リサーチ→スライド生成ワークフロー
+
+ユーザーが「○○について調べてスライドにまとめて」と依頼した場合、以下のフローで進める。
+
+### フロー
+
+1. **リサーチ**: WebSearch ツールでトピックを調査（複数クエリで網羅的に）
+2. **情報整理**: 調査結果をもとに要点・構成を整理（refs/ にメモを保存してもよい）
+3. **Tier 1 生成**: 調査内容からアウトライン JSON を生成 → ユーザー確認
+4. **Tier 2 展開**: 各スライドに調査データを反映。外部データには **出典を必ず記載**
+5. **PPTX 結合**: 通常フローで結合 → サムネイル確認
+
+### 出典の扱い
+
+- 外部データ・統計・事例を記載するスライドには `出典` テキストオブジェクトを配置
+- フォーマット: `skills/design_principles.md` Section 14 参照
+- リサーチメモは `slides/YYYYMMDD_プロジェクト名/refs/` に保存可能
 
 ---
 
@@ -202,23 +225,16 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
   "subtitle": "キーメッセージ（40〜70文字）",
   "body": "・箇条書き1（30〜50文字）\n・箇条書き2\n・箇条書き3\n・箇条書き4",
   "objects": [
-    {"type": "box",   "text": "現状", "left": 0.5, "top": 4.5, "width": 2.5, "height": 0.9,
-     "fill_color": "C00000", "font_color": "FFFFFF", "font_size": 13},
-    {"type": "arrow", "left": 3.1, "top": 4.7, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
-    {"type": "box",   "text": "目標", "left": 3.8, "top": 4.5, "width": 2.5, "height": 0.9,
+    {"type": "box",   "text": "現状", "left": 3.8, "top": 4.5, "width": 2.5, "height": 0.9,
+     "fill_color": "404040", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "arrow", "left": 6.4, "top": 4.7, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box",   "text": "目標", "left": 7.1, "top": 4.5, "width": 2.5, "height": 0.9,
      "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
-  ],
-  "images": [
-    {
-      "prompt": "Professional business illustration, clean minimal style, related to the slide topic",
-      "model": "gemini-3-pro-image-preview",
-      "left": 7.5, "top": 1.5, "width": 5.3
-    }
   ]
-  },
-  {"type": "end"}
-]
+}
 ```
+
+> objects と images は混在させない。画像を使う場合は objects を外して images のみにする。
 
 ### objects の type
 

@@ -25,13 +25,13 @@
     },
     "content": {
       "index": 3,
-      "placeholders": {"title": 12, "body": 13},
+      "placeholders": {"title": 12, "master_title": 10, "body": 13},
       "supports_image": true,
-      "notes": "緑ヘッダーバー内にタイトル(ph12)。本文エリア(ph13)は1.4〜6.7インチの大面積。画像は右半分に自由配置可"
+      "notes": "緑ヘッダーバー内にタイトル(ph12)。マスタータイトル(ph10)はヘッダー上部のセクション名。本文エリア(ph13)は1.4〜6.7インチの大面積。画像は右半分に自由配置可"
     },
     "agenda": {
       "index": 3,
-      "placeholders": {"title": 12, "body": 13},
+      "placeholders": {"title": 12, "master_title": 10, "body": 13},
       "supports_image": true,
       "notes": "content と同一レイアウト。目次テキストは body に改行区切りで記述"
     },

@@ -41,7 +41,7 @@ end           → 次のアクション
    - 「現状→課題→提案→効果→進め方」が基本ストーリー
 
 3. **content**: 各スライドに図解/画像の指示があるか
-   - 最低30%のcontentスライドにobjectsかimagesを入れる
+   - 大半のcontentスライドにobjectsかimagesを入れる（bodyのみは数値系に限定）
 
 4. **end**: エンドスライドに次のアクションがあるか
 
@@ -72,13 +72,9 @@ end           → 次のアクション
   "subtitle": "設備の故障を事前に予測し、ダウンタイムを80%削減する（28文字）",
   "body": "・センサーデータをリアルタイムで収集・AIで異常検知\n・月次定期点検から「必要な時だけ点検」へシフト\n・過去5年の故障データから99%精度のモデル構築済み\n・パイロット3拠点で平均ダウンタイム82%削減を達成",
   "objects": [
-    {"type":"box","text":"現状\n定期点検","left":0.5,"top":4.5,"width":2.5,"height":1.0,"fill_color":"C00000","font_color":"FFFFFF","font_size":12},
-    {"type":"arrow","left":3.1,"top":4.75,"width":0.5,"height":0.5,"fill_color":"ED7D31"},
-    {"type":"box","text":"提案\n予防保全","left":3.7,"top":4.5,"width":2.5,"height":1.0,"fill_color":"4472C4","font_color":"FFFFFF","font_size":12}
-  ],
-  "images": [
-    {"prompt":"Industrial IoT sensor monitoring dashboard with AI anomaly detection, clean flat design, blue tones",
-     "model":"gemini-3-pro-image-preview","left":7.3,"top":1.5,"width":5.5}
+    {"type":"box","text":"現状\n定期点検","left":3.8,"top":4.5,"width":2.5,"height":1.0,"fill_color":"404040","font_color":"FFFFFF","font_size":12},
+    {"type":"arrow","left":6.4,"top":4.75,"width":0.5,"height":0.5,"fill_color":"ED7D31"},
+    {"type":"box","text":"提案\n予防保全","left":7.0,"top":4.5,"width":2.5,"height":1.0,"fill_color":"4472C4","font_color":"FFFFFF","font_size":12}
   ]
 }
 ```

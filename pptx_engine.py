@@ -396,6 +396,12 @@ def add_slide(prs: Presentation, slide_data: dict,
         subtitle_ph = config.placeholders.get(layout_key, {}).get("subtitle", 13)
         set_placeholder_text(slide, subtitle_ph, subtitle)
 
+    # マスタータイトル（セクション名・章タイトル等、テンプレート依存）
+    master_title_ph = config.placeholders.get(layout_key, {}).get("master_title")
+    if master_title_ph is not None:
+        master_title = slide_data.get("master_title", "")
+        set_placeholder_text(slide, master_title_ph, master_title)
+
     if body:
         set_body_text(slide, body, search_order=config.body_ph_search_order)
     if objects:
@@ -405,6 +411,15 @@ def add_slide(prs: Presentation, slide_data: dict,
                             config=config, slides_dir=slides_dir)
     elif images:
         print(f"  [image] skip: {layout_key} layout does not support images")
+
+    # マッピングされていないプレースホルダーのデフォルトテキストをクリア
+    # （テンプレートのレイアウトから継承された「マスタータイトル」等が残るのを防ぐ）
+    mapped_phs = set(config.placeholders.get(layout_key, {}).values())
+    for shape in slide.shapes:
+        if shape.is_placeholder and shape.has_text_frame:
+            ph_idx = shape.placeholder_format.idx
+            if ph_idx not in mapped_phs:
+                fill_text_frame(shape.text_frame, "")
 
     return slide
 
