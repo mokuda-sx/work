@@ -216,16 +216,77 @@ def generate_image_gemini(prompt: str, model: str = "gemini-3-pro-image-preview"
             return part.inline_data.data
     return None
 
-def add_images_to_slide(slide, images: list[dict], layout_index: int = -1):
+def _center_crop_to_ratio(img_bytes: bytes, target_w: float, target_h: float) -> bytes:
+    """画像を target_w:target_h のアスペクト比で中央クロップする。"""
+    from PIL import Image
+    img = Image.open(io.BytesIO(img_bytes))
+    src_w, src_h = img.size
+    target_ratio = target_w / target_h
+    src_ratio = src_w / src_h
+
+    if abs(src_ratio - target_ratio) < 0.01:
+        return img_bytes  # ほぼ同じ比率ならクロップ不要
+
+    if src_ratio > target_ratio:
+        # 元画像が横に広い → 左右をクロップ
+        new_w = int(src_h * target_ratio)
+        left = (src_w - new_w) // 2
+        img = img.crop((left, 0, left + new_w, src_h))
+    else:
+        # 元画像が縦に長い → 上下をクロップ
+        new_h = int(src_w / target_ratio)
+        top = (src_h - new_h) // 2
+        img = img.crop((0, top, src_w, top + new_h))
+
+    buf = io.BytesIO()
+    img.save(buf, format="PNG")
+    return buf.getvalue()
+
+
+def add_images_to_slide(slide, images: list[dict], layout_index: int = -1,
+                        slides_dir: Path | None = None):
     """
     images: JSON の images フィールド
     layout_index: テンプレートの「画像挿入位置」座標を参照するためのレイアウトインデックス
+    slides_dir: 画像キャッシュの保存先（指定時、生成画像を保存＆次回再利用）
     """
     for img_spec in images:
+        # "file" キーがあればローカルファイルを優先使用
+        file_path = img_spec.get("file", "")
+        if file_path:
+            fp = Path(file_path)
+            if not fp.is_absolute() and slides_dir:
+                fp = slides_dir / fp
+            if fp.exists():
+                print(f"  [image] キャッシュ使用: {fp.name}")
+                img_bytes = fp.read_bytes()
+            else:
+                print(f"  [image] ファイル未発見: {fp} -> 生成にフォールバック")
+                img_bytes = None
+                file_path = ""
+        else:
+            img_bytes = None
+
         prompt = img_spec.get("prompt", "")
-        if not prompt:
+        if not img_bytes and not prompt:
             continue
         model = img_spec.get("model", "gemini-3-pro-image-preview")
+
+        # キャッシュにない場合は Gemini 生成
+        if not img_bytes:
+            img_bytes = generate_image_gemini(prompt, model=model)
+            # 生成成功時、slides_dir があれば自動保存
+            if img_bytes and slides_dir:
+                cache_dir = slides_dir / "images"
+                cache_dir.mkdir(exist_ok=True)
+                # ファイル名: prompt先頭20文字をサニタイズ
+                safe_name = "".join(c if c.isalnum() or c in "-_ " else "" for c in prompt[:30]).strip()
+                cache_path = cache_dir / f"{safe_name}.png"
+                cache_path.write_bytes(img_bytes)
+                print(f"  [image] 保存: {cache_path.name}")
+
+        if not img_bytes:
+            continue
 
         # position="auto" または left が未指定 → テンプレートの画像エリアを使用
         use_template_area = (
@@ -241,19 +302,19 @@ def add_images_to_slide(slide, images: list[dict], layout_index: int = -1):
             width_inch  = img_spec.get("width",  5.5)
             height_inch = img_spec.get("height", None)
 
-        img_bytes = generate_image_gemini(prompt, model=model)
-        if img_bytes:
-            if height_inch:
-                slide.shapes.add_picture(
-                    io.BytesIO(img_bytes),
-                    Inches(left_inch), Inches(top_inch),
-                    Inches(width_inch), Inches(height_inch)
-                )
-            else:
-                slide.shapes.add_picture(
-                    io.BytesIO(img_bytes),
-                    Inches(left_inch), Inches(top_inch), Inches(width_inch)
-                )
+        # 配置先の幅・高さが両方分かる場合は中央クロップしてアスペクト比を合わせる
+        if height_inch:
+            img_bytes = _center_crop_to_ratio(img_bytes, width_inch, height_inch)
+            slide.shapes.add_picture(
+                io.BytesIO(img_bytes),
+                Inches(left_inch), Inches(top_inch),
+                Inches(width_inch), Inches(height_inch)
+            )
+        else:
+            slide.shapes.add_picture(
+                io.BytesIO(img_bytes),
+                Inches(left_inch), Inches(top_inch), Inches(width_inch)
+            )
 
 # ─── PNG サムネイル生成 ───────────────────────────────
 def export_thumbnails(pptx_path: Path) -> list[Path]:
@@ -308,7 +369,7 @@ try {{
         return []
 
 # ─── スライド追加 ─────────────────────────────────────
-def add_slide(prs: Presentation, slide_data: dict):
+def add_slide(prs: Presentation, slide_data: dict, slides_dir: Path | None = None):
     layout_key   = slide_data.get("type", "content")
     title        = slide_data.get("title",    "")
     subtitle     = slide_data.get("subtitle", "")
@@ -328,7 +389,8 @@ def add_slide(prs: Presentation, slide_data: dict):
         set_placeholder_text(slide, subtitle_idx, subtitle)
     if body:     set_body_text(slide, body)
     if objects:  add_objects_to_slide(slide, objects)
-    if images:   add_images_to_slide(slide, images, layout_index=layout_index)
+    if images:   add_images_to_slide(slide, images, layout_index=layout_index,
+                                     slides_dir=slides_dir)
 
     return slide
 
@@ -350,15 +412,18 @@ def build_from_slides_dir(slides_dir: Path, output_path: Path,
         if isinstance(slide_data, dict):
             outline.append(slide_data)
     print(f"  {len(outline)}枚のスライドを読み込み: {slides_dir}")
-    return build_pptx(outline, output_path, export_png=export_png)
+    return build_pptx(outline, output_path, export_png=export_png,
+                      slides_dir=slides_dir)
 
 # ─── メイン生成関数 ───────────────────────────────────
 def build_pptx(outline: list[dict], output_path: str | Path,
-               export_png: bool = False) -> Path:
+               export_png: bool = False,
+               slides_dir: Path | None = None) -> Path:
     """
     outline: 中間言語JSONリスト
     output_path: 出力先パス
     export_png: True の場合 PowerPoint COM で PNG サムネイルも生成
+    slides_dir: 画像キャッシュの保存/参照先
     Returns: 保存したファイルのPath
     """
     prs = load_template()
@@ -368,7 +433,7 @@ def build_pptx(outline: list[dict], output_path: str | Path,
             continue
         slide_type = slide_data.get("type", "content")
         print(f"  [{i+1}/{len(outline)}] {slide_type}: {slide_data.get('title', '')[:30]}")
-        add_slide(prs, slide_data)
+        add_slide(prs, slide_data, slides_dir=slides_dir)
     output_path = Path(output_path)
     prs.save(str(output_path))
 

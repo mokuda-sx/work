@@ -264,8 +264,22 @@ left[0]=0.5  left[1]=4.7  left[2]=8.9
 ### 画像プロンプト品質基準
 - **英語で記述**（Geminiの品質向上）
 - スライドの内容と直接関連させる
-- スタイル指定を含める: `clean minimal business illustration`, `flat design`, `professional`
-- NGワード: `photo`, `realistic` (ベクター系の方がスライドに馴染む)
+
+#### スライド種別による画像スタイルの使い分け
+
+| スライド種別 | 推奨スタイル | プロンプト例 |
+|---|---|---|
+| title / agenda / chapter_photo / end | **実写風プロ写真** | `professional photograph, city skyline at night with digital network connections, high quality, corporate` |
+| content（説明・分析系） | **フラットイラスト** | `clean minimal business illustration, flat design, blue tones` |
+
+**テンプレートの画像エリア（大面積）を使うスライドは実写風写真が映える。**
+contentスライドの小さめ画像エリアにはイラスト系が適切。
+
+#### 画像の再利用（統一感の鉄則）
+- 表紙(title)と目次(agenda)は**同じ画像を使う**のがコンサル提案書の基本
+- `"file": "images/xxx.png"` で生成済み画像を再利用する
+- 章扉(chapter_photo)も同じテーマの写真を使うと全体に統一感が出る
+- 毎スライドで違う画像にしない（バラバラ感が出る）
 
 ---
 
@@ -273,8 +287,8 @@ left[0]=0.5  left[1]=4.7  left[2]=8.9
 
 | type | 目的 | 推奨パターン |
 |---|---|---|
-| `title` | 第一印象・権威付け | シンプルに。タイトルとサブタイトル（日付・宛先）のみ |
-| `agenda` | 全体像の提示 | 章番号＋章名のみ。1行1章 |
+| `title` | 第一印象・権威付け | タイトル＋サブタイトル（`会社名\n日付`の2行）のみ。実写風写真推奨 |
+| `agenda` | 全体像の提示 | タイトルは**「アジェンダ」**（「目次」ではない）。階層構造可。表紙と同じ画像を再利用 |
 | `chapter` | 章の区切り | 短く力強いタイトルのみ。写真なし（ミニマル） |
 | `chapter_photo` | 章の区切り（写真あり） | 視覚インパクト重視の章扉 |
 | `content` | 主張・証拠 | A/B/C/Dパターンから1つ選ぶ。3要素共存は禁止 |
