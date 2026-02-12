@@ -47,6 +47,9 @@ class TemplateConfig:
             for k, v in data.get("image_areas", {}).items()
         }
 
+        # type_key -> bool (このレイアウトで画像配置をサポートするか)
+        self.supports_image = {k: v.get("supports_image", True) for k, v in data["layouts"].items()}
+
         self.body_ph_search_order = data.get("body_placeholder_search_order", [10, 14, 1, 2])
         self.colors = data.get("colors", {})
 
@@ -397,9 +400,11 @@ def add_slide(prs: Presentation, slide_data: dict,
         set_body_text(slide, body, search_order=config.body_ph_search_order)
     if objects:
         add_objects_to_slide(slide, objects)
-    if images:
+    if images and config.supports_image.get(layout_key, True):
         add_images_to_slide(slide, images, layout_index=layout_index,
                             config=config, slides_dir=slides_dir)
+    elif images:
+        print(f"  [image] skip: {layout_key} layout does not support images")
 
     return slide
 

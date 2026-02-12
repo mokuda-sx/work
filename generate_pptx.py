@@ -141,9 +141,10 @@ def main():
             except Exception:
                 pass
         template_id = args.template or project_template
+        tid_label = template_id or "sx_proposal"
 
         timestamp   = datetime.now().strftime("%Y%m%d_%H%M")
-        output_path = project_dir / (args.output if args.output else f"{timestamp}_{safe_project}.pptx")
+        output_path = project_dir / (args.output if args.output else f"{timestamp}_{tid_label}_{safe_project}.pptx")
         print(f"\nTier 2 結合中: {slides_subdir}")
         from pptx_engine import build_from_slides_dir
         result_path = build_from_slides_dir(slides_subdir, output_path,
@@ -202,10 +203,11 @@ def main():
     project_dir = SLIDES_DIR / f"{date_str}_{safe_project}"
     project_dir.mkdir(exist_ok=True)
 
+    tid_label = template_id or "sx_proposal"
     if args.output:
         output_name = args.output if args.output.endswith(".pptx") else args.output + ".pptx"
     else:
-        output_name = f"{timestamp}_{safe_project}.pptx"
+        output_name = f"{timestamp}_{tid_label}_{safe_project}.pptx"
     output_path = project_dir / output_name
 
     # outline.json もプロジェクトフォルダーにコピー保存（テンプレート情報を付与）

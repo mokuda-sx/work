@@ -1,0 +1,62 @@
+{
+  "id": "jr_east",
+  "name": "JR東日本提案書",
+  "file": "template.pptx",
+  "slide_size": {"width": 13.333, "height": 7.5},
+  "content_area": {"top": 1.4, "bottom": 6.7, "left": 0.4, "right": 13.0},
+  "layouts": {
+    "title": {
+      "index": 0,
+      "placeholders": {"title": 11, "subtitle": 13},
+      "supports_image": false,
+      "notes": "テキストのみの表紙。画像を載せるとテキストと重なる。写真付き表紙は title_photo を使う"
+    },
+    "title_photo": {
+      "index": 1,
+      "placeholders": {"title": 11, "subtitle": 13},
+      "supports_image": true,
+      "notes": "右側にキービジュアル画像(ph15)。タイトルは左半分のみ(幅7.5インチ)"
+    },
+    "chapter": {
+      "index": 2,
+      "placeholders": {"title": 11, "subtitle": 12},
+      "supports_image": false,
+      "notes": "テンプレートに装飾ボックス+緑矢印が組み込み済み。タイトルのみ。本文・画像不可"
+    },
+    "content": {
+      "index": 3,
+      "placeholders": {"title": 12, "body": 13},
+      "supports_image": true,
+      "notes": "緑ヘッダーバー内にタイトル(ph12)。本文エリア(ph13)は1.4〜6.7インチの大面積。画像は右半分に自由配置可"
+    },
+    "agenda": {
+      "index": 3,
+      "placeholders": {"title": 12, "body": 13},
+      "supports_image": true,
+      "notes": "content と同一レイアウト。目次テキストは body に改行区切りで記述"
+    },
+    "end": {
+      "index": 8,
+      "placeholders": {},
+      "supports_image": false,
+      "notes": "JR東日本ロゴのみの背表紙。テキスト・画像一切不可"
+    }
+  },
+  "image_areas": {
+    "1": {"left": 8.267, "top": 0.0, "width": 5.066, "height": 7.5}
+  },
+  "body_placeholder_search_order": [13, 14, 10],
+  "colors": {
+    "primary": "1B813E",
+    "secondary": "4472C4",
+    "accent": "ED7D31",
+    "neutral": "404040",
+    "background": "FFFFFF"
+  },
+  "color_semantics": {
+    "1B813E": "JR東日本ブランドグリーン（テンプレートヘッダー/フッター/章扉装飾）",
+    "4472C4": "提案・解決・目標（objectsのメインカラー）",
+    "ED7D31": "遷移・矢印のみ",
+    "404040": "補足・中立テキスト"
+  }
+}
