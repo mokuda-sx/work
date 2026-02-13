@@ -1,20 +1,15 @@
+# 秘密情報
 .env
+
+# Python
 __pycache__/
 *.pyc
+
+# ルート直下の一時アウトライン（プロジェクト内の outline.json は追跡する）
 outline_*.json
 
-# Tier 2 個別スライド JSON（生成物・コミット不要）
-slides/*/slides/
-# 生成 PPTX
-slides/*/*.pptx
-# サムネイル PNG
-slides/*/thumbnails/
-# 旧バージョン退避
-slides/*/old/
-
-# テスト・デバッグ
+# テスト・デバッグ用スクリプト
 test_*.py
-test_*.pptx
 check_*.py
 inspect_*.py
 

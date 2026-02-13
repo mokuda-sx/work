@@ -1,0 +1,12 @@
+{
+  "index": 11,
+  "type": "content",
+  "title": "定量効果と将来ロードマップ",
+  "subtitle": "時間93%削減・品質統一・再利用80%の効果を実現し、自律進化するシステムへ発展する",
+  "body": "・作成時間を8時間から30分に短縮（93%削減）\n・テンプレート準拠でデザイン品質を完全統一\n・レシピ再利用で過去資産活用率を80%に向上",
+  "objects": [
+    {"type": "box", "text": "93%\n時間削減", "left": 0.5, "top": 3.5, "width": 3.9, "height": 1.5, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "box", "text": "100%\n品質統一", "left": 4.6, "top": 3.5, "width": 3.9, "height": 1.5, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "box", "text": "80%\n再利用率", "left": 8.7, "top": 3.5, "width": 3.9, "height": 1.5, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
+  ]
+}

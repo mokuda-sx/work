@@ -1,0 +1,13 @@
+{
+  "index": 1,
+  "type": "agenda",
+  "title": "アジェンダ",
+  "body": "1. 提案書作成の課題\n2. システムの仕組み\n3. 使うほど賢くなる仕組み\n4. 導入効果と今後の展開",
+  "images": [
+    {
+      "prompt": "Professional photo of AI assistant helping create business presentations, modern office, blue digital network overlay, corporate atmosphere",
+      "model": "gemini-3-pro-image-preview",
+      "position": "auto"
+    }
+  ]
+}

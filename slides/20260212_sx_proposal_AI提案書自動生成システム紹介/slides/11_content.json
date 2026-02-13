@@ -1,0 +1,14 @@
+{
+  "index": 11,
+  "type": "content",
+  "title": "自律的に進化するシステムへ",
+  "subtitle": "スキルの蓄積とフィードバックループで、使うほど賢くなるシステムを目指す",
+  "body": "・テンプレートライブラリの充実 → 業種・用途別に最適な構成を蓄積\n・AIによる自動品質チェック → 生成・確認・修正の自動フィードバックループ\n・クライアント別テンプレート対応 → 提出先に合わせた体裁を自動切替\n・スライド単位の差し替え → 既存資料の部分的な更新にも対応",
+  "objects": [
+    {"type": "box", "text": "現在\nv2.0", "left": 2.2, "top": 4.5, "width": 2.5, "height": 0.9, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "arrow", "left": 4.8, "top": 4.7, "width": 0.5, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box", "text": "近未来\nレシピ拡充", "left": 5.4, "top": 4.5, "width": 2.5, "height": 0.9, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13},
+    {"type": "arrow", "left": 8.0, "top": 4.7, "width": 0.5, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box", "text": "将来\n自律進化", "left": 8.6, "top": 4.5, "width": 2.5, "height": 0.9, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "index": 1,
+  "type": "agenda",
+  "master_title": "",
+  "title": "アジェンダ",
+  "body": "1. 提案書作成の課題\n2. システムの仕組み\n3. 使うほど賢くなる仕組み\n4. 今後の展開",
+  "images": [
+    {
+      "file": "images/Modern AI assistant helping cr.png",
+      "position": "auto"
+    }
+  ]
+}

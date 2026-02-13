@@ -1,0 +1,14 @@
+{
+  "index": 5,
+  "type": "content",
+  "title": "設計意図と実行を分離する3層構造",
+  "subtitle": "AIが設計意図をレシピに変換し、エンジンがテンプレートに忠実に描画する分業構造",
+  "body": "・思考層: AIがユーザーと対話し、スライドの設計意図を決定\n・レシピ層: パターン・トーン・ラベルをテンプレート非依存で記述\n・実行層: 生成エンジンがレシピをテンプレート固有のPPTXに変換",
+  "objects": [
+    {"type": "box", "text": "思考層\nClaude Code", "left": 0.5, "top": 4.3, "width": 2.5, "height": 1.0, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "arrow", "left": 3.1, "top": 4.55, "width": 0.5, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box", "text": "レシピ層\nパターン定義", "left": 3.7, "top": 4.3, "width": 2.5, "height": 1.0, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "arrow", "left": 6.3, "top": 4.55, "width": 0.5, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box", "text": "実行層\npptx_engine", "left": 6.9, "top": 4.3, "width": 2.5, "height": 1.0, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 12}
+  ]
+}

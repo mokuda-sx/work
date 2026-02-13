@@ -10,18 +10,17 @@
 slides/
 └── YYYYMMDD_テンプレート_プロジェクト名/
     ├── outline.json              ← Tier 1 アウトライン（template フィールドあり）
-    ├── recipes/                  ← レシピ（テンプレート非依存の設計意図、git管理対象）
+    ├── recipes/                  ← レシピ（テンプレート非依存の設計意図）
     │   ├── 03_content.recipe.json
     │   ├── 05_content.recipe.json
     │   └── ...
-    ├── slides/                   ← Tier 2 個別スライド JSON（gitignore）
+    ├── slides/                   ← Tier 2 個別スライド JSON
     │   ├── images/               ← AI生成画像キャッシュ
     │   ├── 00_title.json         ← Tier 2（定型スライドはレシピ不要）
     │   ├── 03_content.json       ← Tier 2（テンプレート固有の座標・色）
     │   └── ...
-    ├── YYYYMMDD_HHMM_*.pptx     ← 最新 PPTX（1ファイルのみ）
+    ├── YYYYMMDD_HHMM_*.pptx     ← 生成 PPTX
     ├── thumbnails/               ← サムネイル PNG
-    ├── old/                      ← 過去バージョンの PPTX
     └── refs/                     ← 参考資料・リサーチメモ（任意）
 ```
 
@@ -32,16 +31,12 @@ slides/
 | プロジェクトフォルダ | `YYYYMMDD_<template_id>_プロジェクト名` | `20260212_sx_proposal_AI提案書自動生成システム紹介` |
 | PPTX ファイル | `YYYYMMDD_HHMM_<template_id>_<プロジェクト名>.pptx` | `20260213_0708_sx_proposal_AI提案書.pptx` |
 | サムネイルフォルダ | `thumbnails/` | `thumbnails/` |
-| 古い PPTX | `old/` フォルダに移動（削除しない） | `old/20260212_0652_AI提案書.pptx` |
 
 ### 管理ルール
 
 1. **1フォルダ = 1テンプレート**: 同じ内容でも別テンプレートなら別フォルダ（Tier 2 JSONの色・座標・master_title等がテンプレート依存のため）
-2. **最新 PPTX はルート直下**: 1ファイルのみ
-3. **再結合時**: 古い PPTX を `old/` に移動してから新規生成
-4. **サムネイル**: `thumbnails/` に集約
-5. **参考資料**: `refs/` に保存（リサーチメモ、出典リスト等）
-6. **Tier 2 JSON + images**: `slides/` サブフォルダ内に集約（gitignore 対象）
-7. **レシピは `recipes/` サブフォルダに保存**: プロジェクトフォルダ内の `recipes/` に `.recipe.json` を保存（git 管理対象）
-8. **テンプレート別の Tier 2 差分**: `master_title`（JR East 等）、色コード、座標はテンプレート固有。同じ内容を別テンプレートで作る場合はレシピから再変換
-9. **レシピの再利用**: 別テンプレートで同じ内容を作る場合、プロジェクトの `recipes/` からレシピを読み込み `skills/slide_recipe.md` のスキル2 で再変換する
+2. **全ファイル git 管理**: PPTX・サムネイル・Tier 2 JSON・画像を含め全て git で追跡する。バージョン管理は git 履歴で行う
+3. **サムネイル**: `thumbnails/` に集約
+4. **参考資料**: `refs/` に保存（リサーチメモ、出典リスト等）
+5. **テンプレート別の Tier 2 差分**: `master_title`（JR East 等）、色コード、座標はテンプレート固有。同じ内容を別テンプレートで作る場合はレシピから再変換
+6. **レシピの再利用**: 別テンプレートで同じ内容を作る場合、プロジェクトの `recipes/` からレシピを読み込み `skills/slide_recipe.md` のスキル2 で再変換する

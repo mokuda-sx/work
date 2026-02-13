@@ -1,0 +1,12 @@
+{
+  "index": 6,
+  "type": "content",
+  "title": "レシピが実現するテンプレート横断",
+  "subtitle": "テンプレート非依存のレシピから、異なるテンプレートのPPTXを自動生成できる",
+  "body": "・従来: テンプレートごとにゼロから作り直し、座標・色を手動調整\n・レシピ方式: 設計意図を1回記述すれば複数テンプレートに自動変換\n・同じレシピからSX提案書・JR提案書など異なるデザインに展開可能",
+  "objects": [
+    {"type": "box", "text": "従来\nテンプレ別に手作業", "left": 0.5, "top": 4.2, "width": 2.8, "height": 1.0, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "arrow", "left": 3.4, "top": 4.45, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
+    {"type": "box", "text": "レシピ方式\n1回の記述で複数展開", "left": 4.1, "top": 4.2, "width": 2.8, "height": 1.0, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 12}
+  ]
+}

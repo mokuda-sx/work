@@ -1,0 +1,17 @@
+{
+  "index": 7,
+  "type": "content",
+  "master_title": "2. システムの仕組み",
+  "title": "対話だけで完結する操作フロー",
+  "subtitle": "要望を伝えるだけで、レシピ設計からPPTX品質確認まで一気通貫で完結する",
+  "body": "・Step1: 要望を伝える → AIが構成案とレシピを自動生成\n・Step2: レシピを確認・修正（パターン選択・トーン調整）\n・Step3: レシピからPPTXを自動生成（テンプレート準拠）\n・Step4: サムネイルで品質チェック → AIが改善を提案",
+  "objects": [
+    {"type": "box", "text": "Step1\n要望", "left": 0.5, "top": 4.0, "width": 1.6, "height": 1.0, "fill_color": "2B7A3D", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "arrow", "left": 2.1, "top": 4.25, "width": 0.3, "height": 0.5, "fill_color": "E8A02F"},
+    {"type": "box", "text": "Step2\nレシピ確認", "left": 2.4, "top": 4.0, "width": 1.6, "height": 1.0, "fill_color": "2B7A3D", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "arrow", "left": 4.0, "top": 4.25, "width": 0.3, "height": 0.5, "fill_color": "E8A02F"},
+    {"type": "box", "text": "Step3\nPPTX生成", "left": 4.3, "top": 4.0, "width": 1.6, "height": 1.0, "fill_color": "2B7A3D", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "arrow", "left": 5.9, "top": 4.25, "width": 0.3, "height": 0.5, "fill_color": "E8A02F"},
+    {"type": "box", "text": "Step4\n品質確認", "left": 6.2, "top": 4.0, "width": 1.6, "height": 1.0, "fill_color": "2B7A3D", "font_color": "FFFFFF", "font_size": 11}
+  ]
+}

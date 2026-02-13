@@ -1,0 +1,12 @@
+{
+  "index": 3,
+  "type": "content",
+  "title": "時間・品質・再利用の3つの壁",
+  "subtitle": "内容を考える時間よりデザイン調整に時間を取られ、品質も属人的になっている",
+  "body": "・提案書1本に平均3〜5時間、うち半分以上がレイアウト調整\n・テンプレートの使い方が人によってバラバラで品質にばらつき\n・過去の良い資料が個人PCに埋もれ、ナレッジとして再利用されない",
+  "objects": [
+    {"type": "box", "text": "時間\n3〜5時間/本", "left": 2.7, "top": 4.5, "width": 2.5, "height": 0.9, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "品質\n属人的", "left": 5.4, "top": 4.5, "width": 2.5, "height": 0.9, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "再利用\n埋もれる", "left": 8.1, "top": 4.5, "width": 2.5, "height": 0.9, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "index": 9,
+  "type": "content",
+  "title": "パターンカタログが品質の底上げを実現",
+  "subtitle": "SWOT・フロー・比較表などの定型パターンが蓄積され、提案書の品質が継続的に向上する",
+  "body": "・11種の構造パターン: 箇条書き、3カード、フロー、マトリクス等\n・6種のフレームワーク: SWOT、空雨傘、As-Is/To-Be、PDCA等\n・作成するたびにパターンが増え、次回以降の品質が自動的に向上\n・共通スキルとテンプレート固有スキルの2層で知識を管理",
+  "images": [
+    {
+      "prompt": "Clean minimal business illustration of a growing catalog of design patterns, organized card library with colorful tabs, flat design, blue and white tones, professional",
+      "model": "gemini-3-pro-image-preview",
+      "left": 7.5,
+      "top": 1.5,
+      "width": 5.3
+    }
+  ]
+}
