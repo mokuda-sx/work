@@ -255,6 +255,12 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
    d. body_points を 3〜5 項目で記述
    e. visual.labels を設定（ボックスのラベル）
    f. message（キーメッセージ）を 40〜70 文字で書く
+4. **ユーザーにレシピを提示し、設計意図をディスカッションする**:
+   - パターン選択は適切か？（別パターンの提案も歓迎）
+   - トーン・ラベル・メッセージの方向性は合っているか？
+   - body_points の内容に過不足はないか？
+   - **ユーザーの承認が出てから** Tier 2 変換に進む
+   - 「一気にやって」と言われた場合のみバッチ処理OK
 
 ### パターン選択の判断フロー
 
@@ -365,10 +371,11 @@ box_height = (available_height - gap) / 2
 
 ### 保存先
 ```
-slides/YYYYMMDD_<template>_プロジェクト名/slides/NN_type.recipe.json
+slides/YYYYMMDD_<template>_プロジェクト名/recipes/NN_type.recipe.json
 ```
 
-Tier 2 ファイル（`NN_type.json`）と同じフォルダに `.recipe.json` 拡張子で保存。
+プロジェクトフォルダ内の `recipes/` サブフォルダに保存。
+Tier 2 JSON（`slides/` サブフォルダ、gitignore対象）とは分離して git 管理する。
 
 ### 保存タイミング
 - Tier 2 展開前にレシピを生成 → `.recipe.json` として保存
@@ -376,7 +383,7 @@ Tier 2 ファイル（`NN_type.json`）と同じフォルダに `.recipe.json` �
 
 ### テンプレート変更時の再利用
 ```
-1. 既存プロジェクトの .recipe.json を読み込む
+1. プロジェクトの recipes/ フォルダの .recipe.json を読み込む
 2. 新テンプレートの design_guide.md を読む
 3. スキル2 で再変換 → 新テンプレート用の Tier 2 JSON を生成
 ```

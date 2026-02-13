@@ -125,10 +125,11 @@ def main():
         if not matching:
             print(f"エラー: プロジェクトフォルダーが見つかりません: *_{safe_project}")
             sys.exit(1)
-        project_dir   = matching[0]
-        slides_subdir = project_dir / "slides"
-        if not slides_subdir.exists():
-            print(f"エラー: slides/ サブフォルダーがありません: {slides_subdir}")
+        project_dir = matching[0]
+        # 番号フォルダ (00/, 01/, ...) がプロジェクト直下にあるか確認
+        num_folders = [d for d in project_dir.iterdir() if d.is_dir() and d.name.isdigit()]
+        if not num_folders:
+            print(f"エラー: 番号フォルダが見つかりません: {project_dir}")
             sys.exit(1)
         # テンプレートID: CLI指定 > outline.json > デフォルト
         outline_json = project_dir / "outline.json"
@@ -145,9 +146,9 @@ def main():
 
         timestamp   = datetime.now().strftime("%Y%m%d_%H%M")
         output_path = project_dir / (args.output if args.output else f"{timestamp}_{tid_label}_{safe_project}.pptx")
-        print(f"\nTier 2 結合中: {slides_subdir}")
+        print(f"\nTier 2 結合中: {project_dir}")
         from pptx_engine import build_from_slides_dir
-        result_path = build_from_slides_dir(slides_subdir, output_path,
+        result_path = build_from_slides_dir(project_dir, output_path,
                                             export_png=args.thumbnail,
                                             template_id=template_id)
         print(f"\n完了: {result_path}")
@@ -200,10 +201,13 @@ def main():
     project_name = args.project if args.project else title_raw
     # ファイル名に使えない文字を除去
     safe_project = "".join(c for c in project_name if c not in r'\/:*?"<>|')
+    # テンプレートID取得（outline.json の template フィールド or CLI引数）
+    raw_outline = json.loads(Path(args.outline).read_text(encoding="utf-8")) if args.outline else outline
+    template_id = args.template or (raw_outline.get("template") if isinstance(raw_outline, dict) else None)
+    tid_label = template_id or "sx_proposal"
+
     project_dir = SLIDES_DIR / f"{date_str}_{safe_project}"
     project_dir.mkdir(exist_ok=True)
-
-    tid_label = template_id or "sx_proposal"
     if args.output:
         output_name = args.output if args.output.endswith(".pptx") else args.output + ".pptx"
     else:
@@ -211,13 +215,11 @@ def main():
     output_path = project_dir / output_name
 
     # outline.json もプロジェクトフォルダーにコピー保存（テンプレート情報を付与）
-    raw_outline = json.loads(Path(args.outline).read_text(encoding="utf-8")) if args.outline else outline
     if isinstance(raw_outline, dict):
-        raw_outline.setdefault("template", args.template or "sx_proposal")
+        raw_outline.setdefault("template", tid_label)
     (project_dir / "outline.json").write_text(
         json.dumps(raw_outline, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    template_id = args.template or (raw_outline.get("template") if isinstance(raw_outline, dict) else None)
 
     # ─ Tier 2 スタブファイル生成（Tier 1 形式の場合のみ） ─
     # Tier 1 形式の検出: outline が list で各要素に "index" キーがあり body/objects/images がない
