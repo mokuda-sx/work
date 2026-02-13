@@ -1,0 +1,18 @@
+{
+  "index": 7,
+  "type": "content",
+  "title": "対話だけで完結する操作フロー",
+  "message": "要望を伝えるだけで、レシピ設計からPPTX品質確認まで一気通貫で完結する",
+  "pattern": "process_flow",
+  "tone": "progression",
+  "body_points": [
+    "Step1: 要望を伝える → AIが構成案とレシピを自動生成",
+    "Step2: レシピを確認・修正（パターン選択・トーン調整）",
+    "Step3: レシピからPPTXを自動生成（テンプレート準拠）",
+    "Step4: サムネイルで品質チェック → AIが改善を提案"
+  ],
+  "visual": {
+    "labels": ["Step1\n要望", "Step2\nレシピ確認", "Step3\nPPTX生成", "Step4\n品質確認"],
+    "emphasis": "equal"
+  }
+}
