@@ -36,10 +36,11 @@ templates/
 
 ## Claude Code への指示（ここが最重要）
 
-**ユーザーが提案書・スライドの作成を依頼したら、以下の2階層フローで進めること。**
+**ユーザーが提案書・スライドの作成を依頼したら、以下の3階層フローで進めること。**
 
 ```
-Tier 1（軽量インデックス）→ Tier 2（スライド単位の詳細）→ PPTX 結合
+Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テンプレート固有JSON）→ PPTX 結合
+     構成・流れ         何をどう見せるか      座標・色・フォントサイズ
 ```
 
 ### ステップ1: Tier 1 アウトライン生成（全体の骨格）
@@ -75,33 +76,70 @@ code outline_<タイトル>.json
 - チャットで修正依頼が来たら Edit ツールで `outline_<タイトル>.json` を直接編集
 - 「OK」「展開して」などの承認が出たらステップ3へ
 
-### ステップ3: Tier 2 スライド展開（1枚ずつ詳細化）
+### ステップ3: スライドレシピ生成（設計意図の明示化）
 
-**Tier 1 から1枚ずつ詳細な Tier 2 ファイルを生成する。**
-各スライドにトークンを集中させることで、高密度なスライドも品質を保てる。
+**Tier 2 を書く前に、各 content スライドのレシピを生成する。**
+レシピはテンプレート非依存の設計意図書。同じレシピから SX でも JR でも変換できる。
 
 まず `generate_pptx.py --outline` でプロジェクト構造を作成:
 ```bash
 python generate_pptx.py --outline "outline_<タイトル>.json" --project "<タイトル>"
 ```
-→ `slides/YYYYMMDD_<タイトル>/slides/` に Tier 2 スタブファイル（`00_title.json`, `01_agenda.json` ...）が生成される。
+→ `slides/YYYYMMDD_<タイトル>/slides/` に Tier 2 スタブファイルが生成される。
 
-次に **スライド1枚ずつ**、Tier 2 ファイルを展開（Write/Edit ツールで保存）:
+次に `skills/slide_recipe.md` を参照し、**content スライド1枚ずつ**レシピを生成:
+
+**レシピ フォーマット**:
+```json
+{
+  "index": 3, "type": "content",
+  "title": "現状の課題を3軸で整理",
+  "message": "提案書作成には時間・品質・再利用の3つの根本課題がある",
+  "pattern": "three_column",
+  "tone": "problem",
+  "body_points": [
+    "作成に平均8時間、急ぎの案件では徹夜も発生",
+    "デザインの属人化で品質にばらつき",
+    "過去資産が埋もれ、毎回ゼロから作成"
+  ],
+  "visual": {
+    "labels": ["時間の課題", "品質の課題", "再利用の課題"],
+    "emphasis": "equal"
+  }
+}
+```
+
+レシピの保存先: `slides/YYYYMMDD_<タイトル>/slides/NN_<type>.recipe.json`
+
+> `title` / `agenda` / `chapter` / `end` は定型のためレシピ不要。直接 Tier 2 へ。
+
+### ステップ4: Tier 2 スライド展開（レシピ → テンプレート固有 JSON）
+
+**レシピをテンプレート固有の Tier 2 JSON に変換する。**
+テンプレートの `design_guide.md` を読み、座標・色コードを具体化する。
+
+変換ルール（`skills/slide_recipe.md` Section 5 参照）:
+- `pattern` → テンプレートの図解パターン集から座標を取得
+- `tone` → テンプレートの色に変換（problem→neutral色、solution→secondary色 等）
+- `visual.labels` → objects の text に変換
+- `body_points` → body 文字列に変換
+- `message` → subtitle に変換
 
 **Tier 2 フォーマット**（1スライド分）:
 ```json
 {
   "index": 3,
   "type": "content",
-  "title": "スライドタイトル（20〜35文字）",
-  "subtitle": "キーメッセージ（40〜70文字）",
-  "body": "・箇条書き1\n・箇条書き2\n・箇条書き3",
+  "title": "現状の課題を3軸で整理",
+  "subtitle": "提案書作成には時間・品質・再利用の3つの根本課題がある",
+  "body": "・作成に平均8時間、急ぎの案件では徹夜も発生\n・デザインの属人化で品質にばらつき\n・過去資産が埋もれ、毎回ゼロから作成",
   "objects": [
-    {"type": "box", "text": "現状", "left": 3.8, "top": 4.5, "width": 2.5, "height": 0.9,
-     "fill_color": "404040", "font_color": "FFFFFF", "font_size": 13},
-    {"type": "arrow", "left": 6.4, "top": 4.7, "width": 0.6, "height": 0.5, "fill_color": "ED7D31"},
-    {"type": "box", "text": "目標", "left": 7.1, "top": 4.5, "width": 2.5, "height": 0.9,
-     "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 13}
+    {"type": "box", "text": "時間の課題", "left": 0.5, "top": 3.5, "width": 3.9, "height": 1.5,
+     "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "品質の課題", "left": 4.6, "top": 3.5, "width": 3.9, "height": 1.5,
+     "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "再利用の課題", "left": 8.7, "top": 3.5, "width": 3.9, "height": 1.5,
+     "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12}
   ]
 }
 ```
@@ -110,7 +148,7 @@ python generate_pptx.py --outline "outline_<タイトル>.json" --project "<タ�
 
 Tier 2 ファイルの保存先: `slides/YYYYMMDD_<タイトル>/slides/NN_<type>.json`
 
-### ステップ4: PPTX 結合
+### ステップ5: PPTX 結合
 
 全 Tier 2 ファイルが揃ったら結合:
 ```bash
@@ -122,7 +160,7 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 
 一部スライドだけ修正して再結合する場合も同じコマンド。
 
-### ステップ5: 視覚的セルフコレクション（任意）
+### ステップ6: 視覚的セルフコレクション（任意）
 
 **重要: PNG の一括読み込みは禁止。コンテキストが枯渇する。**
 
@@ -151,6 +189,7 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 ### 共通スキル（全テンプレート共通）
 | スキル | 読み込むタイミング |
 |---|---|
+| `skills/slide_recipe.md` | **Tier 2 展開前に必ず参照**（レシピ生成・変換） |
 | `skills/outline_guide.md` | アウトライン設計が難しい場合 |
 | `skills/critique_rubric.md` | サムネイル診断時 |
 | `skills/design_principles.md` | デザイン改善・図解設計時（共通原則）|
@@ -162,7 +201,8 @@ python generate_pptx.py --assemble-only --project "<タイトル>"
 | `templates/<id>/design_guide.md` | スライド設計時（座標・色コード・レイアウト）|
 | `templates/<id>/profile.json` | エンジンが自動参照（Claude Codeが読む必要は通常なし）|
 
-**AI判断ルール**: スライド設計時はまずテンプレートの `design_guide.md` を読む（具体的座標がある）。
+**AI判断ルール**: Tier 2 展開前に `skills/slide_recipe.md` を読みレシピを生成する。
+レシピ→Tier 2 変換時にテンプレートの `design_guide.md` を読む（具体的座標がある）。
 デザインの原則・手法が必要な場合は追加で `skills/design_principles.md` を読む。
 
 ---
@@ -318,11 +358,14 @@ work/
 │       ├── slides/             ← Tier 2 個別スライド JSON（gitignore）
 │       │   ├── 00_title.json
 │       │   ├── 01_agenda.json
+│       │   ├── 03_content.recipe.json  ← レシピ（テンプレート非依存）
+│       │   ├── 03_content.json         ← Tier 2（テンプレート固有）
 │       │   └── ...
 │       ├── *.pptx              ← 結合後 PPTX
 │       └── thumbnails/         ← PNG サムネイル（--thumbnail 時）
 ├── recipes/                    ← 再利用可能なアウトライン（レシピ）
 ├── skills/                     ← 共通スキル（全テンプレート共通）
+│   ├── slide_recipe.md         ← スライドレシピ（設計意図の中間言語）
 │   ├── design_principles.md    ← デザイン共通原則
 │   ├── critique_rubric.md      ← 診断手法
 │   └── outline_guide.md        ← 構成パターン
