@@ -407,10 +407,8 @@ def add_slide(prs: Presentation, slide_data: dict,
     if objects:
         add_objects_to_slide(slide, objects)
     if images and config.supports_image.get(layout_key, True):
-        # _slide_folder があればスライド固有フォルダを画像パスに使用
-        img_dir = Path(slide_data["_slide_folder"]) if "_slide_folder" in slide_data else slides_dir
         add_images_to_slide(slide, images, layout_index=layout_index,
-                            config=config, slides_dir=img_dir)
+                            config=config, slides_dir=slides_dir)
     elif images:
         print(f"  [image] skip: {layout_key} layout does not support images")
 
@@ -430,24 +428,18 @@ def build_from_slides_dir(slides_dir: Path, output_path: Path,
                           export_png: bool = False,
                           template_id: str | None = None) -> Path:
     """
-    slides_dir 内の番号フォルダ (00/, 01/, ...) から slide.json を読み込んで PPTX を組み立てる。
-    フォルダ番号でソートするため、00/ → 01/ → 02/ の順が保証される。
+    slides_dir 内の NN_*.json を番号順に読み込んで PPTX を組み立てる（Tier 2 結合）。
+    ファイル名の先頭数字でソートするため、00_title.json → 01_agenda.json の順が保証される。
     Returns: 保存したファイルのPath
     """
     slides_dir = Path(slides_dir)
-    # 番号フォルダ内の slide.json を読む
-    slide_folders = sorted(
-        [d for d in slides_dir.iterdir() if d.is_dir() and d.name.isdigit()],
-        key=lambda d: int(d.name)
-    )
-    json_files = [d / "slide.json" for d in slide_folders if (d / "slide.json").exists()]
+    json_files = sorted(slides_dir.glob("*.json"), key=lambda p: p.name)
     if not json_files:
-        raise FileNotFoundError(f"slide.json が見つかりません: {slides_dir}")
+        raise FileNotFoundError(f"スライドファイルが見つかりません: {slides_dir}")
     outline = []
     for f in json_files:
         slide_data = json.loads(f.read_text(encoding="utf-8"))
         if isinstance(slide_data, dict):
-            slide_data["_slide_folder"] = str(f.parent)
             outline.append(slide_data)
     print(f"  {len(outline)}枚のスライドを読み込み: {slides_dir}")
     return build_pptx(outline, output_path, export_png=export_png,

@@ -125,11 +125,10 @@ def main():
         if not matching:
             print(f"エラー: プロジェクトフォルダーが見つかりません: *_{safe_project}")
             sys.exit(1)
-        project_dir = matching[0]
-        # 番号フォルダ (00/, 01/, ...) がプロジェクト直下にあるか確認
-        num_folders = [d for d in project_dir.iterdir() if d.is_dir() and d.name.isdigit()]
-        if not num_folders:
-            print(f"エラー: 番号フォルダが見つかりません: {project_dir}")
+        project_dir   = matching[0]
+        slides_subdir = project_dir / "slides"
+        if not slides_subdir.exists():
+            print(f"エラー: slides/ サブフォルダーがありません: {slides_subdir}")
             sys.exit(1)
         # テンプレートID: CLI指定 > outline.json > デフォルト
         outline_json = project_dir / "outline.json"
@@ -146,9 +145,9 @@ def main():
 
         timestamp   = datetime.now().strftime("%Y%m%d_%H%M")
         output_path = project_dir / (args.output if args.output else f"{timestamp}_{tid_label}_{safe_project}.pptx")
-        print(f"\nTier 2 結合中: {project_dir}")
+        print(f"\nTier 2 結合中: {slides_subdir}")
         from pptx_engine import build_from_slides_dir
-        result_path = build_from_slides_dir(project_dir, output_path,
+        result_path = build_from_slides_dir(slides_subdir, output_path,
                                             export_png=args.thumbnail,
                                             template_id=template_id)
         print(f"\n完了: {result_path}")
