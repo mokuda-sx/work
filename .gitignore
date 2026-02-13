@@ -5,28 +5,19 @@
 __pycache__/
 *.pyc
 
-# ルート直下の一時アウトライン（プロジェクト内の outline.json は追跡する）
+# 一時ファイル
 outline_*.json
-
-# テスト用一時ファイル
 test_*.pptx
+*.csv
+*.log
 
-# ツール・ユーティリティ
+# ツール
 gh_cli/
 gh.zip
-run_streamlit.ps1
 
 # Claude Code ローカル設定
 .claude/
 
-# Windows アーティファクト
+# Windows
 nul
-
-# Streamlitエクスポート
-*.csv
-# ログ
-*.log
-# 旧出力フォルダー（slides/ に移行済み）
-output/
-# Office一時ファイル
 ~$*
