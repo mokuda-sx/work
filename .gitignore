@@ -8,10 +8,8 @@ __pycache__/
 # ルート直下の一時アウトライン（プロジェクト内の outline.json は追跡する）
 outline_*.json
 
-# テスト・デバッグ用スクリプト
-test_*.py
-check_*.py
-inspect_*.py
+# テスト用一時ファイル
+test_*.pptx
 
 # ツール・ユーティリティ
 gh_cli/
