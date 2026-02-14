@@ -189,11 +189,57 @@ Gemini → branch を作成 → PR を出す → Claude or 人間がレビュー
 
 ---
 
+## 将来の統合候補
+
+### OpenClaw（ローカル AI ゲートウェイ）
+
+> 状態: **インストール済み（2026-02-14）、未統合**
+> リポジトリ: https://github.com/openclaw/openclaw
+
+#### 概要
+
+ローカルで動く AI アシスタントのゲートウェイ。WhatsApp / Slack / Discord / Teams / LINE 等のメッセージングチャネルから Claude や OpenAI を呼び出せる。
+
+```
+[WhatsApp / Slack / Teams / Discord 等]
+        ↓
+    OpenClaw Gateway (ws://127.0.0.1:18789)
+        ↓
+    Claude / OpenAI（モデル選択可）
+        ↓
+    ツール実行（ブラウザ、スクリーン録画、スキル等）
+```
+
+#### このプロジェクトとの接続可能性
+
+| 側面 | 評価 |
+|---|---|
+| スキルアーキテクチャ（ClawHub） | このプロジェクトの `skills/` と構造が近い。将来の互換性がある |
+| メッセージング経由のトリガー | 「Slack で `スライド作って` → PPTX 生成」が実現できる可能性 |
+| チームアクセス | VSCode を持たないメンバーも提案書生成プロセスにアクセスできる |
+| ファイルシステム操作 | Claude Code のような直接操作はしない（ゲートウェイが主な役割）|
+
+#### 今でない理由
+
+1. **Phase 3 はコンテンツ作業** — 参照ライブラリの構築に OpenClaw は不要
+2. **インターフェース拡張より先に品質** — ゲートウェイを増やす前に生成品質が安定していることが前提
+3. **役割の明確化が先** — Claude Code / Gemini / Copilot の役割分担が確立してから外部チャネルを接続する
+
+#### 統合を検討すべきタイミング
+
+以下のいずれかに当たったとき：
+- Phase 3 完了後、チームでの共同制作ユースケースが出てきたとき
+- 「VSCode を開かずにスライドを依頼したい」という具体的なニーズが生まれたとき
+- OpenClaw のスキル仕様が Agent Skills 標準に収束したとき（他エージェントとの共通化）
+
+---
+
 ## 参考リンク
 
 - [Gemini CLI (GitHub)](https://github.com/google-gemini/gemini-cli)
 - [Gemini Code Assist Agent Mode](https://developers.google.com/gemini-code-assist/docs/agent-mode)
 - [GitHub Copilot Agent Mode (VSCode)](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode)
 - [OpenAI Codex CLI (GitHub)](https://github.com/openai/codex)
+- [OpenClaw (GitHub)](https://github.com/openclaw/openclaw)
 - このプロジェクトの協業ルール: [CONTRIBUTING.md](../CONTRIBUTING.md)
 - Phase 2 回顧録（実験記録）: [retrospective_phase2_20260214.md](retrospective_phase2_20260214.md)
