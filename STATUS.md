@@ -1,10 +1,10 @@
 # 現在の状態
 
-> 最終更新: 2026-02-14 | 更新者: Claude Code (Opus 4.6)
+> 最終更新: 2026-02-14 | 更新者: Claude Code (Opus 4.6) | Phase: 0
 
 ## 今どこにいるか
 
-**Phase 0: 知識の外部化** — 進行中
+**Phase 0: 知識の外部化** -- **完了**
 
 ロードマップ全体: [docs/ROADMAP.md](docs/ROADMAP.md)
 
@@ -16,22 +16,26 @@
 - [x] ビジョン策定ディスカッション（Q1-Q8）→ [docs/discussion_20260214.md](docs/discussion_20260214.md)
 - [x] ビジョン文書 → [docs/vision.md](docs/vision.md)
 - [x] 開発ロードマップ → [docs/ROADMAP.md](docs/ROADMAP.md)
+- [x] README.md 整備 — プロジェクト概要、セットアップ手順、CLI使い方
+- [x] ADR 5本作成 → [docs/adr/](docs/adr/)
+  - 001: 3階層生成プロセス
+  - 002: Recipe層の導入
+  - 003: スキルのオンデマンド読み込み
+  - 004: 全ファイルGit管理ポリシー
+  - 005: テンプレート定義の二重化
 
 ## 次にやること
 
-### Phase 0 残りタスク（優先順）
-
-1. **README.md 整備** — プロジェクト概要、セットアップ手順、基本的な使い方
-2. **ADR 3-5本作成** — 主要な設計判断の理由を記録
-   - なぜ3層にしたか
-   - なぜRecipe層を追加したか
-   - なぜSkillsをオンデマンドにしたか
-   - なぜ全ファイルgit管理にしたか
-   - なぜテンプレート二重定義（JSON+MD）か
-
-### Phase 0 完了後 → Phase 1 へ
+### Phase 1: 契約の定義 へ進む
 
 Phase 1 の詳細は着手時に展開する。概要は [ROADMAP.md](docs/ROADMAP.md) 参照。
+
+主な成果物:
+1. `schemas/outline.schema.json` — Tier 1 の JSON Schema
+2. `schemas/recipe.schema.json` — Recipe の JSON Schema
+3. `schemas/tier2.schema.json` — Tier 2 の JSON Schema
+4. `docs/WORKFLOW.md` — エージェント非依存のプロセス定義
+5. `CONTRIBUTING.md` — 参加方法（人間向け・AI向け）
 
 ## 未来の自分（次セッションのAI）への指示
 
@@ -41,3 +45,44 @@ Phase 1 の詳細は着手時に展開する。概要は [ROADMAP.md](docs/ROADM
 4. 上記「次にやること」から作業を開始する
 5. **作業完了ごとにこのファイルを更新する**
 6. セッション終了前に必ずコミット・プッシュする
+
+## リカバリ手順（セッションが中断した場合）
+
+### 状態の確認
+
+```bash
+# 未コミットの変更があるか
+git status
+
+# 未プッシュのコミットがあるか
+git log --oneline origin/main..HEAD
+
+# 最後のコミットメッセージで何をしていたか
+git log --oneline -5
+```
+
+### 中断パターン別の対応
+
+**A. 未コミットの変更が残っている場合**
+- `git diff` で変更内容を確認
+- 完成しているファイルだけ `git add` → コミット
+- 未完成の変更は内容を確認して判断（破棄 or 継続）
+
+**B. コミット済み・未プッシュの場合**
+- `git log --oneline origin/main..HEAD` で内容を確認
+- 品質に問題なければそのまま `git push`
+- 問題があれば `git reset` で戻してやり直す
+
+**C. 前任のAIが壊れた成果物を残した場合**
+- `git log --oneline origin/main..HEAD` で未プッシュのコミットを特定
+- `git diff <commit>..HEAD --stat` で変更範囲を確認
+- 問題のあるコミットまで `git reset --hard <good_commit>` で戻す
+- STATUS.md の「完了したこと」と実際のファイル状態が一致するか検証する
+
+### 検証チェックリスト
+
+STATUS.md を信用する前に、以下を確認:
+- [ ] 「完了」と書かれたファイルが実際に存在し、内容が正しいか
+- [ ] 空ファイルや内容が重複したファイルがないか
+- [ ] README.md に削除済み機能の記述がないか
+- [ ] ADR が docs/adr/ に配置されているか（ルート直下ではないか）

@@ -7,7 +7,7 @@
 PPTX生成の3層アーキテクチャ（Tier 1 → Recipe → Tier 2 → Assembly）が動作する状態。
 2テンプレート対応（sx_proposal, jr_east）。対話ベースの制作ワークフローが確立。
 
-**次に取り組むべきこと**: Phase 0（知識の外部化）
+**次に取り組むべきこと**: Phase 1（契約の定義）
 
 ---
 
@@ -24,17 +24,17 @@ PPTX生成の3層アーキテクチャ（Tier 1 → Recipe → Tier 2 → Assemb
 | `docs/vision.md` | プロジェクトビジョン（Q1-Q6の結論を圧縮） | 完了 |
 | `docs/discussion_20260214.md` | ビジョン策定ディスカッション記録 | 完了 |
 | `docs/ROADMAP.md` | 本ファイル | 完了 |
-| `README.md` | プロジェクト概要・セットアップ・使い方 | 未着手 |
-| `docs/adr/001_three_tier.md` | ADR: なぜ3層にしたか | 未着手 |
-| `docs/adr/002_recipe_layer.md` | ADR: なぜRecipe層を追加したか | 未着手 |
-| `docs/adr/003_skills_architecture.md` | ADR: なぜSkillsをオンデマンドにしたか | 未着手 |
-| `docs/adr/004_git_all_files.md` | ADR: なぜ全ファイルgit管理にしたか | 未着手 |
-| `docs/adr/005_template_dual_definition.md` | ADR: なぜ二重定義（JSON+MD）か | 未着手 |
+| `README.md` | プロジェクト概要・セットアップ・使い方 | 完了 |
+| `docs/adr/001_three_tier_process.md` | ADR: なぜ3層にしたか | 完了 |
+| `docs/adr/002_recipe_layer.md` | ADR: なぜRecipe層を追加したか | 完了 |
+| `docs/adr/003_skills_on_demand.md` | ADR: なぜSkillsをオンデマンドにしたか | 完了 |
+| `docs/adr/004_git_all_files.md` | ADR: なぜ全ファイルgit管理にしたか | 完了 |
+| `docs/adr/005_template_dual_definition.md` | ADR: なぜ二重定義（JSON+MD）か | 完了 |
 
 ### 完了条件
-- [ ] README.md にセットアップ手順と基本的な使い方が記載されている
-- [ ] ADR が最低3本作成されている
-- [ ] 新規参加者が docs/ を読んで「何を目指しているか」「なぜこう作ったか」を理解できる
+- [x] README.md にセットアップ手順と基本的な使い方が記載されている
+- [x] ADR が最低3本作成されている（5本作成）
+- [x] 新規参加者が docs/ を読んで「何を目指しているか」「なぜこう作ったか」を理解できる
 
 ---
 
