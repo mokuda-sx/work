@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recipe.schema.json",
+  "title": "Slide Recipe",
+  "description": "Template-agnostic design intent for a single content slide. Describes WHAT to show and HOW to show it, without template-specific coordinates or colors.",
+  "type": "object",
+  "required": ["index", "type", "title", "message", "pattern", "tone", "body_points"],
+  "properties": {
+    "index": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Slide position (must match Tier 1 outline index)"
+    },
+    "type": {
+      "type": "string",
+      "const": "content",
+      "description": "Always 'content'. Only content slides have recipes."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Slide title (20-35 characters recommended)"
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Key message this slide conveys (1 sentence, 40-70 characters recommended)"
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Layout pattern name from the pattern catalog (e.g. 'three_column', 'process_flow', 'comparison', 'bullet_list')"
+    },
+    "tone": {
+      "type": "string",
+      "description": "Color/mood direction (e.g. 'problem', 'solution', 'neutral', 'progression', 'highlight')"
+    },
+    "body_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Bullet points (30-50 characters each recommended)"
+    },
+    "image_hint": {
+      "type": "string",
+      "description": "Hint for image generation when pattern is 'text_and_image' (Japanese OK)"
+    },
+    "visual": {
+      "type": "object",
+      "required": ["labels"],
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "Labels for diagram elements (boxes, cards, flow steps)"
+        },
+        "emphasis": {
+          "type": "string",
+          "description": "Which element to emphasize (e.g. 'equal', 'first', 'last', 'center')",
+          "default": "equal"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Visual specification for diagram elements"
+    },
+    "reference": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Path to reference work (e.g. 'refs/excellent_deck/05_content')"
+        },
+        "adaptation": {
+          "type": "string",
+          "description": "What was changed from the reference and why"
+        }
+      },
+      "description": "Optional reference to an existing work this recipe is based on (for imitation/shu-ha-ri workflow)"
+    }
+  },
+  "additionalProperties": false
+}

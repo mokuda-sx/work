@@ -56,9 +56,9 @@ PPTX生成の3層アーキテクチャ（Tier 1 → Recipe → Tier 2 → Assemb
 | `CONTRIBUTING.md` | 参加方法（人間向け・AI向けオンボーディング） |
 
 ### 完了条件
-- [ ] 各 Schema で既存の JSON ファイルがバリデーションを通る
-- [ ] WORKFLOW.md が Claude Code 以外のAIでも理解・実行可能な記述になっている
-- [ ] CONTRIBUTING.md に AI 向けオンボーディング順序が記載されている
+- [x] 各 Schema で既存の JSON ファイルがバリデーションを通る（40/40 通過確認済み）
+- [x] WORKFLOW.md が Claude Code 以外のAIでも理解・実行可能な記述になっている
+- [x] CONTRIBUTING.md に AI 向けオンボーディング順序が記載されている
 
 ---
 

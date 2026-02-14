@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tier2.schema.json",
+  "title": "Tier 2 Slide",
+  "description": "Template-specific slide definition with concrete coordinates, colors, and font sizes. One file per slide.",
+  "type": "object",
+  "required": ["index", "type", "title"],
+  "discriminator": {
+    "propertyName": "type"
+  },
+  "oneOf": [
+    { "$ref": "#/$defs/title_slide" },
+    { "$ref": "#/$defs/agenda_slide" },
+    { "$ref": "#/$defs/chapter_slide" },
+    { "$ref": "#/$defs/content_slide" },
+    { "$ref": "#/$defs/end_slide" }
+  ],
+  "$defs": {
+    "title_slide": {
+      "type": "object",
+      "required": ["index", "type", "title"],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "type": { "const": "title" },
+        "title": { "type": "string", "minLength": 1 },
+        "subtitle": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+
+    "agenda_slide": {
+      "type": "object",
+      "required": ["index", "type", "title", "body"],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "type": { "const": "agenda" },
+        "title": { "type": "string", "minLength": 1 },
+        "master_title": {
+          "type": "string",
+          "description": "Chapter header text (template-dependent, e.g. jr_east)"
+        },
+        "body": {
+          "type": "string",
+          "description": "Agenda items separated by newlines"
+        },
+        "images": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/image" }
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "chapter_slide": {
+      "type": "object",
+      "required": ["index", "type", "title"],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "type": { "const": "chapter" },
+        "title": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+
+    "content_slide": {
+      "type": "object",
+      "required": ["index", "type", "title"],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "type": { "const": "content" },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Slide title (20-35 characters recommended)"
+        },
+        "master_title": {
+          "type": "string",
+          "description": "Chapter title displayed in header area (template-dependent)"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Key message (40-70 characters recommended)"
+        },
+        "body": {
+          "type": "string",
+          "description": "Bullet points as newline-separated string"
+        },
+        "objects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/object" },
+          "description": "Diagram elements (boxes, arrows, text). Do NOT mix with images."
+        },
+        "images": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/image" },
+          "description": "AI-generated images. Do NOT mix with objects."
+        }
+      },
+      "additionalProperties": false,
+      "not": {
+        "required": ["objects", "images"],
+        "description": "objects and images must not coexist on the same slide"
+      }
+    },
+
+    "end_slide": {
+      "type": "object",
+      "required": ["index", "type", "title"],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "type": { "const": "end" },
+        "title": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+
+    "object": {
+      "type": "object",
+      "required": ["type", "left", "top", "width", "height"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["box", "rect", "arrow", "text"],
+          "description": "box/rect: filled rectangle, arrow: right arrow, text: text box"
+        },
+        "text": {
+          "type": "string",
+          "description": "Text content (optional for arrows)"
+        },
+        "left": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Left position in inches"
+        },
+        "top": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Top position in inches"
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Width in inches"
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Height in inches"
+        },
+        "fill_color": {
+          "type": "string",
+          "pattern": "^[0-9A-Fa-f]{6}$",
+          "description": "Fill color as 6-digit hex (e.g. '4472C4')"
+        },
+        "font_color": {
+          "type": "string",
+          "pattern": "^[0-9A-Fa-f]{6}$",
+          "description": "Font color as 6-digit hex (e.g. 'FFFFFF')"
+        },
+        "font_size": {
+          "type": "integer",
+          "minimum": 6,
+          "maximum": 48,
+          "description": "Font size in points"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "image": {
+      "type": "object",
+      "required": ["prompt"],
+      "properties": {
+        "prompt": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Image generation prompt (English, specific and descriptive)"
+        },
+        "model": {
+          "type": "string",
+          "description": "Image generation model (default: gemini-3-pro-image-preview)"
+        },
+        "position": {
+          "type": "string",
+          "const": "auto",
+          "description": "Use template's default image area"
+        },
+        "left": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Left position in inches (when not using auto)"
+        },
+        "top": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Top position in inches"
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Width in inches"
+        },
+        "file": {
+          "type": "string",
+          "description": "Cached image file path (relative to slides dir)"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

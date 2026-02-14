@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "outline.schema.json",
+  "title": "Tier 1 Outline",
+  "description": "Tier 1: presentation outline defining structure and narrative flow. Template-agnostic except for the template field.",
+  "type": "object",
+  "required": ["title", "slides"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Presentation title (20-35 characters recommended)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Overall narrative flow (1-3 sentences explaining chapter connections and purpose)"
+    },
+    "template": {
+      "type": "string",
+      "description": "Template ID (e.g. 'sx_proposal', 'jr_east'). Defaults to 'sx_proposal' if omitted.",
+      "default": "sx_proposal"
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/slide_entry"
+      },
+      "description": "Ordered list of slides. Must start with 'title' and end with 'end'."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "slide_entry": {
+      "type": "object",
+      "required": ["index", "type", "title"],
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Zero-based slide position"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["title", "agenda", "chapter", "content", "end"],
+          "description": "Slide type"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Slide title"
+        },
+        "note": {
+          "type": "string",
+          "description": "Brief note about this slide's purpose or content direction"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

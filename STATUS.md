@@ -1,10 +1,10 @@
 # 現在の状態
 
-> 最終更新: 2026-02-14 | 更新者: Claude Code (Opus 4.6) | Phase: 0
+> 最終更新: 2026-02-14 | 更新者: Claude Code (Sonnet 4.5) | Phase: 1
 
 ## 今どこにいるか
 
-**Phase 0: 知識の外部化** -- **完了**
+**Phase 1: 契約の定義** — **完了**
 
 ロードマップ全体: [docs/ROADMAP.md](docs/ROADMAP.md)
 
@@ -18,24 +18,23 @@
 - [x] 開発ロードマップ → [docs/ROADMAP.md](docs/ROADMAP.md)
 - [x] README.md 整備 — プロジェクト概要、セットアップ手順、CLI使い方
 - [x] ADR 5本作成 → [docs/adr/](docs/adr/)
-  - 001: 3階層生成プロセス
-  - 002: Recipe層の導入
-  - 003: スキルのオンデマンド読み込み
-  - 004: 全ファイルGit管理ポリシー
-  - 005: テンプレート定義の二重化
+- [x] オンボーディングテスト → STATUS.md に組み込み済み
+- [x] JSON Schema 3本 → [schemas/](schemas/)（既存40ファイルで全通過確認済み）
+  - outline.schema.json, recipe.schema.json, tier2.schema.json
+- [x] validate_schemas.py — バリデーション実行スクリプト
+- [x] docs/WORKFLOW.md — エージェント非依存のプロセス定義
+- [x] CONTRIBUTING.md — 人間向け・AI向け参加ガイド
 
 ## 次にやること
 
-### Phase 1: 契約の定義 へ進む
+### Phase 2: 自動化 へ進む
 
-Phase 1 の詳細は着手時に展開する。概要は [ROADMAP.md](docs/ROADMAP.md) 参照。
+Phase 2 の詳細は着手時に展開する。概要は [ROADMAP.md](docs/ROADMAP.md) 参照。
 
-主な成果物:
-1. `schemas/outline.schema.json` — Tier 1 の JSON Schema
-2. `schemas/recipe.schema.json` — Recipe の JSON Schema
-3. `schemas/tier2.schema.json` — Tier 2 の JSON Schema
-4. `docs/WORKFLOW.md` — エージェント非依存のプロセス定義
-5. `CONTRIBUTING.md` — 参加方法（人間向け・AI向け）
+主な成果物（GitHub Actions）:
+1. Schema バリデーション（PR 時に自動実行）
+2. PPTX アセンブル（push 時に自動実行）
+3. 品質チェック（フォーマル評価の自動化）
 
 ## 未来の自分（次セッションのAI）への指示
 
