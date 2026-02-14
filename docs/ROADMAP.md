@@ -7,11 +7,12 @@
 PPTX生成の3層アーキテクチャ（Tier 1 → Recipe → Tier 2 → Assembly）が動作する状態。
 2テンプレート対応（sx_proposal, jr_east）。対話ベースの制作ワークフローが確立。
 
-**次に取り組むべきこと**: Phase 2（自動化基盤）
+**次に取り組むべきこと**: Phase 3（参照ライブラリ）
 
 | フェーズ | 回顧録 |
 |---|---|
 | Phase 0 + Phase 1 | [retrospective_phase1_20260214.md](retrospective_phase1_20260214.md) |
+| Phase 2 | [retrospective_phase2_20260214.md](retrospective_phase2_20260214.md) |
 
 ---
 
@@ -82,9 +83,9 @@ PPTX生成の3層アーキテクチャ（Tier 1 → Recipe → Tier 2 → Assemb
 | `requirements.txt` | Python 依存パッケージ定義 |
 
 ### 完了条件
-- [ ] Tier 2 ファイルの PR に対して自動バリデーションが走る
-- [ ] バリデーション通過後に自動で PPTX が結合される
-- [ ] 品質チェック結果が PR コメントに表示される
+- [x] Tier 2 ファイルの PR に対して自動バリデーションが走る
+- [x] バリデーション通過後に自動で PPTX が結合される
+- [x] 品質チェック結果が PR コメントに表示される
 
 ### 前提条件
 - Phase 1 の JSON Schema が完成していること
