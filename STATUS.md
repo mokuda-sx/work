@@ -1,6 +1,6 @@
 # 現在の状態
 
-> 最終更新: 2026-02-14 | 更新者: Gemini Code Assist | Phase: 2
+> 最終更新: 2026-02-14 | 更新者: Claude Code (Sonnet 4.5) | Phase: 2
 
 ## 今どこにいるか
 
