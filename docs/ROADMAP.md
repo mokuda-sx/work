@@ -7,7 +7,11 @@
 PPTX生成の3層アーキテクチャ（Tier 1 → Recipe → Tier 2 → Assembly）が動作する状態。
 2テンプレート対応（sx_proposal, jr_east）。対話ベースの制作ワークフローが確立。
 
-**次に取り組むべきこと**: Phase 1（契約の定義）
+**次に取り組むべきこと**: Phase 2（自動化基盤）
+
+| フェーズ | 回顧録 |
+|---|---|
+| Phase 0 + Phase 1 | [retrospective_phase1_20260214.md](retrospective_phase1_20260214.md) |
 
 ---
 
