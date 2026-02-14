@@ -165,3 +165,11 @@ Phase 0 ──→ Phase 1 ──→ Phase 2 ──→ Phase 4
 - 各 Phase の詳細タスク分解は、そのフェーズに着手するときに行う（今全部書かない）
 - Phase の進捗は `docs/assessment_YYYYMMDD.md` で定期的に評価する
 - このロードマップ自体も定期的に見直す
+
+## 参考資料
+
+| ドキュメント | 内容 |
+|---|---|
+| [ai_agent_comparison.md](ai_agent_comparison.md) | 各AIエージェントの動作モデル比較・役割分担ガイド |
+| [retrospective_phase1_20260214.md](retrospective_phase1_20260214.md) | Phase 0+1 回顧録 |
+| [retrospective_phase2_20260214.md](retrospective_phase2_20260214.md) | Phase 2 回顧録 |
