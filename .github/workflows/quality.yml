@@ -1,0 +1,68 @@
+name: Quality Check
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'slides/**/slides/*.json'
+      - 'slides/**/recipes/*.json'
+      - 'schemas/*.json'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'slides/**/slides/*.json'
+      - 'slides/**/recipes/*.json'
+      - 'schemas/*.json'
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Schema Validation
+        id: validation
+        run: |
+          output=$(python validate_schemas.py)
+          echo "$output"
+          delimiter="EOF_DELIM"
+          echo "result<<$delimiter" >> $GITHUB_OUTPUT
+          echo "$output" >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
+          if echo "$output" | grep -q "ERRORS: 0"; then
+            echo "status=success" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        env:
+          VALIDATION_RESULT: ${{ steps.validation.outputs.result }}
+          VALIDATION_STATUS: ${{ steps.validation.outputs.status }}
+        with:
+          script: |
+            const output = process.env.VALIDATION_RESULT;
+            const status = process.env.VALIDATION_STATUS;
+            const emoji = status === 'success' ? 'OK' : 'NG';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '## ' + emoji + ' Quality Check
+
+```
+' + output + '
+```'
+            })
+      - name: Fail if errors
+        if: steps.validation.outputs.status == 'failure'
+        run: exit 1

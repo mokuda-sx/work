@@ -1,0 +1,39 @@
+name: Assemble PPTX
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Project folder name under slides/ (e.g. 20260214_proposal)'
+        required: true
+        type: string
+      no_image:
+        description: 'Skip image generation (faster)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Assemble PPTX
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ "${{ inputs.no_image }}" = "true" ]; then
+            python generate_pptx.py --assemble-only --project "${{ inputs.project_name }}" --no-image
+          else
+            python generate_pptx.py --assemble-only --project "${{ inputs.project_name }}"
+          fi
+      - name: Upload PPTX artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pptx-${{ inputs.project_name }}
+          path: slides/${{ inputs.project_name }}/*.pptx
