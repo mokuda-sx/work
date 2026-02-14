@@ -395,7 +395,7 @@ GEMINI_API_KEY=AIzaSy...
 
 依存パッケージ:
 ```bash
-pip install python-pptx anthropic google-genai streamlit python-dotenv
+pip install python-pptx anthropic google-genai python-dotenv Pillow jsonschema
 ```
 
 ---
@@ -404,4 +404,4 @@ pip install python-pptx anthropic google-genai streamlit python-dotenv
 
 - **画像生成エラー**: `GEMINI_API_KEY` が未設定か、`gemini-3-pro-image-preview`（NANOBANAPRO）が使えない状態
 - **git コマンドが動かない**: bash シェルでは PATH に git がない場合あり。PowerShell から実行
-- **Streamlit UI が使いたい**: `start.bat` を実行（ポート 8501）
+- **バリデーションしたい**: `python validate_schemas.py` を実行
