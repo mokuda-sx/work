@@ -1,0 +1,31 @@
+{
+  "refs": [
+    {
+      "id": "sx_ctc_jre_suica",
+      "family": "sx",
+      "source_file": "refs\\sx\\CTC様_JRE様のSuicaアプリ等で実装するサービスの検討支援等に係るご支援のご提案_20251031_v0.1.pptx",
+      "slide_count": 19,
+      "analysis_path": "refs\\sx\\sx_ctc_jre_suica\\analysis.json",
+      "thumbnail_dir": "refs\\sx\\sx_ctc_jre_suica\\thumbnails",
+      "analyzed_at": "2026-02-15"
+    },
+    {
+      "id": "sx_ai_callcenter",
+      "family": "sx",
+      "source_file": "refs\\sx\\自律思考型AI導入支援(コールセンター自動化)_Ph0-1_提案書.pptx",
+      "slide_count": 22,
+      "analysis_path": "refs\\sx\\sx_ai_callcenter\\analysis.json",
+      "thumbnail_dir": "refs\\sx\\sx_ai_callcenter\\thumbnails",
+      "analyzed_at": "2026-02-15"
+    },
+    {
+      "id": "jr_20251209_teireikai",
+      "family": "jr",
+      "source_file": "refs\\jr\\20251209_全体定例会_vSent.pptx",
+      "slide_count": 27,
+      "analysis_path": "refs\\jr\\jr_20251209_teireikai\\analysis.json",
+      "thumbnail_dir": "refs\\jr\\jr_20251209_teireikai\\thumbnails",
+      "analyzed_at": "2026-02-15"
+    }
+  ]
+}

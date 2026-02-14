@@ -1,0 +1,3465 @@
+{
+  "slide_count": 22,
+  "slide_size": {
+    "width": 13.33,
+    "height": 7.5
+  },
+  "design_observations": {
+    "dominant_colors": [],
+    "font_sizes_observed": [
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      20
+    ]
+  },
+  "slides": [
+    {
+      "index": 0,
+      "layout_name": "ドキュメンテーションタイトルあり（写真あり）",
+      "inferred_type": "content",
+      "title": "XXX導入プロジェクト支援（XXX様・フェーズ⓪①）\u000b　ご提案書",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "サブタイトル 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 1.567,
+          "width": 11.34,
+          "height": 0.55,
+          "text": "2025 / 年 / 10"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.447,
+          "width": 11.34,
+          "height": 0.862,
+          "text": "XXX / 導入プロジェクト支援（ / XXX"
+        },
+        {
+          "name": "サブタイトル 1",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 8.63,
+          "top": 6.881,
+          "width": 3.874,
+          "height": 0.452,
+          "text": "提案書 / ID / ："
+        },
+        {
+          "name": "図 6",
+          "shape_type": "PICTURE (13)",
+          "left": 0.997,
+          "top": 7.136,
+          "width": 3.486,
+          "height": 0.26
+        },
+        {
+          "name": "図 4",
+          "shape_type": "PICTURE (13)",
+          "left": 0.997,
+          "top": 2.189,
+          "width": 11.34,
+          "height": 4.645
+        },
+        {
+          "name": "テキスト ボックス 3",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 0.0,
+          "top": 0.0,
+          "width": 2.076,
+          "height": 0.337,
+          "text": "XXXXX / 株式会社 御中",
+          "font_sizes": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "layout_name": "目次・アジェンダページ（写真あり）",
+      "inferred_type": "content",
+      "title": "目次",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "タイトル 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.443,
+          "width": 5.356,
+          "height": 0.866,
+          "text": "目次"
+        },
+        {
+          "name": "図 4",
+          "shape_type": "PICTURE (13)",
+          "left": 0.997,
+          "top": 7.136,
+          "width": 3.486,
+          "height": 0.26
+        },
+        {
+          "name": "図 5",
+          "shape_type": "PICTURE (13)",
+          "left": 7.005,
+          "top": 0.47,
+          "width": 5.331,
+          "height": 6.587
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 1.547,
+          "width": 5.356,
+          "height": 5.51,
+          "text": "背景／目的（弊社理解） / スコープ / 支援内容",
+          "font_sizes": [
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "1. 背景／目的（弊社理解）",
+      "shape_count": 6,
+      "shapes": [
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "1. / 背景／目的（弊社理解）"
+        },
+        {
+          "name": "テキスト ボックス 1",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 1.096,
+          "top": 1.43,
+          "width": 0.787,
+          "height": 3.15,
+          "text": "背景"
+        },
+        {
+          "name": "テキスト ボックス 4",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 1.096,
+          "top": 5.337,
+          "width": 0.787,
+          "height": 1.575,
+          "text": "目的"
+        },
+        {
+          "name": "テキスト ボックス 5",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.035,
+          "top": 5.337,
+          "width": 10.197,
+          "height": 1.575,
+          "text": "「 / XXX / 」導入プロジェクトを円滑に推進",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "フローチャート: 組合せ 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.295,
+          "top": 4.932,
+          "width": 4.743,
+          "height": 0.236
+        },
+        {
+          "name": "テキスト ボックス 7",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.035,
+          "top": 1.431,
+          "width": 10.197,
+          "height": 3.106,
+          "text": "貴社は、コンタクトセンターにおける様々な問い合わせに対応する / 自律思考型 / AI",
+          "font_sizes": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "2. スコープ（1/2）",
+      "shape_count": 19,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "本ご提案における支援スコープは以下の通りと考えております。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "2. / スコープ（ / 1/2"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 1.545,
+          "width": 11.34,
+          "height": 5.512,
+          "text": "対象案件 / 対象フェーズ"
+        },
+        {
+          "name": "表 5",
+          "shape_type": "TABLE (19)",
+          "left": 0.996,
+          "top": 2.017,
+          "width": 11.341,
+          "height": 0.912
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.024,
+          "top": 4.382,
+          "width": 0.669,
+          "height": 0.477,
+          "text": "期間",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.024,
+          "top": 4.932,
+          "width": 0.669,
+          "height": 2.145,
+          "text": "活動 / 概要",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.434,
+          "top": 3.733,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "フェーズ①",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.11,
+          "top": 3.733,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "フェーズ②",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.786,
+          "top": 3.733,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "フェーズ③",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 13",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.106,
+          "top": 4.382,
+          "width": 2.554,
+          "height": 0.477,
+          "text": "3 / ヶ月",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 14",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.786,
+          "top": 4.385,
+          "width": 2.554,
+          "height": 0.477,
+          "text": "TBD / （案件による）",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 15",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.434,
+          "top": 4.932,
+          "width": 2.554,
+          "height": 2.145,
+          "text": "【PoC】 / 現状理解 / 検証計画",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.106,
+          "top": 4.932,
+          "width": 2.554,
+          "height": 2.145,
+          "text": "【MVP / 構築対応 / 】",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.786,
+          "top": 4.935,
+          "width": 2.638,
+          "height": 2.145,
+          "text": "【MVP / 本格展開対応 / 】",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.759,
+          "top": 3.75,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "フェーズ⓪",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.039,
+          "top": 4.399,
+          "width": 2.554,
+          "height": 0.477,
+          "text": "4 / ヶ月",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.759,
+          "top": 4.949,
+          "width": 2.554,
+          "height": 2.145,
+          "text": "【 / 現状分析と戦略策定 / 】",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 21",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.713,
+          "top": 3.641,
+          "width": 5.367,
+          "height": 3.452
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "2. スコープ（2/2）",
+      "shape_count": 20,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①実施事項の概略は以下を想定しております。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "2. / スコープ（ / 2/2"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 1.545,
+          "width": 11.34,
+          "height": 5.512,
+          "text": "実施事項概略 / / / ステップ"
+        },
+        {
+          "name": "正方形/長方形 67",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.384,
+          "top": 2.092,
+          "width": 1.299,
+          "height": 2.145,
+          "text": "現状分析 / と / 戦略策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.39,
+          "top": 4.339,
+          "width": 1.299,
+          "height": 2.145,
+          "text": "PoC",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.066,
+          "top": 2.401,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "現状分析 / （業務把握 / /",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.875,
+          "top": 2.401,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "自動化ポテンシャル診断",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.066,
+          "top": 3.418,
+          "width": 9.614,
+          "height": 0.572,
+          "text": "次期音声基盤検討",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.562,
+          "top": 2.401,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "コンセプトメイク・ / 全体戦略策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 12",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.269,
+          "top": 2.401,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "実施スケジュール策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.066,
+          "top": 4.465,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "現状理解 / （ / 検証",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.896,
+          "top": 4.472,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "検証計画策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 21",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.586,
+          "top": 4.462,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "検証 / 準備",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 22",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.593,
+          "top": 5.129,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "検証 / 実施",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 23",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.909,
+          "top": 5.795,
+          "width": 5.359,
+          "height": 0.572,
+          "text": "MVP / システム要件整理",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.275,
+          "top": 5.322,
+          "width": 2.602,
+          "height": 0.572,
+          "text": "検証結果取り纏め / 次フェーズ計画",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.459,
+          "top": 6.555,
+          "width": 9.055,
+          "height": 0.386,
+          "text": "※PoC / の検証対象業務はプロジェクト開始時に定まっている前提。（新商品センターの未収に関する受電業務を含む）",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "正方形/長方形 27",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.455,
+          "top": 6.841,
+          "width": 7.874,
+          "height": 0.316,
+          "text": "※ / 一次接点（ / Web",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "グループ化 30",
+          "shape_type": "GROUP (6)",
+          "left": 8.529,
+          "top": 4.875,
+          "width": 0.519,
+          "height": 0.404
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "3. 支援内容 （1/4）",
+      "shape_count": 32,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①において以下支援を実施します。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "3. / 支援内容 （ / 1/4"
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.385,
+          "width": 1.22,
+          "height": 0.276,
+          "text": "支援内容",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.385,
+          "width": 1.772,
+          "height": 0.276,
+          "text": "目的",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "インプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.385,
+          "width": 3.543,
+          "height": 0.276,
+          "text": "タスク",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "アウトプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 4",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 1.661,
+          "width": 1.772,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 21",
+          "shape_type": "LINE (9)",
+          "left": 3.635,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 22",
+          "shape_type": "LINE (9)",
+          "left": 6.535,
+          "top": 1.661,
+          "width": 3.543,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 23",
+          "shape_type": "LINE (9)",
+          "left": 10.223,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 5",
+          "shape_type": "LINE (9)",
+          "left": 0.354,
+          "top": 1.661,
+          "width": 1.22,
+          "height": 0.0
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.779,
+          "width": 0.394,
+          "height": 5.118,
+          "text": "現状分析と戦略策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.812,
+          "top": 1.779,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "現状分析",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 30",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.808,
+          "top": 3.496,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "自動化ポテンシャル診断",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.815,
+          "top": 5.232,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "コンセプトメイク / / / 全体戦略",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 32",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 3.461,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 33",
+          "shape_type": "LINE (9)",
+          "left": 1.746,
+          "top": 5.128,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 38",
+          "shape_type": "LINE (9)",
+          "left": 1.712,
+          "top": 6.885,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "正方形/長方形 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.793,
+          "width": 1.772,
+          "height": 1.616,
+          "text": "自動化対象となる業務と関連システムの / 特定",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.779,
+          "width": 2.756,
+          "height": 1.616,
+          "text": "業務マニュアル / / / フロー",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.779,
+          "width": 3.688,
+          "height": 1.616,
+          "text": "業務 / 及びシステム部門 / へのインタビュー",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 12",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.779,
+          "width": 2.756,
+          "height": 1.616,
+          "text": "業務分類表（業務 / ／ / 利用システム",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 28",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 3.496,
+          "width": 1.772,
+          "height": 1.639,
+          "text": "生成 / AI/AI( / 主に",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 29",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 3.482,
+          "width": 2.756,
+          "height": 1.639,
+          "text": "コンタクトセンター関連情報 / 業務カテゴリ別件数や / AHT",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 43",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 3.482,
+          "width": 3.543,
+          "height": 1.639,
+          "text": "業務分類ごとの自動化難易度の検討 / 定型・非定型／後続処理有無／利用データ（参照システム）の有無等 / 自動化インパクトの算出",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 44",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 3.482,
+          "width": 2.756,
+          "height": 1.639,
+          "text": "業務分類ごとの自動化 / による効果と難易度一覧",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 5.174,
+          "width": 1.772,
+          "height": 1.631,
+          "text": "生成 / AI/AI / 活用ポイントの全体像策定と導入業務の優先度・順番の合意",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 5.174,
+          "width": 2.756,
+          "height": 1.631,
+          "text": "業務分類ごとの自動化による効果と難易度一覧 / 顧客の自動化要望業務",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 5.174,
+          "width": 3.543,
+          "height": 1.631,
+          "text": "コンセプトメイク / / / 全体戦略の策定",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 34",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 5.174,
+          "width": 2.756,
+          "height": 1.631,
+          "text": "コンセプト更新 / 全体戦略 / （展開ロードマップ）",
+          "font_sizes": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "3. 支援内容 （2/4）",
+      "shape_count": 28,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①において以下支援を実施します。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "3. / 支援内容 （ / 2/4"
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.385,
+          "width": 1.22,
+          "height": 0.276,
+          "text": "支援内容",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.385,
+          "width": 1.772,
+          "height": 0.276,
+          "text": "目的",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "インプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.385,
+          "width": 3.543,
+          "height": 0.276,
+          "text": "タスク",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "アウトプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 4",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 1.661,
+          "width": 1.772,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 21",
+          "shape_type": "LINE (9)",
+          "left": 3.635,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 22",
+          "shape_type": "LINE (9)",
+          "left": 6.535,
+          "top": 1.661,
+          "width": 3.543,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 23",
+          "shape_type": "LINE (9)",
+          "left": 10.223,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 5",
+          "shape_type": "LINE (9)",
+          "left": 0.354,
+          "top": 1.661,
+          "width": 1.22,
+          "height": 0.0
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.779,
+          "width": 0.394,
+          "height": 5.118,
+          "text": "現状分析と戦略策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.812,
+          "top": 1.779,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "次期音声基盤検討",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 30",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.808,
+          "top": 3.496,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "実施スケジュール策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.815,
+          "top": 5.232,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "-",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 32",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 3.461,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 33",
+          "shape_type": "LINE (9)",
+          "left": 1.746,
+          "top": 5.128,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 38",
+          "shape_type": "LINE (9)",
+          "left": 1.712,
+          "top": 6.885,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "正方形/長方形 35",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.818,
+          "width": 1.772,
+          "height": 1.61,
+          "text": "業務の自動化を見据えた音声基盤の検討",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 36",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.804,
+          "width": 2.756,
+          "height": 1.61,
+          "text": "システム一覧 / PBX/IVR / フロー",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 37",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.804,
+          "width": 3.543,
+          "height": 1.61,
+          "text": "XXX / 等自動化システム導入を前提とした音声基盤要件の整理 / 音声基盤候補ソリューションの調査",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 39",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.804,
+          "width": 2.756,
+          "height": 1.61,
+          "text": "音声基盤要件 / 候補ソリューション比較資料",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 40",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 3.496,
+          "width": 1.772,
+          "height": 1.605,
+          "text": "自動化に向けた概要とスケジュールとりまとめ",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 41",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 3.496,
+          "width": 2.756,
+          "height": 1.605,
+          "text": "業務分類ごとの自動化による効果と難易度一覧 / コンセプト / /",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 42",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 3.496,
+          "width": 3.543,
+          "height": 1.605,
+          "text": "自動化に向けた / 全体戦略 / に則ったスケジュール策定（音声基盤更改も含む）",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 45",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 3.496,
+          "width": 2.756,
+          "height": 1.605,
+          "text": "実施スケジュール",
+          "font_sizes": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "3. 支援内容 （3/4）",
+      "shape_count": 31,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①において以下支援を実施します。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "3. / 支援内容 （ / 3/4"
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.793,
+          "width": 1.772,
+          "height": 1.635,
+          "text": "検証 / 計画策定・シナリオ検討のための対象業務内容の把握",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.779,
+          "width": 2.756,
+          "height": 1.7,
+          "text": "対象業務に関する業務マニュアル / / / フロー",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.779,
+          "width": 3.543,
+          "height": 1.651,
+          "text": "検証 / 対象業務の把握 / インプット情報より対象業務内容を理解",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.385,
+          "width": 1.22,
+          "height": 0.276,
+          "text": "支援内容",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.385,
+          "width": 1.772,
+          "height": 0.276,
+          "text": "目的",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "インプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.385,
+          "width": 3.543,
+          "height": 0.276,
+          "text": "タスク",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "アウトプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 4",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 1.661,
+          "width": 1.772,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 21",
+          "shape_type": "LINE (9)",
+          "left": 3.635,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 22",
+          "shape_type": "LINE (9)",
+          "left": 6.535,
+          "top": 1.661,
+          "width": 3.543,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 23",
+          "shape_type": "LINE (9)",
+          "left": 10.223,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 5",
+          "shape_type": "LINE (9)",
+          "left": 0.354,
+          "top": 1.661,
+          "width": 1.22,
+          "height": 0.0
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.779,
+          "width": 0.394,
+          "height": 5.118,
+          "text": "PoC",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.812,
+          "top": 1.779,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "現状理解",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 30",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.808,
+          "top": 3.496,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "検証計画策定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.815,
+          "top": 5.232,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "検証準備",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 32",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 3.461,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 33",
+          "shape_type": "LINE (9)",
+          "left": 1.746,
+          "top": 5.128,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "正方形/長方形 34",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 3.448,
+          "width": 1.772,
+          "height": 1.746,
+          "text": "検証 / 実施に向けた業務視点、技術視点での検証ポイントや方法の定義",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 35",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 3.439,
+          "width": 2.756,
+          "height": 1.746,
+          "text": "業務マニュアル / / / フロー",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 36",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 3.439,
+          "width": 3.543,
+          "height": 1.746,
+          "text": "技術視点から検証項目と検証手法の案を提示。 / 技術制約を踏まえて、実行可能な検証方式の案整理。 / 技術観点から検証項目・方式の妥当性最終確認。",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 37",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 3.439,
+          "width": 2.756,
+          "height": 1.746,
+          "text": "検証計画書（検証シナリオ / / / ポイント",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "直線コネクタ 38",
+          "shape_type": "LINE (9)",
+          "left": 1.712,
+          "top": 6.885,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "正方形/長方形 39",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 5.162,
+          "width": 1.772,
+          "height": 1.71,
+          "text": "検証の簡易シナリオ、対話スクリプトの / 定義と / 検証用",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 40",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 5.162,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "検証計画書 / 検証利用データ",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 41",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 5.162,
+          "width": 3.543,
+          "height": 1.71,
+          "text": "AI / オペレーターインプット作成 / 技術仕様と",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 42",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 5.162,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "検証 / 対話スクリプト / 検証用システム環境",
+          "font_sizes": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "3. 支援内容 （4/4）",
+      "shape_count": 32,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①において以下支援を実施します。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "3. / 支援内容 （ / 4"
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.385,
+          "width": 1.22,
+          "height": 0.276,
+          "text": "支援内容",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.385,
+          "width": 1.772,
+          "height": 0.276,
+          "text": "目的",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "インプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.385,
+          "width": 3.543,
+          "height": 0.276,
+          "text": "タスク",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.385,
+          "width": 2.756,
+          "height": 0.276,
+          "text": "アウトプット",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 4",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 1.661,
+          "width": 1.772,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 21",
+          "shape_type": "LINE (9)",
+          "left": 3.635,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 22",
+          "shape_type": "LINE (9)",
+          "left": 6.535,
+          "top": 1.661,
+          "width": 3.543,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 23",
+          "shape_type": "LINE (9)",
+          "left": 10.223,
+          "top": 1.661,
+          "width": 2.756,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 5",
+          "shape_type": "LINE (9)",
+          "left": 0.354,
+          "top": 1.661,
+          "width": 1.22,
+          "height": 0.0
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.354,
+          "top": 1.779,
+          "width": 0.394,
+          "height": 5.118,
+          "text": "PoC",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.812,
+          "top": 1.779,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "検証実施",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 30",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.808,
+          "top": 3.496,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "MVP / システム / 要件整理",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.815,
+          "top": 5.232,
+          "width": 0.787,
+          "height": 1.658,
+          "text": "検証結果取り纏め / 次フェーズ計画",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 32",
+          "shape_type": "LINE (9)",
+          "left": 1.719,
+          "top": 3.461,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 33",
+          "shape_type": "LINE (9)",
+          "left": 1.746,
+          "top": 5.128,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "直線コネクタ 38",
+          "shape_type": "LINE (9)",
+          "left": 1.712,
+          "top": 6.885,
+          "width": 11.26,
+          "height": 0.014
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 1.707,
+          "width": 1.772,
+          "height": 1.71,
+          "text": "AI / オペレーターの実現性、応答品質の評価と取り纏め",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 1.707,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "検証 / 対話スクリプト / 検証用システム環境",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 1.707,
+          "width": 3.543,
+          "height": 1.71,
+          "text": "実行シナリオに基づき、評価と改善の推進。検証結果取り纏め。 / 検証パターンに基づく技術的な応答品質の集計、調整方針を策定。",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 1.707,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "検証結果 / 検証 / 課題・対応方針",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 12",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 3.52,
+          "width": 1.772,
+          "height": 1.71,
+          "text": "MVP / 構築を見据えたスコープ、要件を仮定義",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 13",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 3.511,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "業務マニュアル / / / フロー",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 14",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 3.511,
+          "width": 3.543,
+          "height": 1.71,
+          "text": "技術観点での実現性・制約をレビュー。 / AI / アプリの設計構成要素（",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 15",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 3.511,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "MVP / システム要件書",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.719,
+          "top": 5.168,
+          "width": 1.772,
+          "height": 1.71,
+          "text": "検証結果、 / MVP / 要件の",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.635,
+          "top": 5.168,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "検証結果 / MVP / システム要件書",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.535,
+          "top": 5.168,
+          "width": 3.543,
+          "height": 1.71,
+          "text": "検証結果を踏まえて、 / MVP / のスコープや要件を取り纏め。",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "正方形/長方形 34",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.223,
+          "top": 5.168,
+          "width": 2.756,
+          "height": 1.71,
+          "text": "次フェーズ計画書",
+          "font_sizes": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "4. スケジュール",
+      "shape_count": 21,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①は / 4 / ヶ月間（"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "4. / スケジュール"
+        },
+        {
+          "name": "表 5",
+          "shape_type": "TABLE (19)",
+          "left": 0.405,
+          "top": 1.222,
+          "width": 12.585,
+          "height": 5.706
+        },
+        {
+          "name": "矢印: 五方向 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.156,
+          "top": 2.254,
+          "width": 2.504,
+          "height": 0.591,
+          "text": "現状分析 / （業務 / /",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.804,
+          "top": 2.254,
+          "width": 3.739,
+          "height": 0.591,
+          "text": "自動化ポテンシャル診断",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.699,
+          "top": 2.254,
+          "width": 3.114,
+          "height": 0.591,
+          "text": "コンセプトメイク / / / 全体戦略策定",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.881,
+          "top": 2.254,
+          "width": 1.416,
+          "height": 0.591,
+          "text": "スケジュール / 策定",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.72,
+          "top": 3.024,
+          "width": 10.577,
+          "height": 0.591,
+          "text": "次期音声基盤検討",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.156,
+          "top": 4.061,
+          "width": 1.184,
+          "height": 0.591,
+          "text": "PoC / ① / 現状理解",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 12",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.105,
+          "top": 4.762,
+          "width": 5.844,
+          "height": 0.591,
+          "text": "PoC / ② 検証準備 / /",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 13",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.699,
+          "top": 6.14,
+          "width": 3.287,
+          "height": 0.591,
+          "text": "MVP / システム要件整理",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 14",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.287,
+          "top": 2.059,
+          "width": 0.689,
+          "height": 4.574,
+          "text": "開始 / 準備 / ※1",
+          "font_sizes": [
+            12,
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 15",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.459,
+          "top": 6.895,
+          "width": 7.874,
+          "height": 0.316,
+          "text": "※1 / ： / XXX",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "矢印: 五方向 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.457,
+          "top": 4.061,
+          "width": 3.212,
+          "height": 0.591,
+          "text": "PoC / ② 検証準備 / /",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.105,
+          "top": 5.446,
+          "width": 5.881,
+          "height": 0.591,
+          "text": "PoC / ③ 検証準備 / /",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.804,
+          "top": 4.762,
+          "width": 1.184,
+          "height": 0.591,
+          "text": "PoC / ② / 現状理解",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.804,
+          "top": 5.446,
+          "width": 1.184,
+          "height": 0.591,
+          "text": "PoC / ③ / 現状理解",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 21",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.799,
+          "top": 4.061,
+          "width": 1.184,
+          "height": 0.591,
+          "text": "PoC / ① / 取り纏め",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 22",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.048,
+          "top": 4.762,
+          "width": 1.184,
+          "height": 0.591,
+          "text": "PoC / ② / 取り纏め",
+          "font_sizes": [
+            13
+          ]
+        },
+        {
+          "name": "矢印: 五方向 23",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.037,
+          "top": 5.446,
+          "width": 1.184,
+          "height": 0.591,
+          "text": "PoC / ③ / 取り纏め",
+          "font_sizes": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "5. 体制・役割（1/3）-体制図-",
+      "shape_count": 31,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①は以下の支援体制で推進いたします（弊社プロジェクト推進要員は最大 / 7 / 名を想定）。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "5. / 体制・役割 / （"
+        },
+        {
+          "name": "テキスト ボックス 3",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 5.27,
+          "top": 5.397,
+          "width": 2.362,
+          "height": 0.472,
+          "text": "SX / 森（ / 50%",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 4",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 5.27,
+          "top": 5.082,
+          "width": 2.362,
+          "height": 0.315,
+          "text": "現場リーダー",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 5",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 5.269,
+          "top": 3.809,
+          "width": 2.362,
+          "height": 0.472,
+          "text": "SX / 山田（ / 30%",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 15",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 5.269,
+          "top": 3.494,
+          "width": 2.362,
+          "height": 0.315,
+          "text": "PL",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "グループ化 16",
+          "shape_type": "GROUP (6)",
+          "left": 5.269,
+          "top": 2.527,
+          "width": 2.362,
+          "height": 0.787
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.05,
+          "top": 1.897,
+          "width": 2.534,
+          "height": 5.157,
+          "text": "XXX / 様",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "テキスト ボックス 25",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.426,
+          "top": 2.527,
+          "width": 1.732,
+          "height": 0.787,
+          "text": "全体 / PM",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 26",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 5.269,
+          "top": 6.384,
+          "width": 2.362,
+          "height": 0.472,
+          "text": "SX TBD / ①・②・③・④ / （",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 28",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 5.269,
+          "top": 6.069,
+          "width": 2.362,
+          "height": 0.315,
+          "text": "現場メンバー",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 29",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 8.334,
+          "top": 4.303,
+          "width": 2.362,
+          "height": 0.472,
+          "text": "シンセリオ / 浜崎（ / 20%",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 31",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 8.334,
+          "top": 3.988,
+          "width": 2.362,
+          "height": 0.315,
+          "text": "推進サポート",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "グループ化 35",
+          "shape_type": "GROUP (6)",
+          "left": 8.348,
+          "top": 5.076,
+          "width": 2.362,
+          "height": 0.787
+        },
+        {
+          "name": "直線コネクタ 41",
+          "shape_type": "LINE (9)",
+          "left": 6.451,
+          "top": 3.315,
+          "width": 0.0,
+          "height": 0.18
+        },
+        {
+          "name": "直線コネクタ 43",
+          "shape_type": "LINE (9)",
+          "left": 6.451,
+          "top": 4.282,
+          "width": 0.0,
+          "height": 0.801
+        },
+        {
+          "name": "直線コネクタ 44",
+          "shape_type": "LINE (9)",
+          "left": 6.451,
+          "top": 5.87,
+          "width": 0.0,
+          "height": 0.199
+        },
+        {
+          "name": "直線コネクタ 71",
+          "shape_type": "LINE (9)",
+          "left": 7.264,
+          "top": 3.469,
+          "width": 0.257,
+          "height": 1.884
+        },
+        {
+          "name": "テキスト ボックス 50",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 8.348,
+          "top": 2.843,
+          "width": 2.362,
+          "height": 0.472,
+          "text": "SX / 桑原（適宜）",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 51",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 8.348,
+          "top": 2.528,
+          "width": 2.362,
+          "height": 0.315,
+          "text": "XXXXX / 様担当責任者",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "直線コネクタ 53",
+          "shape_type": "LINE (9)",
+          "left": 7.632,
+          "top": 5.628,
+          "width": 0.716,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 56",
+          "shape_type": "LINE (9)",
+          "left": 7.632,
+          "top": 3.079,
+          "width": 0.716,
+          "height": 0.001
+        },
+        {
+          "name": "正方形/長方形 59",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.96,
+          "top": 1.897,
+          "width": 6.063,
+          "height": 5.157,
+          "text": "XXXXX / 様・ / SX",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "テキスト ボックス 60",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.426,
+          "top": 3.499,
+          "width": 1.732,
+          "height": 0.787,
+          "text": "PL",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 61",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.426,
+          "top": 5.082,
+          "width": 1.732,
+          "height": 1.774,
+          "text": "業務部門 / システム部門",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "直線コネクタ 62",
+          "shape_type": "LINE (9)",
+          "left": 3.292,
+          "top": 3.315,
+          "width": 0.0,
+          "height": 0.184
+        },
+        {
+          "name": "直線コネクタ 64",
+          "shape_type": "LINE (9)",
+          "left": 3.292,
+          "top": 4.286,
+          "width": 0.0,
+          "height": 0.796
+        },
+        {
+          "name": "直線コネクタ 66",
+          "shape_type": "LINE (9)",
+          "left": 4.584,
+          "top": 4.476,
+          "width": 0.376,
+          "height": 0.0
+        },
+        {
+          "name": "楕円 67",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.431,
+          "top": 4.83,
+          "width": 0.039,
+          "height": 0.039
+        },
+        {
+          "name": "直線コネクタ 71",
+          "shape_type": "LINE (9)",
+          "left": 6.47,
+          "top": 4.85,
+          "width": 3.059,
+          "height": 0.226
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "5. 体制・役割（2/3）-役割-",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "フェーズ⓪①は以下の支援体制で推進いたします（弊社プロジェクト推進要員は最大 / 7 / 名を想定）。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "5. / 体制 / ・役割",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "コンテンツ プレースホルダー 5",
+          "shape_type": "TABLE (19)",
+          "left": 0.741,
+          "top": 1.346,
+          "width": 11.85,
+          "height": 5.734
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "5. 体制・役割（3/3）-SX参画メンバーの紹介-",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "5. / 体制・役割 / （"
+        },
+        {
+          "name": "表 3",
+          "shape_type": "TABLE (19)",
+          "left": 0.407,
+          "top": 1.245,
+          "width": 12.465,
+          "height": 5.986
+        },
+        {
+          "name": "図 4",
+          "shape_type": "PICTURE (13)",
+          "left": 7.672,
+          "top": 0.991,
+          "width": 0.955,
+          "height": 1.22
+        },
+        {
+          "name": "図 5",
+          "shape_type": "PICTURE (13)",
+          "left": 10.71,
+          "top": 0.991,
+          "width": 0.955,
+          "height": 1.22
+        },
+        {
+          "name": "図 6",
+          "shape_type": "PICTURE (13)",
+          "left": 4.563,
+          "top": 0.991,
+          "width": 0.989,
+          "height": 1.22
+        },
+        {
+          "name": "図 7",
+          "shape_type": "PICTURE (13)",
+          "left": 1.394,
+          "top": 0.996,
+          "width": 1.048,
+          "height": 1.26
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "6. ご依頼事項",
+      "shape_count": 3,
+      "shapes": [
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "プロジェクト推進に際し、以下の点、ご協力の程、宜しくお願い致します。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "6 / . / ご依頼事項"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 1.545,
+          "width": 11.34,
+          "height": 5.512,
+          "text": "XXX / レクチャー / プロジェクトを推進する上で",
+          "font_sizes": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "7. お見積り",
+      "shape_count": 9,
+      "shapes": [
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "7 / . / お見積り"
+        },
+        {
+          "name": "テキスト ボックス 6",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 1.269,
+          "top": 4.442,
+          "width": 11.111,
+          "height": 1.75,
+          "text": "サービス料金に消費税相当額を加えた金額をご請求させて頂きます。 / サービス料金には貴社オフィスへの交通費等の実費が含まれております。 / 契約書は弊社の準委任契約書を使用させていただきます。",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.269,
+          "top": 1.491,
+          "width": 2.83,
+          "height": 0.787,
+          "text": "サービス料金",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.269,
+          "top": 2.42,
+          "width": 2.83,
+          "height": 0.787,
+          "text": "プロジェクト期間",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.269,
+          "top": 3.348,
+          "width": 2.83,
+          "height": 0.787,
+          "text": "契約形態",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.178,
+          "top": 1.491,
+          "width": 8.201,
+          "height": 0.787,
+          "text": "XX,000,000 / 円（消費税別） / （初回特別割引価格）",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.178,
+          "top": 2.42,
+          "width": 8.201,
+          "height": 0.787,
+          "text": "20XX / 年 / X",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.178,
+          "top": 3.348,
+          "width": 8.201,
+          "height": 0.787,
+          "text": "準委任契約",
+          "font_sizes": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "8. Why SIGMAXYZ（1/3）",
+      "shape_count": 10,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "本プロジェクトを成功に導くための / 3 / つのポイントにおいて弊社は知見・実績を有しており、協業パートナーとして最適だと考えています。"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "8. Why SIGMAXYZ / （ / 1/3"
+        },
+        {
+          "name": "二等辺三角形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.446,
+          "top": 2.533,
+          "width": 2.441,
+          "height": 1.929,
+          "text": "Why / SIGMAXYZ",
+          "font_sizes": [
+            17
+          ]
+        },
+        {
+          "name": "グループ化 8",
+          "shape_type": "GROUP (6)",
+          "left": 0.871,
+          "top": 3.903,
+          "width": 4.818,
+          "height": 0.546
+        },
+        {
+          "name": "グループ化 12",
+          "shape_type": "GROUP (6)",
+          "left": 7.64,
+          "top": 3.903,
+          "width": 4.835,
+          "height": 0.546
+        },
+        {
+          "name": "正方形/長方形 13",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.304,
+          "top": 4.57,
+          "width": 4.724,
+          "height": 0.546,
+          "text": "プロジェクト推進の知見"
+        },
+        {
+          "name": "正方形/長方形 14",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.871,
+          "top": 1.969,
+          "width": 4.818,
+          "height": 1.777,
+          "text": "貴社 / XXX / がターゲットとしているコンタクトセンターの構築・刷新プロジェクトの　知見を保有",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 15",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.64,
+          "top": 1.969,
+          "width": 4.818,
+          "height": 1.777,
+          "text": "XXX / の技術要素である生成 / AI",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.15,
+          "top": 5.224,
+          "width": 9.033,
+          "height": 1.492,
+          "text": "業務変革や / IT / システム刷新等、多くのプロジェクト推進の実績があり、",
+          "font_sizes": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "8. Why SIGMAXYZ（2/3）–コンタクトセンター支援実績・事例-",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "8. Why SIGMAXYZ / （ / 2/3"
+        },
+        {
+          "name": "表 3",
+          "shape_type": "TABLE (19)",
+          "left": 1.041,
+          "top": 0.877,
+          "width": 11.251,
+          "height": 6.233
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "8. Why SIGMAXYZ（3/3） –生成AI関連支援実績・事例-",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "8. Why SIGMAXYZ / （ / 3/3"
+        },
+        {
+          "name": "表 3",
+          "shape_type": "TABLE (19)",
+          "left": 1.041,
+          "top": 1.07,
+          "width": 11.251,
+          "height": 5.906
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "layout_name": "コンテンツページヘッドラインあり（cofidential）",
+      "inferred_type": "content",
+      "title": "（Appendix：生成AI関連書籍）",
+      "shape_count": 21,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "字幕 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.784,
+          "width": 11.34,
+          "height": 0.538,
+          "text": "各分野のプロフェッショナルによる情報発信（書籍）"
+        },
+        {
+          "name": "タイトル 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.996,
+          "top": 0.459,
+          "width": 11.355,
+          "height": 0.3,
+          "text": "（ / Appendix / ：生成"
+        },
+        {
+          "name": "スライド番号プレースホルダー 5",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 9.408,
+          "top": 7.136,
+          "width": 3.15,
+          "height": 0.285
+        },
+        {
+          "name": "角丸四角形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.923,
+          "top": 5.71,
+          "width": 3.455,
+          "height": 1.299
+        },
+        {
+          "name": "テキスト ボックス 12",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 6.923,
+          "top": 5.519,
+          "width": 3.455,
+          "height": 1.442,
+          "text": "発売当週に早くも増刷決定！ / Amazon / 売れ筋ランキング",
+          "font_sizes": [
+            7,
+            9,
+            12
+          ]
+        },
+        {
+          "name": "図 13",
+          "shape_type": "PICTURE (13)",
+          "left": 11.185,
+          "top": 3.147,
+          "width": 1.624,
+          "height": 2.255
+        },
+        {
+          "name": "図 14",
+          "shape_type": "PICTURE (13)",
+          "left": 8.191,
+          "top": 3.146,
+          "width": 1.624,
+          "height": 2.258
+        },
+        {
+          "name": "角丸四角形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.459,
+          "top": 5.948,
+          "width": 2.35,
+          "height": 1.061
+        },
+        {
+          "name": "角丸四角形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.98,
+          "top": 1.25,
+          "width": 5.63,
+          "height": 5.793
+        },
+        {
+          "name": "グループ化 17",
+          "shape_type": "GROUP (6)",
+          "left": 1.765,
+          "top": 3.219,
+          "width": 1.024,
+          "height": 1.024
+        },
+        {
+          "name": "テキスト ボックス 20",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 7.002,
+          "top": 0.994,
+          "width": 5.756,
+          "height": 1.534,
+          "text": "シグマクシスがお客様プロジェクトで蓄積した知見と、世界の先端技術の調査レポートや市場予測データを踏まえて見解を整理し、下記を提供 / 自律的にタスクを遂行する「 / AI",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "テキスト ボックス 21",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.786,
+          "top": 1.828,
+          "width": 2.7,
+          "height": 1.414,
+          "text": "AI / エージェント革命 / 「知能」を雇う時代へ",
+          "font_sizes": [
+            11,
+            20
+          ]
+        },
+        {
+          "name": "角丸四角形 139",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.745,
+          "top": 1.545,
+          "width": 1.024,
+          "height": 0.197,
+          "text": "AI",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "テキスト ボックス 23",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 10.657,
+          "top": 6.225,
+          "width": 0.982,
+          "height": 0.388,
+          "text": "シグマクシス / 寄稿・論文・書籍",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "グラフィックス 24",
+          "shape_type": "PICTURE (13)",
+          "left": 11.826,
+          "top": 6.025,
+          "width": 0.787,
+          "height": 0.787
+        },
+        {
+          "name": "図 25",
+          "shape_type": "PICTURE (13)",
+          "left": 0.83,
+          "top": 1.498,
+          "width": 1.428,
+          "height": 2.084
+        },
+        {
+          "name": "テキスト ボックス 26",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 1.449,
+          "top": 5.093,
+          "width": 4.471,
+          "height": 1.64,
+          "text": "はじめに / ようこそ、「知能」を雇う時代へ / 第",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "図 27",
+          "shape_type": "PICTURE (13)",
+          "left": 7.002,
+          "top": 2.773,
+          "width": 1.687,
+          "height": 2.273
+        },
+        {
+          "name": "図 28",
+          "shape_type": "PICTURE (13)",
+          "left": 9.956,
+          "top": 2.773,
+          "width": 1.532,
+          "height": 2.273
+        },
+        {
+          "name": "テキスト ボックス 29",
+          "shape_type": "TEXT_BOX (17)",
+          "left": 2.929,
+          "top": 3.027,
+          "width": 3.256,
+          "height": 1.825,
+          "text": "溝畑 　彰洋 / シグマクシス　常務執行役員 / 新井 　克人",
+          "font_sizes": [
+            10,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "layout_name": "コンテンツページヘッドラインあり（コピーライト通常）",
+      "inferred_type": "content",
+      "title": "（Appendix：プロジェクト事務手続き）",
+      "shape_count": 12,
+      "shapes": [
+        {
+          "name": "タイトル 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.459,
+          "width": 11.34,
+          "height": 0.3,
+          "text": "（ / Appendix / ：プロジェクト事務手続き）"
+        },
+        {
+          "name": "正方形/長方形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 1.562,
+          "width": 11.34,
+          "height": 0.85
+        },
+        {
+          "name": "正方形/長方形 2",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 1.051,
+          "width": 2.638,
+          "height": 1.893,
+          "text": "月次作業完了報告書",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 3.022,
+          "width": 2.638,
+          "height": 1.893,
+          "text": "プロジェクト満足度評価",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 4.992,
+          "width": 2.638,
+          "height": 1.893,
+          "text": "電子サインサービス / (DocuSign) / 利用",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.716,
+          "top": 1.051,
+          "width": 8.618,
+          "height": 1.893,
+          "text": "作業計画書は、フェーズ、ワーク、タスクの３つのレベルに展開されて作成されます。 / この計画書に基いたワークレベルでの進捗を電子サインサービス / (DocuSign)",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.716,
+          "top": 3.022,
+          "width": 8.618,
+          "height": 1.893,
+          "text": "プロジェクト終了後 、当該プロジェクトが適切に運営され、プロジェクトの目的が / 当初の予定通り達成されたか否かについて、 / 5",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.716,
+          "top": 4.992,
+          "width": 8.618,
+          "height": 1.893,
+          "text": "月次進捗確認書、プロジェクト満足度調査につきましては、 / DocuSign / にてご確認いただきますよう、お願い申し上げます。",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "直線コネクタ 3",
+          "shape_type": "LINE (9)",
+          "left": 3.716,
+          "top": 6.885,
+          "width": 8.618,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 6",
+          "shape_type": "LINE (9)",
+          "left": 3.716,
+          "top": 1.051,
+          "width": 8.618,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 11",
+          "shape_type": "LINE (9)",
+          "left": 3.716,
+          "top": 2.983,
+          "width": 8.618,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 12",
+          "shape_type": "LINE (9)",
+          "left": 3.716,
+          "top": 4.953,
+          "width": 8.618,
+          "height": 0.0
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "layout_name": "コンテンツページヘッドラインあり（コピーライト通常）",
+      "inferred_type": "content",
+      "title": "（Appendix：プロジェクトとSDGs）",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "タイトル 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.459,
+          "width": 11.34,
+          "height": 0.3,
+          "text": "（ / Appendix / ：プロジェクトと"
+        },
+        {
+          "name": "字幕 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.997,
+          "top": 0.782,
+          "width": 11.34,
+          "height": 0.538
+        },
+        {
+          "name": "正方形/長方形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 1.562,
+          "width": 5.984,
+          "height": 2.442,
+          "text": "弊社は、以下をミッション / として掲げております。 / 企業のトランスフォーメーションを推進しクライアント、",
+          "font_sizes": [
+            12,
+            14
+          ]
+        },
+        {
+          "name": "グループ化 22",
+          "shape_type": "GROUP (6)",
+          "left": 0.997,
+          "top": 4.405,
+          "width": 11.576,
+          "height": 2.442
+        },
+        {
+          "name": "図 23",
+          "shape_type": "PICTURE (13)",
+          "left": 7.458,
+          "top": 1.944,
+          "width": 4.295,
+          "height": 2.197
+        },
+        {
+          "name": "図 24",
+          "shape_type": "PICTURE (13)",
+          "left": 8.247,
+          "top": 2.651,
+          "width": 1.356,
+          "height": 0.709
+        },
+        {
+          "name": "図 25",
+          "shape_type": "PICTURE (13)",
+          "left": 7.458,
+          "top": 1.181,
+          "width": 4.295,
+          "height": 0.728
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "layout_name": "エンドスライド（写真あり_Pマークあり）",
+      "inferred_type": "content",
+      "title": "End Of File",
+      "shape_count": 2,
+      "shapes": [
+        {
+          "name": "タイトル 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.998,
+          "top": 5.641,
+          "width": 8.609,
+          "height": 0.866,
+          "text": "End Of File"
+        },
+        {
+          "name": "図 2",
+          "shape_type": "PICTURE (13)",
+          "left": 0.997,
+          "top": 0.86,
+          "width": 11.34,
+          "height": 4.645
+        }
+      ]
+    }
+  ],
+  "id": "sx_ai_callcenter",
+  "family": "sx",
+  "source_file": "refs\\sx\\自律思考型AI導入支援(コールセンター自動化)_Ph0-1_提案書.pptx",
+  "analyzed_at": "2026-02-15"
+}

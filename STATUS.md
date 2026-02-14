@@ -1,11 +1,12 @@
 # 現在の状態
 
-> 最終更新: 2026-02-14 | 更新者: Claude Code (Sonnet 4.5) | Phase: 2
+> 最終更新: 2026-02-15 | 更新者: Claude Code (Sonnet 4.5) | Phase: 3
 
 ## 今どこにいるか
 
 **Phase 1: 契約の定義** — **完了**
 **Phase 2: 自動化基盤** — **完了**
+**Phase 3: 参照ライブラリ** — **進行中**
 
 ロードマップ全体: [docs/ROADMAP.md](docs/ROADMAP.md)
 
@@ -29,14 +30,18 @@
 - [x] .github/workflows/validate.yml — Schema バリデーション自動実行
 - [x] .github/workflows/assemble.yml — PPTX 自動結合ワークフロー
 - [x] .github/workflows/quality.yml — PR コメント付き品質チェック
+- [x] **Phase 3 着手**: 参照ライブラリ構築開始
+  - [x] `analyze_ref.py` — 参照PPTX分析・登録ツール
+  - [x] 参照作品3本登録 → `refs/index.json`（sx: 2本, jr: 1本）
+  - [x] `skills/slide_recipe.md` — パターン3種追加（row_label_content, swimlane_process, matrix_table）
 
 ## 次にやること
 
-### Phase 3: 参照ライブラリ
+### Phase 3: 参照ライブラリ（進行中）
 
-Phase 2 完了。次は Phase 3（参照ライブラリ）へ進む。
-
-[docs/ROADMAP.md](docs/ROADMAP.md) の Phase 3 完了条件を確認して着手すること。
+残り完了条件:
+- [ ] Recipe 生成時に参照作品を提示するフローを実際に試す
+- [ ] 「この参照をベースに、ここを変える」というディスカッションを1回実施する
 
 ## 未来の自分（次セッションのAI）への指示
 

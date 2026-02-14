@@ -1,0 +1,3734 @@
+{
+  "slide_count": 27,
+  "slide_size": {
+    "width": 13.33,
+    "height": 7.5
+  },
+  "design_observations": {
+    "dominant_colors": [],
+    "font_sizes_observed": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      16,
+      20
+    ]
+  },
+  "slides": [
+    {
+      "index": 0,
+      "layout_name": "表紙",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 5,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.411
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 3.153,
+          "width": 12.582,
+          "height": 0.588,
+          "text": "S / アプリ / _"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 4.553,
+          "width": 12.582,
+          "height": 0.411
+        },
+        {
+          "name": "テキスト プレースホルダー 4",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 4.964,
+          "width": 12.582,
+          "height": 1.119
+        },
+        {
+          "name": "テキスト プレースホルダー 5",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 6.087,
+          "width": 12.582,
+          "height": 0.298,
+          "text": "2025/12/09"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 2,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.021,
+          "top": 1.729,
+          "width": 7.874,
+          "height": 0.591
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 3,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.375,
+          "top": 1.936,
+          "width": 12.583,
+          "height": 4.787,
+          "text": "各分科会の活動状況や課題を共有した上で、今後の推進アクションの方針を / 検討・明確化すること"
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "01_ / 本日の / MTG"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.021,
+          "top": 2.28,
+          "width": 7.874,
+          "height": 0.591
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.021,
+          "top": 2.783,
+          "width": 7.874,
+          "height": 0.591
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "直近の活動 / を踏まえて更新した / WBS"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "03_ / プロジェクトの進捗状況（ / WBS"
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 4.154,
+          "width": 11.576,
+          "height": 1.378,
+          "text": "別紙、エクセルを投影",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "グループ化 1",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 1.923,
+          "width": 12.597,
+          "height": 1.66
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.021,
+          "top": 3.289,
+          "width": 7.874,
+          "height": 0.591
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "各会議体ごとにメンバー間でコミュニケーションを取りながら活動を推進中"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / （参考）会議体の参加者"
+        },
+        {
+          "name": "表 4",
+          "shape_type": "TABLE (19)",
+          "left": 0.376,
+          "top": 1.939,
+          "width": 12.598,
+          "height": 4.687
+        },
+        {
+          "name": "正方形/長方形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.366,
+          "top": 6.747,
+          "width": 12.205,
+          "height": 0.3,
+          "text": "※ / スケジュールにて「現状確認後、判断」としている項目のため、上記のように記載",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 8,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "分科会 / A-1 / （"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / A-1"
+        },
+        {
+          "name": "グループ化 6",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 2.62,
+          "width": 12.597,
+          "height": 1.102
+        },
+        {
+          "name": "グループ化 19",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.08,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 22",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 3.811,
+          "width": 12.597,
+          "height": 1.181
+        },
+        {
+          "name": "グループ化 25",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.955,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 28",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 1.942,
+          "width": 12.597,
+          "height": 0.591
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.384,
+          "top": 6.76,
+          "width": 12.583,
+          "height": 0.394,
+          "text": "※ / 分科会は、大川・奥田・川口が / JRE MALL",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "新 / Suica / アプリのリリース時に"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / A-1"
+        },
+        {
+          "name": "グループ化 6",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 1.943,
+          "width": 12.597,
+          "height": 1.063
+        },
+        {
+          "name": "グループ化 9",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 4.893,
+          "width": 12.597,
+          "height": 1.85
+        },
+        {
+          "name": "グループ化 12",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 3.064,
+          "width": 12.597,
+          "height": 1.772
+        },
+        {
+          "name": "正方形/長方形 15",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.384,
+          "top": 6.76,
+          "width": 12.583,
+          "height": 0.394,
+          "text": "※ / 先週ご説明した「 / 2028",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "Clients",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.816,
+          "top": 0.139,
+          "width": 3.151,
+          "height": 0.625,
+          "text": "12/8 / （月）の / WG MTG",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 64,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "JRE / 社内の / WG"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / A-1"
+        },
+        {
+          "name": "正方形/長方形 42",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.698,
+          "top": 1.953,
+          "width": 1.54,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 43",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.238,
+          "top": 1.953,
+          "width": 4.72,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 172",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.698,
+          "top": 2.238,
+          "width": 1.54,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 174",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.238,
+          "top": 2.238,
+          "width": 1.54,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 175",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.778,
+          "top": 2.238,
+          "width": 1.392,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 176",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.17,
+          "top": 2.238,
+          "width": 1.54,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 12.71,
+          "top": 2.238,
+          "width": 0.248,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 153",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.698,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 155",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.045,
+          "top": 2.523,
+          "width": 0.349,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 156",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.394,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 157",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.741,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 158",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.089,
+          "top": 2.523,
+          "width": 0.349,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 159",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.438,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 160",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.785,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 161",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.132,
+          "top": 2.523,
+          "width": 0.349,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 162",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.481,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 163",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.828,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 164",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.175,
+          "top": 2.523,
+          "width": 0.349,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 165",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.524,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 166",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.872,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 167",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.219,
+          "top": 2.523,
+          "width": 0.349,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 168",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.568,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 169",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.915,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 170",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 12.262,
+          "top": 2.523,
+          "width": 0.349,
+          "height": 0.285
+        },
+        {
+          "name": "正方形/長方形 171",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 12.611,
+          "top": 2.523,
+          "width": 0.347,
+          "height": 0.285
+        },
+        {
+          "name": "直線コネクタ 65",
+          "shape_type": "LINE (9)",
+          "left": 12.958,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 66",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 132",
+          "shape_type": "LINE (9)",
+          "left": 12.262,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 119",
+          "shape_type": "LINE (9)",
+          "left": 7.741,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 118",
+          "shape_type": "LINE (9)",
+          "left": 7.045,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 188",
+          "shape_type": "LINE (9)",
+          "left": 7.394,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 120",
+          "shape_type": "LINE (9)",
+          "left": 8.089,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 121",
+          "shape_type": "LINE (9)",
+          "left": 8.438,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 122",
+          "shape_type": "LINE (9)",
+          "left": 8.785,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 123",
+          "shape_type": "LINE (9)",
+          "left": 9.132,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 124",
+          "shape_type": "LINE (9)",
+          "left": 9.481,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 126",
+          "shape_type": "LINE (9)",
+          "left": 10.175,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 127",
+          "shape_type": "LINE (9)",
+          "left": 10.524,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 128",
+          "shape_type": "LINE (9)",
+          "left": 10.872,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 129",
+          "shape_type": "LINE (9)",
+          "left": 11.219,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 130",
+          "shape_type": "LINE (9)",
+          "left": 11.568,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 131",
+          "shape_type": "LINE (9)",
+          "left": 11.915,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 125",
+          "shape_type": "LINE (9)",
+          "left": 9.828,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 133",
+          "shape_type": "LINE (9)",
+          "left": 12.611,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 64",
+          "shape_type": "LINE (9)",
+          "left": 6.698,
+          "top": 2.807,
+          "width": 0.0,
+          "height": 1.061
+        },
+        {
+          "name": "直線コネクタ 68",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 3.868,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 67",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 2.807,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "正方形/長方形 47",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.748,
+          "top": 2.856,
+          "width": 2.384,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 194",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.792,
+          "top": 3.269,
+          "width": 3.427,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 196",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.219,
+          "top": 3.696,
+          "width": 1.392,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 195",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.481,
+          "top": 3.483,
+          "width": 1.738,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.453,
+          "top": 2.818,
+          "width": 6.167,
+          "height": 0.399,
+          "text": "①ありたい姿の定義 / + / ありたい姿が達成されたときにあると良さそうなサービス（連続・",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "正方形/長方形 12",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.453,
+          "top": 3.658,
+          "width": 1.823,
+          "height": 0.2
+        },
+        {
+          "name": "正方形/長方形 15",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.453,
+          "top": 2.549,
+          "width": 0.908,
+          "height": 0.233,
+          "text": "検討事項 / ※",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.453,
+          "top": 3.444,
+          "width": 5.333,
+          "height": 0.2
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.453,
+          "top": 3.231,
+          "width": 3.333,
+          "height": 0.2
+        },
+        {
+          "name": "正方形/長方形 197",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.076,
+          "top": 2.818,
+          "width": 0.361,
+          "height": 1.061
+        },
+        {
+          "name": "正方形/長方形 206",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.384,
+          "top": 6.76,
+          "width": 12.583,
+          "height": 0.394,
+          "text": "※ / 検討事項に紐づく、具体的なワークが存在する",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "表 137",
+          "shape_type": "TABLE (19)",
+          "left": 0.384,
+          "top": 4.094,
+          "width": 5.315,
+          "height": 2.667
+        },
+        {
+          "name": "表 1",
+          "shape_type": "TABLE (19)",
+          "left": 6.981,
+          "top": 4.094,
+          "width": 5.315,
+          "height": 2.667
+        },
+        {
+          "name": "Clients",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.816,
+          "top": 0.139,
+          "width": 3.151,
+          "height": 0.625,
+          "text": "12/8 / （月）の / WG MTG",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 21,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "今日からありたい姿の定義、およびサービス構想の取り纏めに着手する。 / 1 / 月"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "02_ / WG / の活動スケジュールの確認・検討"
+        },
+        {
+          "name": "矢印: 五方向 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.24,
+          "top": 1.945,
+          "width": 3.858,
+          "height": 0.591,
+          "text": "①ありたい姿の定義 / + / サービス構想の取り纏め",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.111,
+          "top": 1.945,
+          "width": 3.858,
+          "height": 0.591,
+          "text": "④ / PoC / 準備",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.376,
+          "top": 3.252,
+          "width": 0.787,
+          "height": 0.591,
+          "text": "想定 / 期間",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.24,
+          "top": 3.167,
+          "width": 3.858,
+          "height": 0.591,
+          "text": "～ / 1 / 月",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 21",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.176,
+          "top": 3.167,
+          "width": 3.858,
+          "height": 0.591,
+          "text": "1 / 月 / 3",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 23",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.111,
+          "top": 3.167,
+          "width": 3.858,
+          "height": 0.591,
+          "text": "2 / 月 / 3",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.24,
+          "top": 3.887,
+          "width": 3.858,
+          "height": 1.575,
+          "text": "ありたい姿（案）の共有 / ありたい姿の整理結果の確認・検討 / ありたい姿の確定",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 25",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.376,
+          "top": 3.906,
+          "width": 0.787,
+          "height": 1.575,
+          "text": "想定 / ワーク",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.176,
+          "top": 3.887,
+          "width": 3.858,
+          "height": 1.575,
+          "text": "実現性の検証① / 実現性の検証② / 持続可能性の検証②",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 27",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.111,
+          "top": 3.887,
+          "width": 3.858,
+          "height": 1.575,
+          "text": "PoC / 計画詳細化 / (WG10~)",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 33",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.24,
+          "top": 5.544,
+          "width": 3.858,
+          "height": 1.343,
+          "text": "毎週実施が / or / 隔週程度での集中討議か",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 34",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.376,
+          "top": 5.544,
+          "width": 0.787,
+          "height": 1.343,
+          "text": "備考",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 35",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.176,
+          "top": 5.544,
+          "width": 3.858,
+          "height": 1.343,
+          "text": "②の受容性の検証は、 / WG / ではなく、",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 36",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.111,
+          "top": 5.544,
+          "width": 3.858,
+          "height": 1.343,
+          "text": "2 / 月末には社内調整開始",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 五方向 1",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.176,
+          "top": 1.945,
+          "width": 3.858,
+          "height": 0.591,
+          "text": "③ / 検証（受容性・実現性・持続可能性）",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 13",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.376,
+          "top": 2.599,
+          "width": 0.787,
+          "height": 0.591,
+          "text": "マイルストン",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "グループ化 16",
+          "shape_type": "GROUP (6)",
+          "left": 4.055,
+          "top": 2.625,
+          "width": 2.165,
+          "height": 0.458
+        },
+        {
+          "name": "グループ化 17",
+          "shape_type": "GROUP (6)",
+          "left": 7.99,
+          "top": 2.625,
+          "width": 2.165,
+          "height": 0.458
+        },
+        {
+          "name": "Clients",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.816,
+          "top": 0.139,
+          "width": 3.151,
+          "height": 0.625,
+          "text": "12/8 / （月）の / WG MTG",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 35,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "連続的な成長は、主に生活ソリューションのユーザーの数の増加であり、非連続な成長は、モビリティのユーザーの獲得と機能としての他事業への貢献の / 2 / つがある"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_JRE MALL / の連続・非連続の成長イメージ（参考）"
+        },
+        {
+          "name": "正方形/長方形 12",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.83,
+          "top": 2.438,
+          "width": 4.331,
+          "height": 0.394,
+          "text": "モビリティ：ユーザー",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 13",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.342,
+          "top": 2.522,
+          "width": 4.331,
+          "height": 0.394,
+          "text": "生活ソリューション：ユーザー",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 14",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.359,
+          "top": 3.389,
+          "width": 1.378,
+          "height": 0.591,
+          "text": "接点 / （駅～デジ）",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 16",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.83,
+          "top": 3.311,
+          "width": 9.843,
+          "height": 0.394,
+          "text": "生活者",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 17",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.359,
+          "top": 5.83,
+          "width": 1.378,
+          "height": 0.337,
+          "text": "接点",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 18",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.359,
+          "top": 4.708,
+          "width": 1.378,
+          "height": 0.337,
+          "text": "システム",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 19",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.359,
+          "top": 6.406,
+          "width": 1.378,
+          "height": 0.337,
+          "text": "顧客",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 20",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.359,
+          "top": 3.056,
+          "width": 1.378,
+          "height": 0.337,
+          "text": "顧客",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 25",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.83,
+          "top": 2.874,
+          "width": 1.969,
+          "height": 0.394,
+          "text": "サービス / A / ←",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.153,
+          "top": 2.874,
+          "width": 1.969,
+          "height": 0.394,
+          "text": "→サービス / Z",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 27",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.382,
+          "top": 2.874,
+          "width": 1.969,
+          "height": 0.394,
+          "text": "サービス / A / ←",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 28",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.704,
+          "top": 2.874,
+          "width": 1.969,
+          "height": 0.394,
+          "text": "→サービス / Z",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 29",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.586,
+          "top": 2.024,
+          "width": 4.331,
+          "height": 0.37,
+          "text": "Suica / 経済圏",
+          "font_sizes": [
+            16
+          ]
+        },
+        {
+          "name": "正方形/長方形 1",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.83,
+          "top": 6.349,
+          "width": 9.843,
+          "height": 0.394,
+          "text": "加盟店",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.83,
+          "top": 3.747,
+          "width": 9.843,
+          "height": 2.559
+        },
+        {
+          "name": "正方形/長方形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.224,
+          "top": 5.856,
+          "width": 9.055,
+          "height": 0.394,
+          "text": "フロントエンド・アプリ",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.224,
+          "top": 4.452,
+          "width": 9.055,
+          "height": 1.181,
+          "text": "バックエンド",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.224,
+          "top": 3.836,
+          "width": 9.055,
+          "height": 0.394,
+          "text": "フロントエンド・アプリ",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.421,
+          "top": 4.113,
+          "width": 5.927,
+          "height": 0.394,
+          "text": "非連続な成長①： / Suica / ユーザーを獲得する",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 35",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.421,
+          "top": 4.544,
+          "width": 8.661,
+          "height": 0.512,
+          "text": "非連続な成長②： / Suica / ユーザーのフライホイールの循環を拡大させる",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "Sticker",
+          "shape_type": "GROUP (6)",
+          "left": 12.083,
+          "top": 0.069,
+          "width": 1.181,
+          "height": 0.326
+        },
+        {
+          "name": "正方形/長方形 42",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.421,
+          "top": 5.548,
+          "width": 8.661,
+          "height": 0.394,
+          "text": "非連続な成長②：クライアントをフライホイールに巻き込む",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 32",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.348,
+          "top": 3.412,
+          "width": 1.181,
+          "height": 3.209,
+          "text": "現在",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "正方形/長方形 40",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.526,
+          "top": 3.412,
+          "width": 1.181,
+          "height": 3.209,
+          "text": "連続的な / 成長",
+          "font_sizes": [
+            14
+          ]
+        },
+        {
+          "name": "矢印: 上 43",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.675,
+          "top": 2.255,
+          "width": 0.787,
+          "height": 2.165
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.675,
+          "top": 2.322,
+          "width": 0.787,
+          "height": 0.438,
+          "text": "toC",
+          "font_sizes": [
+            20
+          ]
+        },
+        {
+          "name": "矢印: 上 44",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.675,
+          "top": 4.573,
+          "width": 0.787,
+          "height": 2.165
+        },
+        {
+          "name": "正方形/長方形 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.675,
+          "top": 6.217,
+          "width": 0.787,
+          "height": 0.438,
+          "text": "toB",
+          "font_sizes": [
+            20
+          ]
+        },
+        {
+          "name": "矢印: 上 45",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.151,
+          "top": 3.924,
+          "width": 0.394,
+          "height": 0.787
+        },
+        {
+          "name": "矢印: 上 46",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.347,
+          "top": 3.452,
+          "width": 0.394,
+          "height": 0.787
+        },
+        {
+          "name": "矢印: 上 47",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.374,
+          "top": 5.616,
+          "width": 0.394,
+          "height": 0.787
+        },
+        {
+          "name": "Clients",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.775,
+          "top": 0.083,
+          "width": 3.151,
+          "height": 0.625,
+          "text": "12/8 / （月）の / WG MTG",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "支援チーム内で今後の推進スケジュール案（ / WBS / ）を作成済み。"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / A-2"
+        },
+        {
+          "name": "グループ化 4",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 3.178,
+          "width": 12.597,
+          "height": 1.181
+        },
+        {
+          "name": "グループ化 8",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.187,
+          "width": 12.597,
+          "height": 0.709
+        },
+        {
+          "name": "グループ化 11",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 4.419,
+          "width": 12.597,
+          "height": 0.709
+        },
+        {
+          "name": "グループ化 14",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.955,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 19",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 1.937,
+          "width": 12.597,
+          "height": 1.181
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 3,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "受容性検証に向けて、 / Figma / にて実施タスクと、アウトプットイメージを明確化"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / A-2"
+        },
+        {
+          "name": "正方形/長方形 5",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.997,
+          "top": 3.061,
+          "width": 11.576,
+          "height": 1.378,
+          "text": "別紙、 / Figma / 画面",
+          "font_sizes": [
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "競合調査の実施スケジュールについてすり合わせた上で、調査設計を実施。 / 今週から競合調査を開始する"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / C"
+        },
+        {
+          "name": "グループ化 6",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 2.847,
+          "width": 12.597,
+          "height": 1.181
+        },
+        {
+          "name": "グループ化 18",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.05,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 21",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 4.145,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 24",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.955,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 27",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 1.942,
+          "width": 12.597,
+          "height": 0.787
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "C-0 / ：テーマ探索活動の既存テーマ（ / C-0-1"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / C"
+        },
+        {
+          "name": "グループ化 28",
+          "shape_type": "GROUP (6)",
+          "left": 0.376,
+          "top": 1.895,
+          "width": 12.582,
+          "height": 2.384
+        },
+        {
+          "name": "Clients",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.775,
+          "top": 0.083,
+          "width": 3.151,
+          "height": 0.625,
+          "text": "12/4 / （ / 木",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 13,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "「競合視点で磨き込んだ / 『 / サービス"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / C"
+        },
+        {
+          "name": "グループ化 22",
+          "shape_type": "GROUP (6)",
+          "left": 1.14,
+          "top": 1.85,
+          "width": 11.818,
+          "height": 0.53
+        },
+        {
+          "name": "グループ化 30",
+          "shape_type": "GROUP (6)",
+          "left": 0.376,
+          "top": 3.195,
+          "width": 12.582,
+          "height": 0.625
+        },
+        {
+          "name": "グループ化 31",
+          "shape_type": "GROUP (6)",
+          "left": 0.376,
+          "top": 3.896,
+          "width": 12.582,
+          "height": 2.046
+        },
+        {
+          "name": "正方形/長方形 33",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.14,
+          "top": 6.018,
+          "width": 3.779,
+          "height": 0.725,
+          "text": "競合調査で得た新規テーマに加えて、既存テーマも含めて取組の優先順位付けを実施",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "正方形/長方形 34",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.376,
+          "top": 6.018,
+          "width": 0.659,
+          "height": 0.725,
+          "text": "備考",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "正方形/長方形 35",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.023,
+          "top": 6.018,
+          "width": 4.221,
+          "height": 0.725,
+          "text": "優先順位の高いものから想定タスクを実施 / 一部 / A",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "正方形/長方形 36",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.349,
+          "top": 6.018,
+          "width": 3.609,
+          "height": 0.725,
+          "text": "2 / 周目の検証サイクルに移るのか、リリースを目指した開発に進むのかを軸に検討",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "正方形/長方形 29",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.376,
+          "top": 2.528,
+          "width": 0.659,
+          "height": 0.591,
+          "text": "マイルストン",
+          "font_sizes": [
+            12
+          ]
+        },
+        {
+          "name": "グループ化 32",
+          "shape_type": "GROUP (6)",
+          "left": 3.374,
+          "top": 2.528,
+          "width": 2.165,
+          "height": 0.458
+        },
+        {
+          "name": "グループ化 42",
+          "shape_type": "GROUP (6)",
+          "left": 10.802,
+          "top": 2.528,
+          "width": 2.165,
+          "height": 0.458
+        },
+        {
+          "name": "Clients",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.775,
+          "top": 0.083,
+          "width": 3.151,
+          "height": 0.625,
+          "text": "12/4 / （ / 木",
+          "font_sizes": [
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "現状の全体サービス設計の課題感のヒアリングを実施。 / 現在、ヒアリングを踏まえた論点の整理と、今後の推進方針の取り纏めを実施中"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "04_ / 分科会 / Z"
+        },
+        {
+          "name": "グループ化 19",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 2.931,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 22",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 4.947,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 25",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 3.939,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 28",
+          "shape_type": "GROUP (6)",
+          "left": 0.37,
+          "top": 5.955,
+          "width": 12.597,
+          "height": 0.787
+        },
+        {
+          "name": "グループ化 31",
+          "shape_type": "GROUP (6)",
+          "left": 0.369,
+          "top": 1.923,
+          "width": 12.597,
+          "height": 0.787
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.021,
+          "top": 3.816,
+          "width": 7.874,
+          "height": 0.984
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 7,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "全体サービス設計の役割は、今 / 後産まれる多様なサービス群を束ねた / Suica",
+          "font_sizes": [
+            20
+          ]
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "05_ / 全体サービス設計の位置付け・役割"
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.016,
+          "top": 6.868,
+          "width": 4.167,
+          "height": 0.278,
+          "text": "* / 1) / 脚注",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 1.016,
+          "top": 6.868,
+          "width": 4.167,
+          "height": 0.278,
+          "text": "* / 1) / 脚注",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.384,
+          "top": 6.894,
+          "width": 12.583,
+          "height": 0.269,
+          "text": "出所）提案依頼書 / (2025 / 年",
+          "font_sizes": [
+            11
+          ]
+        },
+        {
+          "name": "グループ化 12",
+          "shape_type": "GROUP (6)",
+          "left": 0.462,
+          "top": 2.033,
+          "width": 8.196,
+          "height": 4.71
+        },
+        {
+          "name": "図 11",
+          "shape_type": "PICTURE (13)",
+          "left": 8.801,
+          "top": 2.853,
+          "width": 4.153,
+          "height": 3.071
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 14,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "「 / Suica / 経済圏拡大の土台作り」に向けて、大きく５つの観点で論点を解いていく",
+          "font_sizes": [
+            20
+          ]
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "05_ / 全体サービス設計の論点"
+        },
+        {
+          "name": "二等辺三角形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.376,
+          "top": 2.023,
+          "width": 2.581,
+          "height": 0.197
+        },
+        {
+          "name": "正方形/長方形 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.555,
+          "top": 1.709,
+          "width": 8.223,
+          "height": 0.236,
+          "text": "Suica / アプリを起点とした事業拡大（ / Suica"
+        },
+        {
+          "name": "グループ化 13",
+          "shape_type": "GROUP (6)",
+          "left": 0.212,
+          "top": 2.298,
+          "width": 12.754,
+          "height": 0.709
+        },
+        {
+          "name": "グループ化 25",
+          "shape_type": "GROUP (6)",
+          "left": 0.212,
+          "top": 3.085,
+          "width": 12.754,
+          "height": 1.181
+        },
+        {
+          "name": "グループ化 37",
+          "shape_type": "GROUP (6)",
+          "left": 0.212,
+          "top": 4.344,
+          "width": 12.754,
+          "height": 1.181
+        },
+        {
+          "name": "グループ化 38",
+          "shape_type": "GROUP (6)",
+          "left": 0.212,
+          "top": 5.603,
+          "width": 12.754,
+          "height": 0.704
+        },
+        {
+          "name": "グループ化 39",
+          "shape_type": "GROUP (6)",
+          "left": 0.212,
+          "top": 6.385,
+          "width": 12.754,
+          "height": 0.709
+        },
+        {
+          "name": "直線コネクタ 26",
+          "shape_type": "LINE (9)",
+          "left": 2.333,
+          "top": 3.043,
+          "width": 10.63,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 27",
+          "shape_type": "LINE (9)",
+          "left": 2.333,
+          "top": 4.301,
+          "width": 10.63,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 28",
+          "shape_type": "LINE (9)",
+          "left": 2.333,
+          "top": 5.559,
+          "width": 10.63,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 29",
+          "shape_type": "LINE (9)",
+          "left": 2.333,
+          "top": 6.344,
+          "width": 10.63,
+          "height": 0.0
+        },
+        {
+          "name": "Sticker",
+          "shape_type": "GROUP (6)",
+          "left": 12.083,
+          "top": 0.069,
+          "width": 1.181,
+          "height": 0.326
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 129,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "論点カテゴリ別に２～３週間サイクルで検討を進めて行く。 / 経営層とのコミュニケーション・タイミングに合わ / せ、議論内容を段階的に取り纏める",
+          "font_sizes": [
+            20
+          ]
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "05_ / 全体サービス設計のワークプラン"
+        },
+        {
+          "name": "正方形/長方形 123",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.375,
+          "top": 6.557,
+          "width": 12.583,
+          "height": 0.175
+        },
+        {
+          "name": "正方形/長方形 95",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.375,
+          "top": 2.509,
+          "width": 12.583,
+          "height": 0.181
+        },
+        {
+          "name": "正方形/長方形 158",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.375,
+          "top": 2.865,
+          "width": 12.583,
+          "height": 0.175
+        },
+        {
+          "name": "正方形/長方形 78",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.375,
+          "top": 5.33,
+          "width": 12.583,
+          "height": 0.175
+        },
+        {
+          "name": "正方形/長方形 77",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.375,
+          "top": 4.804,
+          "width": 12.583,
+          "height": 0.175
+        },
+        {
+          "name": "正方形/長方形 107",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.965,
+          "top": 2.509,
+          "width": 0.569,
+          "height": 4.58
+        },
+        {
+          "name": "正方形/長方形 38",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.681,
+          "top": 1.868,
+          "width": 2.53,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 39",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.21,
+          "top": 1.868,
+          "width": 7.748,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 141",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.681,
+          "top": 2.082,
+          "width": 2.53,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 143",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.21,
+          "top": 2.082,
+          "width": 2.528,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 144",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.738,
+          "top": 2.082,
+          "width": 2.285,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 145",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.023,
+          "top": 2.082,
+          "width": 2.528,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 175",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 12.55,
+          "top": 2.082,
+          "width": 0.408,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 22",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.681,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 23",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.252,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 24",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.823,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 25",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.394,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 26",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.965,
+          "top": 2.295,
+          "width": 0.569,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 27",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.535,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 28",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.106,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 29",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.677,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 30",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.248,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 31",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.819,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 32",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.391,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 33",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.962,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 34",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.533,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 66",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.104,
+          "top": 2.295,
+          "width": 0.569,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 68",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.674,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 69",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.245,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 70",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.816,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "正方形/長方形 172",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 12.387,
+          "top": 2.295,
+          "width": 0.571,
+          "height": 0.214
+        },
+        {
+          "name": "直線コネクタ 56",
+          "shape_type": "LINE (9)",
+          "left": 7.819,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 57",
+          "shape_type": "LINE (9)",
+          "left": 8.391,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 58",
+          "shape_type": "LINE (9)",
+          "left": 8.962,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 59",
+          "shape_type": "LINE (9)",
+          "left": 9.533,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 73",
+          "shape_type": "LINE (9)",
+          "left": 10.104,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 74",
+          "shape_type": "LINE (9)",
+          "left": 10.674,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 75",
+          "shape_type": "LINE (9)",
+          "left": 11.245,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 76",
+          "shape_type": "LINE (9)",
+          "left": 11.816,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 174",
+          "shape_type": "LINE (9)",
+          "left": 12.387,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 61",
+          "shape_type": "LINE (9)",
+          "left": 12.958,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 62",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 60",
+          "shape_type": "LINE (9)",
+          "left": 2.681,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 49",
+          "shape_type": "LINE (9)",
+          "left": 3.252,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 81",
+          "shape_type": "LINE (9)",
+          "left": 3.823,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 50",
+          "shape_type": "LINE (9)",
+          "left": 4.394,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 51",
+          "shape_type": "LINE (9)",
+          "left": 4.965,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 52",
+          "shape_type": "LINE (9)",
+          "left": 5.535,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 53",
+          "shape_type": "LINE (9)",
+          "left": 6.106,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 54",
+          "shape_type": "LINE (9)",
+          "left": 6.677,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 55",
+          "shape_type": "LINE (9)",
+          "left": 7.248,
+          "top": 2.509,
+          "width": 0.0,
+          "height": 4.58
+        },
+        {
+          "name": "直線コネクタ 186",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 3.568,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 195",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 4.097,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 199",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 4.451,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 64",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 7.089,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "直線コネクタ 63",
+          "shape_type": "LINE (9)",
+          "left": 0.375,
+          "top": 2.509,
+          "width": 12.583,
+          "height": 0.0
+        },
+        {
+          "name": "正方形/長方形 242",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.674,
+          "top": 5.533,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 137",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.674,
+          "top": 6.76,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 102",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.677,
+          "top": 3.068,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 132",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.245,
+          "top": 2.717,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 234",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.535,
+          "top": 3.068,
+          "width": 0.571,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 140",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.962,
+          "top": 2.717,
+          "width": 1.061,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 160",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.533,
+          "top": 3.773,
+          "width": 2.854,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 220",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.535,
+          "top": 5.708,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 219",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.819,
+          "top": 5.533,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 211",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.248,
+          "top": 3.597,
+          "width": 2.285,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 133",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.391,
+          "top": 6.76,
+          "width": 0.571,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 170",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.533,
+          "top": 4.656,
+          "width": 1.141,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 96",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.677,
+          "top": 2.717,
+          "width": 1.061,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 229",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.252,
+          "top": 3.068,
+          "width": 1.714,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 225",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.106,
+          "top": 4.656,
+          "width": 2.285,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 215",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.681,
+          "top": 4.481,
+          "width": 3.425,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 184",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.248,
+          "top": 3.243,
+          "width": 2.285,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 202",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.333,
+          "top": 3.597,
+          "width": 1.632,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 111",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.677,
+          "top": 5.884,
+          "width": 1.714,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 159",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.106,
+          "top": 3.773,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 114",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.533,
+          "top": 6.234,
+          "width": 1.141,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 193",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.533,
+          "top": 3.948,
+          "width": 2.283,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 110",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.394,
+          "top": 5.708,
+          "width": 0.571,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 113",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.391,
+          "top": 6.059,
+          "width": 1.142,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 101",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.578,
+          "top": 5.533,
+          "width": 1.387,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 87",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.681,
+          "top": 5.007,
+          "width": 0.571,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 86",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.252,
+          "top": 5.182,
+          "width": 0.571,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 126",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.106,
+          "top": 6.76,
+          "width": 0.571,
+          "height": 0.108
+        },
+        {
+          "name": "正方形/長方形 134",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.816,
+          "top": 6.42,
+          "width": 0.734,
+          "height": 0.087
+        },
+        {
+          "name": "正方形/長方形 146",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 11.816,
+          "top": 6.946,
+          "width": 0.734,
+          "height": 0.087
+        },
+        {
+          "name": "右大かっこ 105",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.191,
+          "top": 6.903,
+          "width": 0.118,
+          "height": 0.569
+        },
+        {
+          "name": "二等辺三角形 106",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 5.134,
+          "top": 7.247,
+          "width": 0.233,
+          "height": 0.118
+        },
+        {
+          "name": "正方形/長方形 103",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.958,
+          "top": 7.384,
+          "width": 0.583,
+          "height": 0.175,
+          "text": "年末年始",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 11",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 2.314,
+          "width": 0.583,
+          "height": 0.175
+        },
+        {
+          "name": "正方形/長方形 121",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 6.733,
+          "width": 1.604,
+          "height": 0.175,
+          "text": "報告書・上申書取り纏め",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 117",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 6.557,
+          "width": 2.042,
+          "height": 0.175,
+          "text": "経営層とのコミュニケーション",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 6",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 5.155,
+          "width": 1.167,
+          "height": 0.175,
+          "text": "活動スキーム設計",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 168",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 9.623,
+          "top": 4.635,
+          "width": 0.958,
+          "height": 0.149,
+          "text": "受容性検証 / ( / 実査",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 7",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 5.33,
+          "width": 2.188,
+          "height": 0.175,
+          "text": "全体サービス設計論点検討ワーク",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 154",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 4.453,
+          "width": 0.729,
+          "height": 0.175,
+          "text": "C / 競合視点",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 213",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.955,
+          "top": 4.46,
+          "width": 0.875,
+          "height": 0.149,
+          "text": "調査準備～実査",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 8",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 5.505,
+          "width": 1.167,
+          "height": 0.175,
+          "text": "①ビジネスモデル",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 147",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 4.099,
+          "width": 1.927,
+          "height": 0.175,
+          "text": "B / 技術起点 / /",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 191",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.031,
+          "top": 3.927,
+          "width": 1.285,
+          "height": 0.149,
+          "text": "実現性 / / / 持続可能性検証",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 9",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 5.681,
+          "width": 1.021,
+          "height": 0.175,
+          "text": "② / 統合顧客体験",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 161",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.198,
+          "top": 3.752,
+          "width": 0.958,
+          "height": 0.149,
+          "text": "受容性検証 / ( / 実査",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 10",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 5.856,
+          "width": 1.167,
+          "height": 0.175,
+          "text": "③オペレーション",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 149",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 3.569,
+          "width": 1.484,
+          "height": 0.175,
+          "text": "A-2 / Club/ / 生活の定期券",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 99",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 6.031,
+          "width": 1.021,
+          "height": 0.175,
+          "text": "④アライアンス",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 209",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 8.016,
+          "top": 3.576,
+          "width": 0.75,
+          "height": 0.149,
+          "text": "サービス磨込",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 97",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 6.207,
+          "width": 1.312,
+          "height": 0.175,
+          "text": "⑤経済圏ガバナンス",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 200",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.587,
+          "top": 3.576,
+          "width": 1.125,
+          "height": 0.149,
+          "text": "コンセプト初期構築",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 163",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.328,
+          "top": 3.752,
+          "width": 1.264,
+          "height": 0.149,
+          "text": "受容性検証 / ( / 実査",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 182",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.748,
+          "top": 3.222,
+          "width": 1.285,
+          "height": 0.149,
+          "text": "実現性 / / / 持続可能性検証",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 115",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 6.382,
+          "width": 0.875,
+          "height": 0.175,
+          "text": "（バッファ）",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 165",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.707,
+          "top": 3.047,
+          "width": 1.083,
+          "height": 0.149,
+          "text": "受容性検証 / ( / ｺﾝｾﾌﾟﾄ",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 4.804,
+          "width": 0.875,
+          "height": 0.175,
+          "text": "活動立上準備",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 124",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 6.908,
+          "width": 0.875,
+          "height": 0.175,
+          "text": "（バッファ）",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 91",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 3.04,
+          "width": 1.257,
+          "height": 0.175,
+          "text": "A-1 JRE MALL / 関連",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 223",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 6.748,
+          "top": 4.635,
+          "width": 1.0,
+          "height": 0.149,
+          "text": "サービス企画検討",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 129",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 2.865,
+          "width": 1.896,
+          "height": 0.175,
+          "text": "テーマ別サービス企画・検証",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 227",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.733,
+          "top": 3.047,
+          "width": 0.75,
+          "height": 0.149,
+          "text": "サービス企画",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 93",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 2.689,
+          "width": 1.021,
+          "height": 0.175,
+          "text": "経営報告（仮）",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 89",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 2.514,
+          "width": 1.28,
+          "height": 0.175,
+          "text": "PJT / マイルストーン",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "正方形/長方形 236",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 4.021,
+          "top": 5.512,
+          "width": 0.5,
+          "height": 0.149,
+          "text": "初期設計",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 238",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 7.828,
+          "top": 5.512,
+          "width": 1.125,
+          "height": 0.149,
+          "text": "受容性検証結果反映",
+          "font_sizes": [
+            9
+          ]
+        },
+        {
+          "name": "正方形/長方形 240",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 10.745,
+          "top": 5.521,
+          "width": 1.0,
+          "height": 0.134,
+          "text": "実現性 / 検証結果反映",
+          "font_sizes": [
+            8
+          ]
+        },
+        {
+          "name": "正方形/長方形 79",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 0.434,
+          "top": 4.979,
+          "width": 0.875,
+          "height": 0.175,
+          "text": "事前情報連携",
+          "font_sizes": [
+            10
+          ]
+        },
+        {
+          "name": "Sticker",
+          "shape_type": "GROUP (6)",
+          "left": 12.083,
+          "top": 0.069,
+          "width": 1.181,
+          "height": 0.326
+        },
+        {
+          "name": "直線コネクタ 136",
+          "shape_type": "LINE (9)",
+          "left": 3.327,
+          "top": 1.868,
+          "width": 0.0,
+          "height": 5.288
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 3,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 1",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.375,
+          "top": 1.936,
+          "width": 12.583,
+          "height": 4.787,
+          "text": "各論点の検討に、 / PGM / 全体の中から誰を巻き込むべきか？"
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "05_ / 全体サービス設計に関する確認・相談事項"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "layout_name": "目次",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 4,
+      "shapes": [
+        {
+          "name": "think-cell data - do not delete",
+          "shape_type": "EMBEDDED_OLE_OBJECT (7)",
+          "left": 0.002,
+          "top": 0.002,
+          "width": 0.002,
+          "height": 0.002
+        },
+        {
+          "name": "正方形/長方形 4",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 3.021,
+          "top": 4.712,
+          "width": 7.874,
+          "height": 0.591
+        },
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.127,
+          "top": 3.259,
+          "width": 2.684,
+          "height": 0.579,
+          "text": "アジェンダ"
+        },
+        {
+          "name": "正方形/長方形 3",
+          "shape_type": "AUTO_SHAPE (1)",
+          "left": 2.956,
+          "top": 0.0,
+          "width": 10.378,
+          "height": 7.5,
+          "text": "本日の / MTG / の目的確認",
+          "font_sizes": [
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "layout_name": "本紙（マスタータイトルあり_2行）",
+      "inferred_type": "content",
+      "title": "",
+      "shape_count": 3,
+      "shapes": [
+        {
+          "name": "テキスト プレースホルダー 2",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.708,
+          "width": 12.582,
+          "height": 0.977,
+          "text": "各分科会の活動以外の / To Do / 、担当者、および対応期限を確認させていただきたい"
+        },
+        {
+          "name": "テキスト プレースホルダー 3",
+          "shape_type": "PLACEHOLDER (14)",
+          "left": 0.376,
+          "top": 0.4,
+          "width": 12.582,
+          "height": 0.309,
+          "text": "06_ / 直近 / To Do"
+        },
+        {
+          "name": "表 6",
+          "shape_type": "TABLE (19)",
+          "left": 0.376,
+          "top": 1.939,
+          "width": 12.582,
+          "height": 4.624
+        }
+      ]
+    }
+  ],
+  "id": "jr_20251209_teireikai",
+  "family": "jr",
+  "source_file": "refs\\jr\\20251209_全体定例会_vSent.pptx",
+  "analyzed_at": "2026-02-15"
+}

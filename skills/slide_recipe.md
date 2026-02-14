@@ -92,6 +92,9 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
 | `pyramid` | 上が小さく下が大きい階層 | あり | なし | 戦略→戦術→実行 |
 | `kpi_cards` | 数値を大きく見せるカード | あり | なし | KPI、成果指標 |
 | `single_message` | 大きな1メッセージ | なし | 任意 | インパクト重視 |
+| `row_label_content` | 左ラベル列 + 右コンテンツ列（行グループ） | あり | なし | スコープ定義、フェーズ別説明 |
+| `swimlane_process` | 行ラベル（スイムレーン） + 各行にプロセスフロー | あり | なし | 並行プロセス、複数フェーズ計画 |
+| `matrix_table` | ヘッダー付き多列テーブル（複雑） | あり | なし | 作業定義、RACI、詳細スコープ |
 
 ### ビジネスフレームワーク（構造パターンの特化版）
 
@@ -194,6 +197,61 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
 }
 ```
 
+### row_label_content（左ラベル + 右コンテンツ）
+
+**参照作品**: `sx_ctc_jre_suica` スライド3, 5 / `sx_ai_callcenter` スライド7
+
+```json
+{
+  "index": 4, "type": "content",
+  "title": "ご支援スコープの定義",
+  "message": "目的・ゴール・体制・期間の4軸でスコープを明確に合意する",
+  "pattern": "row_label_content",
+  "tone": "neutral",
+  "body_points": [
+    "目的: サービス企画の全体構想を具体化する",
+    "ゴール: 2026年Q1までに投資意思決定が可能な状態",
+    "体制: クライアント3名 + 支援側3名のOne Team",
+    "期間: 2025年12月〜2026年3月（4ヶ月）"
+  ],
+  "visual": {
+    "labels": ["目的", "ゴール", "体制", "期間"],
+    "emphasis": "equal"
+  }
+}
+```
+
+> **変換ルール**: labels の数 = 行数。各行は「左の label ボックス（dark）+ 右のテキストエリア」で構成。
+> body_points の N 番目が labels の N 番目に対応する。
+
+---
+
+### swimlane_process（スイムレーン + プロセス）
+
+**参照作品**: `sx_ai_callcenter` スライド4
+
+```json
+{
+  "index": 6, "type": "content",
+  "title": "フェーズ別の実施ステップ",
+  "message": "現状分析とPoC検証を並行して進め、4ヶ月で導入判断を行う",
+  "pattern": "swimlane_process",
+  "tone": "progression",
+  "body_points": [
+    "現状分析と戦略策定: 業務把握 → 自動化診断 → コンセプト策定 → スケジュール",
+    "PoC実施: 現状理解 → 検証計画 → 検証実施 → 結果取りまとめ"
+  ],
+  "visual": {
+    "labels": ["現状分析・\n戦略策定", "PoC"],
+    "emphasis": "equal"
+  }
+}
+```
+
+> **変換ルール**: labels = スイムレーンの行ラベル（N行）。body_points の各行を ` → ` で分割してプロセスボックスに変換。
+
+---
+
 ### text_and_image（テキスト + 右画像）
 
 ```json
@@ -284,6 +342,12 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
   │   ├→ As-Is/To-Be → asis_tobe
   │   └→ 時系列 → timeline
   │
+  ├→ スコープ・定義の整理 → いくつの属性？
+  │   ├→ 3〜5属性（目的/ゴール/体制等） → row_label_content (tone: neutral)
+  │   └→ 多列定義（項目×作業×成果物等） → matrix_table (tone: neutral)
+  │
+  ├→ 並行プロセス・複数フェーズ → swimlane_process (tone: progression)
+  │
   └→ 情報の羅列 → bullet_list (tone: neutral)
 ```
 
@@ -342,6 +406,9 @@ AI の学習が進めば、Tier 1 の段階でパターンヒントを出力で�
 | `matrix_2x2` | 4 box を 2x2 配置 |
 | `kpi_cards` | N box 横並び（数値を大きく） |
 | `swot` | 4 box を 2x2 配置、ラベル固定 |
+| `row_label_content` | N行の「label box + text area」 |
+| `swimlane_process` | N行の「lane_label + process_flow」 |
+| `matrix_table` | ヘッダー行 + N データ行（各行に複数セル） |
 
 #### emphasis → 色の差別化
 
@@ -406,7 +473,55 @@ Tier 2 JSON（`slides/` サブフォルダ、gitignore対象）とは分離し�
 
 ---
 
-## 8. レシピ品質チェック
+## 8. 参照ライブラリの活用（Phase 3〜）
+
+### 参照ライブラリとは
+
+`refs/` ディレクトリに登録された過去の優良スライドのこと。
+`refs/index.json` に全参照作品が一覧されている。
+
+```
+refs/
+├── index.json               ← 全参照作品の目次
+├── sx/
+│   ├── sx_ctc_jre_suica/    ← JRE様 Suica 提案書（19枚）
+│   │   ├── analysis.json    ← 構造分析（機械可読）
+│   │   └── thumbnails/      ← PNG サムネイル（目視確認用）
+│   └── sx_ai_callcenter/    ← コールセンター AI 提案書（22枚）
+└── jr/
+    └── jr_20251209_teireikai/ ← JR 全体定例会（27枚）
+```
+
+### いつ参照するか
+
+レシピ生成時に「このスライドは参照作品に似たものがある」と思ったとき。
+ユーザーが「あのスライドみたいな感じで」と言ったとき。
+
+### 参照の使い方
+
+1. `refs/index.json` を Read して登録済み参照を確認
+2. 関連する参照の `analysis.json` を Read して構造を把握
+3. サムネイルを Read して視覚確認（1枚ずつ、一括読み込み禁止）
+4. レシピに `reference` フィールドを追加:
+
+```json
+{
+  "reference": {
+    "source": "refs/sx/sx_ctc_jre_suica/sx_ctc_jre_suica_analysis.json",
+    "adaptation": "スライド5の row_label_content 構造を参照。ラベルを4→3行に変更し、目的をより明確化"
+  }
+}
+```
+
+### パターン発見の記録
+
+参照を見て「これはカタログにないパターンだ」と思ったら:
+1. このファイル（slide_recipe.md）のパターンカタログに追記
+2. 参照作品のスライド番号と参照IDをコメントとして残す
+
+---
+
+## 9. レシピ品質チェック
 
 レシピ生成後、以下を確認:
 
