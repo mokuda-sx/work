@@ -5,7 +5,7 @@
 ## 今どこにいるか
 
 **Phase 1: 契約の定義** — **完了**
-**Phase 2: 自動化基盤** — **進行中**
+**Phase 2: 自動化基盤** — **完了**
 
 ロードマップ全体: [docs/ROADMAP.md](docs/ROADMAP.md)
 
@@ -28,16 +28,15 @@
 - [x] requirements.txt — 依存パッケージ定義
 - [x] .github/workflows/validate.yml — Schema バリデーション自動実行
 - [x] .github/workflows/assemble.yml — PPTX 自動結合ワークフロー
+- [x] .github/workflows/quality.yml — PR コメント付き品質チェック
 
 ## 次にやること
 
-### Phase 2: 自動化基盤（続き）
+### Phase 3: 参照ライブラリ
 
-自動化基盤の残タスクへ進む。
+Phase 2 完了。次は Phase 3（参照ライブラリ）へ進む。
 
-1. [x] Schema バリデーション（PR 時に自動実行）
-2. [x] PPTX アセンブル（手動トリガーで実装済み）
-3. [ ] 品質チェック（フォーマル評価の自動化）
+[docs/ROADMAP.md](docs/ROADMAP.md) の Phase 3 完了条件を確認して着手すること。
 
 ## 未来の自分（次セッションのAI）への指示
 
