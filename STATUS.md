@@ -1,10 +1,11 @@
 # 現在の状態
 
-> 最終更新: 2026-02-14 | 更新者: Claude Code (Sonnet 4.5) | Phase: 1
+> 最終更新: 2026-02-14 | 更新者: Gemini Code Assist | Phase: 2
 
 ## 今どこにいるか
 
 **Phase 1: 契約の定義** — **完了**
+**Phase 2: 自動化基盤** — **進行中**
 
 ロードマップ全体: [docs/ROADMAP.md](docs/ROADMAP.md)
 
@@ -24,17 +25,19 @@
 - [x] validate_schemas.py — バリデーション実行スクリプト
 - [x] docs/WORKFLOW.md — エージェント非依存のプロセス定義
 - [x] CONTRIBUTING.md — 人間向け・AI向け参加ガイド
+- [x] requirements.txt — 依存パッケージ定義
+- [x] .github/workflows/validate.yml — Schema バリデーション自動実行
+- [x] .github/workflows/assemble.yml — PPTX 自動結合ワークフロー
 
 ## 次にやること
 
-### Phase 2: 自動化 へ進む
+### Phase 2: 自動化基盤（続き）
 
-Phase 2 の詳細は着手時に展開する。概要は [ROADMAP.md](docs/ROADMAP.md) 参照。
+自動化基盤の残タスクへ進む。
 
-主な成果物（GitHub Actions）:
-1. Schema バリデーション（PR 時に自動実行）
-2. PPTX アセンブル（push 時に自動実行）
-3. 品質チェック（フォーマル評価の自動化）
+1. [x] Schema バリデーション（PR 時に自動実行）
+2. [x] PPTX アセンブル（手動トリガーで実装済み）
+3. [ ] 品質チェック（フォーマル評価の自動化）
 
 ## 未来の自分（次セッションのAI）への指示
 
