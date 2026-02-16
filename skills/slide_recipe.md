@@ -95,6 +95,12 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
 | `row_label_content` | 左ラベル列 + 右コンテンツ列（行グループ） | あり | なし | スコープ定義、フェーズ別説明 |
 | `swimlane_process` | 行ラベル（スイムレーン） + 各行にプロセスフロー | あり | なし | 並行プロセス、複数フェーズ計画 |
 | `matrix_table` | ヘッダー付き多列テーブル（複雑） | あり | なし | 作業定義、RACI、詳細スコープ |
+| `circular_flow` | 循環プロセス（円形に配置されたステップ） | あり | なし | PDCA、継続改善、スプリント |
+| `value_chain` | 横長の連結ブロック（左→右の価値連鎖） | あり | なし | バリューチェーン、サプライチェーン |
+| `cause_effect` | 原因群→結果の構造（左に原因、右に結果） | あり | なし | 課題分析、根本原因、因果関係 |
+| `roadmap` | 時系列ロードマップ（フェーズ + マイルストーン） | あり | なし | 中長期計画、段階的導入 |
+| `traffic_light` | 信号式ステータス表示（赤黄緑 + 項目） | あり | なし | 進捗報告、リスク評価、ヘルスチェック |
+| `team_profile` | メンバー紹介カード（名前 + 役割 + 写真エリア） | あり | 任意 | 体制紹介、チーム紹介 |
 
 ### ビジネスフレームワーク（構造パターンの特化版）
 
@@ -106,6 +112,8 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
 | `sora_ame_kasa` | `three_column` | 空（事実）→ 雨（解釈）→ 傘（行動） |
 | `timeline` | `process_flow` | 時系列のマイルストーン |
 | `funnel` | `pyramid`（逆） | ステージごとの絞り込み |
+| `fishbone` | `cause_effect` | 特性要因図（魚の骨） |
+| `customer_journey` | `process_flow` | 顧客体験の段階フロー |
 
 ---
 
@@ -287,6 +295,139 @@ Tier 1（アウトライン）→ レシピ（設計意図）→ Tier 2（テン
   ],
   "visual": {
     "labels": ["93%\n時間削減", "100%\n品質統一", "80%\n再利用率"],
+    "emphasis": "equal"
+  }
+}
+```
+
+### circular_flow（循環プロセス）
+
+```json
+{
+  "index": 9, "type": "content",
+  "title": "継続的改善サイクルの定着",
+  "message": "Plan→Do→Check→Actの4ステップを毎スプリント回す",
+  "pattern": "circular_flow",
+  "tone": "solution",
+  "body_points": [
+    "Plan: 仮説設定とKPI目標の合意",
+    "Do: 2週間スプリントでの施策実行",
+    "Check: データ分析と効果測定",
+    "Act: 改善アクションの反映と次サイクルへ"
+  ],
+  "visual": {
+    "labels": ["Plan", "Do", "Check", "Act"],
+    "emphasis": "equal"
+  }
+}
+```
+
+### value_chain（バリューチェーン）
+
+```json
+{
+  "index": 10, "type": "content",
+  "title": "サービス提供の価値連鎖",
+  "message": "企画から運用まで一気通貫で支援し、各段階で価値を付加",
+  "pattern": "value_chain",
+  "tone": "solution",
+  "body_points": [
+    "企画: ニーズ調査・要件定義",
+    "設計: アーキテクチャ設計・UXデザイン",
+    "開発: アジャイル開発・テスト",
+    "展開: 導入支援・トレーニング",
+    "運用: 継続改善・モニタリング"
+  ],
+  "visual": {
+    "labels": ["企画", "設計", "開発", "展開", "運用"],
+    "emphasis": "left_to_right"
+  }
+}
+```
+
+### cause_effect（原因→結果）
+
+```json
+{
+  "index": 11, "type": "content",
+  "title": "業務効率低下の根本原因",
+  "message": "3つの構造的課題が連鎖して全体の生産性を下げている",
+  "pattern": "cause_effect",
+  "tone": "problem",
+  "body_points": [
+    "原因1: 手作業による情報転記（年間500時間のロス）",
+    "原因2: 部門間の情報サイロ化（意思決定の遅延）",
+    "原因3: 属人化した業務プロセス（引継ぎ不能）",
+    "結果: 全体の生産性が30%低下、顧客対応も遅延"
+  ],
+  "visual": {
+    "labels": ["手作業", "サイロ化", "属人化", "生産性低下"],
+    "emphasis": "right"
+  }
+}
+```
+
+### roadmap（ロードマップ）
+
+```json
+{
+  "index": 12, "type": "content",
+  "title": "3フェーズでの段階的導入計画",
+  "message": "Phase 0で検証、Phase 1で基盤構築、Phase 2で全社展開",
+  "pattern": "roadmap",
+  "tone": "neutral",
+  "body_points": [
+    "Phase 0（3ヶ月）: PoC実施・効果検証・要件確定",
+    "Phase 1（6ヶ月）: 基盤システム構築・パイロット部門導入",
+    "Phase 2（6ヶ月）: 全社展開・運用定着・効果測定"
+  ],
+  "visual": {
+    "labels": ["Phase 0\nPoC", "Phase 1\n基盤構築", "Phase 2\n全社展開"],
+    "emphasis": "left_to_right"
+  }
+}
+```
+
+### traffic_light（信号式ステータス）
+
+```json
+{
+  "index": 13, "type": "content",
+  "title": "各領域の進捗ステータス",
+  "message": "開発は順調、テストに遅延リスク、インフラは完了",
+  "pattern": "traffic_light",
+  "tone": "neutral",
+  "body_points": [
+    "開発: 予定通り進行中（完了率85%）",
+    "テスト: 一部遅延あり（テストデータ準備に課題）",
+    "インフラ: 完了（本番環境構築済み）",
+    "トレーニング: 未着手（Phase 2で実施予定）"
+  ],
+  "visual": {
+    "labels": ["開発", "テスト", "インフラ", "トレーニング"],
+    "status": ["green", "yellow", "green", "gray"],
+    "emphasis": "equal"
+  }
+}
+```
+
+### team_profile（チーム紹介）
+
+```json
+{
+  "index": 14, "type": "content",
+  "title": "プロジェクト推進メンバー",
+  "message": "各領域の専門家がワンチームで支援",
+  "pattern": "team_profile",
+  "tone": "neutral",
+  "body_points": [
+    "PM: プロジェクト全体統括、クライアント窓口",
+    "テックリード: アーキテクチャ設計、技術選定",
+    "UXデザイナー: ユーザー調査、UI設計",
+    "データサイエンティスト: 分析基盤構築、AI/ML実装"
+  ],
+  "visual": {
+    "labels": ["PM", "テックリード", "UXデザイナー", "データサイエンティスト"],
     "emphasis": "equal"
   }
 }
