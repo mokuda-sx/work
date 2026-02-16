@@ -7,7 +7,29 @@
       "slide_count": 19,
       "analysis_path": "refs\\sx\\sx_ctc_jre_suica\\analysis.json",
       "thumbnail_dir": "refs\\sx\\sx_ctc_jre_suica\\thumbnails",
-      "analyzed_at": "2026-02-15"
+      "analyzed_at": "2026-02-15",
+      "purpose": "新規クライアント向けサービス検討支援の提案書。Suicaアプリ関連のDXコンサルティング提案",
+      "tags": ["提案", "新規", "DX", "サービスデザイン", "Suica", "コンサルティング"],
+      "summary": {
+        "tone": "formal_proposal",
+        "structure_pattern": "standard_proposal",
+        "structure_description": "表紙→目次→提案サマリ→背景・目的→重要論点→スコープ→スケジュール→体制・役割→見積→依頼事項→Appendix→End",
+        "chapter_flow": ["提案サマリ", "背景認識・目的", "重要論点", "スコープ", "スケジュール", "体制・役割", "見積", "依頼事項"],
+        "slide_type_distribution": {
+          "title": 1,
+          "agenda": 1,
+          "chapter": 1,
+          "content": 15,
+          "end": 1
+        },
+        "notable_patterns": ["row_label_content", "process_flow", "matrix_table", "team_profile"],
+        "premise_rules": [
+          "提案書は必ず「提案サマリ」で始め、全体像を1枚で示す",
+          "背景→スコープ→スケジュール→体制→見積の順序が基本構成",
+          "依頼事項（月次確認書・満足度調査・電子サイン・SDGs）をAppendix前に配置",
+          "Appendixに自社フレームワーク・手法の詳細を配置"
+        ]
+      }
     },
     {
       "id": "sx_ai_callcenter",
@@ -16,7 +38,30 @@
       "slide_count": 22,
       "analysis_path": "refs\\sx\\sx_ai_callcenter\\analysis.json",
       "thumbnail_dir": "refs\\sx\\sx_ai_callcenter\\thumbnails",
-      "analyzed_at": "2026-02-15"
+      "analyzed_at": "2026-02-15",
+      "purpose": "既存クライアント向けAI導入支援の提案書。コールセンター自動化のフェーズ0-1提案",
+      "tags": ["提案", "AI", "生成AI", "コールセンター", "自動化", "DX", "フェーズ提案"],
+      "summary": {
+        "tone": "formal_proposal",
+        "structure_pattern": "standard_proposal",
+        "structure_description": "表紙→目次→背景・目的→スコープ(2枚)→支援内容(4枚)→スケジュール→体制・役割(3枚)→依頼事項→見積→Why SIGMAXYZ(3枚)→Appendix→End",
+        "chapter_flow": ["背景・目的", "スコープ", "支援内容", "スケジュール", "体制・役割", "依頼事項", "見積", "Why SIGMAXYZ"],
+        "slide_type_distribution": {
+          "title": 1,
+          "agenda": 1,
+          "chapter": 0,
+          "content": 19,
+          "end": 1
+        },
+        "notable_patterns": ["process_flow", "swimlane_process", "row_label_content", "matrix_table", "team_profile"],
+        "premise_rules": [
+          "支援内容を複数枚に分割して詳細に説明する（4/4構成）",
+          "体制図・役割表・メンバー紹介の3枚セットで体制を示す",
+          "Why SIGMAXYZ（自社PR）セクションで実績・事例を訴求",
+          "フェーズ提案ではスコープを2枚で段階的に説明",
+          "見積は依頼事項の後に配置（先に要件を合意してから金額）"
+        ]
+      }
     },
     {
       "id": "jr_20251209_teireikai",
@@ -25,7 +70,30 @@
       "slide_count": 27,
       "analysis_path": "refs\\jr\\jr_20251209_teireikai\\analysis.json",
       "thumbnail_dir": "refs\\jr\\jr_20251209_teireikai\\thumbnails",
-      "analyzed_at": "2026-02-15"
+      "analyzed_at": "2026-02-15",
+      "purpose": "クライアント社内の全体定例会向け進捗報告資料。複数チームの状況を章ごとに報告",
+      "tags": ["報告", "定例", "社内共有", "進捗", "定例会", "ステータス"],
+      "summary": {
+        "tone": "internal_report",
+        "structure_pattern": "recurring_chapter_report",
+        "structure_description": "表紙→目次→[目次(章扉として再利用)→コンテンツ数枚]の繰り返し→End",
+        "chapter_flow": ["各チーム/領域の進捗報告が章ごとに繰り返される構成"],
+        "slide_type_distribution": {
+          "title": 1,
+          "agenda": 6,
+          "chapter": 0,
+          "content": 20,
+          "end": 0
+        },
+        "notable_patterns": ["matrix_table", "traffic_light", "bullet_list", "kpi_cards"],
+        "premise_rules": [
+          "目次スライドを章扉として再利用し、現在の章をハイライト",
+          "報告調のトーン（問題提起→解決策ではなく、状況→課題→次アクション）",
+          "複数チーム/領域を同じフォーマットで並列に報告",
+          "詳細よりも概況把握を優先した情報密度",
+          "提案書と異なりAppendix・見積・体制は不要"
+        ]
+      }
     }
   ]
 }
