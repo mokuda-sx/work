@@ -408,6 +408,15 @@ def add_slide(prs: Presentation, slide_data: dict,
 
     if body:
         set_body_text(slide, body, search_order=config.body_ph_search_order)
+    elif objects:
+        # body が空で objects がある場合、body プレースホルダを削除
+        # （空プレースホルダの点線枠が画面表示で目立つため）
+        body_ph_ids = set(config.body_ph_search_order or [10, 14, 1, 2])
+        for shape in list(slide.shapes):
+            if shape.is_placeholder and shape.placeholder_format.idx in body_ph_ids:
+                sp = shape._element
+                sp.getparent().remove(sp)
+                break
     if objects:
         add_objects_to_slide(slide, objects)
     if images and config.supports_image.get(layout_key, True):
