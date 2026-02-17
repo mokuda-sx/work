@@ -188,6 +188,11 @@ def add_objects_to_slide(slide, objects: list[dict]):
             txBox = slide.shapes.add_textbox(left, top, width, height)
             tf = txBox.text_frame
             tf.word_wrap = True
+            v_align = obj.get("v_align", "top")
+            if v_align == "middle":
+                tf._txBody.bodyPr.set("anchor", "ctr")
+            elif v_align == "bottom":
+                tf._txBody.bodyPr.set("anchor", "b")
             tf.clear()
             font_sz = Pt(obj.get("font_size", 11))
             font_clr = RGBColor.from_string(obj.get("font_color", "404040"))

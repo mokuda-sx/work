@@ -6,13 +6,13 @@
   "objects": [
     {"type": "box",  "text": "課題",   "left": 1.0, "top": 1.55, "width": 1.5, "height": 0.45, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
     {"type": "box",  "text": "", "left": 2.7, "top": 1.55, "width": 9.64, "height": 0.45, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
-    {"type": "text", "text": "ナレッジ散在・属人化・検索困難（検索に平均30分、退職時の知見消失）", "left": 2.9, "top": 1.55, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333"},
+    {"type": "text", "text": "ナレッジ散在・属人化・検索困難（検索に平均30分、退職時の知見消失）", "left": 2.9, "top": 1.55, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333", "v_align": "middle"},
     {"type": "box",  "text": "目標",   "left": 1.0, "top": 2.05, "width": 1.5, "height": 0.45, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
     {"type": "box",  "text": "", "left": 2.7, "top": 2.05, "width": 9.64, "height": 0.45, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
-    {"type": "text", "text": "AI検索基盤で情報到達5分以内、暗黙知の組織資産化", "left": 2.9, "top": 2.05, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333"},
+    {"type": "text", "text": "AI検索基盤で情報到達5分以内、暗黙知の組織資産化", "left": 2.9, "top": 2.05, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333", "v_align": "middle"},
     {"type": "box",  "text": "判断軸", "left": 1.0, "top": 2.55, "width": 1.5, "height": 0.45, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
     {"type": "box",  "text": "", "left": 2.7, "top": 2.55, "width": 9.64, "height": 0.45, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
-    {"type": "text", "text": "導入速度 / 検索精度 / 初期+運用コスト / 社内運用負荷", "left": 2.9, "top": 2.55, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333"},
+    {"type": "text", "text": "導入速度 / 検索精度 / 初期+運用コスト / 社内運用負荷", "left": 2.9, "top": 2.55, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333", "v_align": "middle"},
 
     {"type": "box",  "text": "案A: 既製品SaaS", "left": 1.0, "top": 3.3, "width": 3.65, "height": 0.45, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
     {"type": "text", "text": "M365 Copilot等の既製品を導入", "left": 1.1, "top": 3.85, "width": 3.45, "height": 0.35, "font_size": 12, "font_color": "333333", "bold": true},
