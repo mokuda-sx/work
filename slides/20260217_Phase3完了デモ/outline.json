@@ -1,0 +1,13 @@
+{
+  "title": "Phase 3完了デモ：参照ベース変更",
+  "description": "参照作品をTier 2段階で見ながら調整するディスカッションのデモンストレーション",
+  "template": "sx_proposal",
+  "slides": [
+    {
+      "index": 0,
+      "type": "content",
+      "title": "AIコンサル提案：3つの支援プラン",
+      "note": "sx_ai_callcenter slide 3 をベースに変更"
+    }
+  ]
+}
