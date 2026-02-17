@@ -1,6 +1,6 @@
 # 現在の状態
 
-> 最終更新: 2026-02-15 | 更新者: Claude Code (Sonnet 4.5) | Phase: 3
+> 最終更新: 2026-02-17 | 更新者: Claude Code (Opus 4.6) | Phase: 3
 
 ## 今どこにいるか
 
@@ -34,14 +34,30 @@
   - [x] `analyze_ref.py` — 参照PPTX分析・登録ツール
   - [x] 参照作品3本登録 → `refs/index.json`（sx: 2本, jr: 1本）
   - [x] `skills/slide_recipe.md` — パターン3種追加（row_label_content, swimlane_process, matrix_table）
+- [x] **Phase 3 参照作品ベースのスライド生成を実施**（2026-02-16〜17）
+  - [x] `slides/20260216_ナレッジAI論点整理/` — 参照作品 `sx_ai_callcenter` をベースに1枚スライド生成
+  - [x] レシピで参照作品の adaptation を記述 → Tier 2 変換 → PPTX 結合 → ユーザーレビュー → 修正の全フローを実施
+  - [x] ユーザーフィードバック反映: フォントサイズ階層、横幅統一、プレースホルダ削除、Dynamic Orange 強調色、縦中央揃え
+- [x] **SX Documentation Master 2023 のルール体系化**（2026-02-17）
+  - [x] `refs/sx/SX_Documentation_Master_2023_16x9.pptx` — 参照テンプレート登録
+  - [x] `refs/sx/sx_guide_complete_extraction.txt` — 活用ガイド全4枚の完全テキスト抽出
+  - [x] `skills/critique_rubric.md` — SX Doc Master 準拠ルール追加（フォント、カラー、出典、コンフィデンシャル、整列）
+- [x] **pptx_engine.py 機能強化**（2026-02-17）
+  - [x] `text` type: `\n` 個別段落化 + `bold` + `v_align` プロパティ
+  - [x] `box` type: 縦中央揃え（デフォルト）+ `v_align` プロパティ
+  - [x] 空 body 時のプレースホルダ自動削除
 
 ## 次にやること
 
-### Phase 3: 参照ライブラリ（進行中）
+### Phase 3: 参照ライブラリ（進行中 — 残り1条件）
 
 残り完了条件:
-- [ ] Recipe 生成時に参照作品を提示するフローを実際に試す
-- [ ] 「この参照をベースに、ここを変える」というディスカッションを1回実施する
+- [x] ~~Recipe 生成時に参照作品を提示するフローを実際に試す~~ → ナレッジAI論点整理で実施済み
+- [ ] 「この参照をベースに、ここを変える」というディスカッションを1回実施する（レシピ段階でのディスカッションは実施済み、Tier 2 段階での「参照を見ながら変更議論」が未実施）
+
+### 後続タスク（Phase 3 完了後）
+- [ ] カバー素材カタログ整備（`SXG_Documentation_Cover_2024` 48枚の分類・活用フロー）
+- [ ] `docs/knowhow.md` にフォントサイズ基準・整列ルールを転記
 
 ## 未来の自分（次セッションのAI）への指示
 
