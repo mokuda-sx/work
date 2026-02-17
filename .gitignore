@@ -18,6 +18,9 @@ gh.zip
 # Claude Code ローカル設定
 .claude/
 
+# 大容量参照ファイル
+refs/sx/SXG_Documentation_Cover_2024_16x9.pptx
+
 # Windows
 nul
 ~$*
