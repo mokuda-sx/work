@@ -17,6 +17,7 @@ from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_AUTO_SHAPE_TYPE
+from pptx.enum.text import MSO_ANCHOR
 
 # ─── テンプレート設定 ─────────────────────────────────
 TEMPLATES_DIR = Path(__file__).parent / "templates"
@@ -159,9 +160,15 @@ def add_objects_to_slide(slide, objects: list[dict]):
             shape.fill.fore_color.rgb = RGBColor.from_string(obj.get("fill_color", "4472C4"))
             shape.line.fill.background()
             text = obj.get("text", "")
+            tf = shape.text_frame
+            tf.word_wrap = True
+            tf.auto_size = None
+            v_align = obj.get("v_align", "middle")
+            if v_align == "top":
+                tf.paragraphs[0].space_before = Pt(0)
+            else:
+                shape.text_frame._txBody.bodyPr.set("anchor", "ctr" if v_align == "middle" else "b")
             if text:
-                tf = shape.text_frame
-                tf.word_wrap = True
                 tf.clear()
                 p = tf.paragraphs[0]
                 p.text = text

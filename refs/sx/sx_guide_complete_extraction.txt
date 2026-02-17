@@ -1,0 +1,282 @@
+
+================================================================================
+SIGMAXYZ SX_DOCUMENTATION_MASTER_2023 - COMPLETE GUIDE EXTRACTION
+Slides 0-3 Full Text Content with Color Analysis
+================================================================================
+
+
+================================================================================
+SLIDE 0: Template Overview (1/4)
+Japanese Title: シグマクシス　パワーポイントテンプレート　活用ガイド（1/4）
+================================================================================
+
+FULL TEXT CONTENT:
+--------------------------------------------------------------------------------
+シグマクシス　パワーポイントテンプレート　活用ガイド（1/4)
+
+パワーポイントテンプレートについて
+
+企業理念とロゴのコンセプトを反映してデザインしています。
+
+
+パワーポイントテンプレートの種類
+　　
+2種類のテンプレートをご用意しています。このファイルは「ドキュメンテーション用テンプレート」です。
+
+①　ドキュメンテーション用テンプレート：再利用、生産性を重視したテンプレートです。複数のメンバーで一つの資料を作る、あるいは加工する、事後に再利用する、
+ということを念頭に、複数のスライドのパターンを設定しています。活用ガイドに従い、推奨フォント、推奨カラー、ガイド値に
+沿ってご使用下さい。
+
+②　プレゼントテーション用テンプレート：作成者の創造性と表現を重視していますので、自由にお使いください。
+ドキュメンテーション用と同じく、ガイド値、表紙・エンドスライドのロゴ表示、推奨フォント、推奨カラーの設定はしていますが、プレゼンテーションの目的に応じて、どのようにお使いいただいても結構です。
+ 
+
+
+
+
+================================================================================
+SLIDE 1: Recommended Fonts (2/4)
+Japanese Title: シグマクシス　パワーポイントテンプレート　活用ガイド（2/4）
+================================================================================
+
+FULL TEXT CONTENT:
+--------------------------------------------------------------------------------
+シグマクシス　パワーポイントテンプレート　活用ガイド（2/4)
+
+推奨フォントについて
+
+和文：
+
+①MSPゴシック：　一般的で、印刷にも投影にも扱いやすい、相手と目的を選ばないフォントです。
+②游ゴシック：　　 MSPゴシックよりもクセがないやわらかさのあるフォントです。
+
+資料の目的、提出するお相手によって、どちらのフォントを使うかを決めて、プロジェクト、あるいは一つの資料の中での統一を図ってください。
+仕様の関係上、テンプレートの基本設定は「MSPゴシック」に規定値を設定してあります
+游ゴシックの線の細さが気になる場合、またタイトルに使用される際は、「游ゴシックMedium」またはボールドにする事をお勧めします。
+
+
+欧文：　Cambria　 
+
+このフォントは「全文英語」、すなわち英語版資料を作るときの推奨フォントです。
+日英混合の資料を作る（文章の一部に英単語や英文がはいる）などの場合は日英共に統一された和文フォントを使用してください。※文字の高さや幅が異なり、見た目にばらつきがでることが理由です
+ 
+ 
+
+和文：
+MSPゴシック
+游ゴシック
+游ゴシックMedium
+
+欧文：
+Cambria
+
+
+COLOR ANALYSIS (Shape Colors Detected):
+--------------------------------------------------------------------------------
+Shape 2: Theme color type: SCHEME (2)
+
+
+================================================================================
+SLIDE 2: Color Palette & Confidentiality Levels (3/4)
+Japanese Title: シグマクシス　パワーポイントテンプレート　活用ガイド（3/4）
+================================================================================
+
+FULL TEXT CONTENT:
+--------------------------------------------------------------------------------
+シグマクシス　パワーポイントテンプレート　活用ガイド（3/4)
+
+推奨カラーについて
+
+基本色は白、黒、Dynamic Orange （シグマクシスロゴのオレンジ）の3色です。
+強調色は「Dynamic Orange」をご使用下さい。
+カラーパレットに、その他推奨色をご用意しています。色を増やす場合は、左から順に使うことをお勧めします。
+ 
+
+
+
+
+
+
+
+
+コピーライトおよびコンフィデンシャル表記について
+
+コンテンツページのマスタースライドに設定してあります。4種類の中から、資料の機密レベルに合わせて、適切なマスタースライドを選んで使ってください。
+
+レベル０（公開）	Copyright SIGMAXYZ Inc. all rights reserved.
+レベル１（機密）	Copyright SIGMAXYZ Inc. all rights reserved. / Confidential
+　　〃　　（社外秘）	Copyright SIGMAXYZ Inc. all rights reserved. / Internal Use Only 
+レベル２（厳秘）	Copyright SIGMAXYZ Inc. all rights reserved. / Strictly Confidential
+
+
+推奨順
+
+White
+
+Black
+
+Dynamic Orange
+
+
+COLOR ANALYSIS (Shape Colors Detected):
+--------------------------------------------------------------------------------
+Shape 2: Theme color type: SCHEME (2)
+Shape 3: Theme color type: SCHEME (2)
+Shape 4: Theme color type: SCHEME (2)
+Shape 5: Theme color type: SCHEME (2)
+Shape 6: Theme color type: SCHEME (2)
+Shape 9: Theme color type: SCHEME (2)
+Shape 10: Theme color type: SCHEME (2)
+Shape 11: Theme color type: SCHEME (2)
+
+
+================================================================================
+SLIDE 3: Objects, Charts, Citations (4/4)
+Japanese Title: シグマクシス　パワーポイントテンプレート　活用ガイド（4/4）
+================================================================================
+
+FULL TEXT CONTENT:
+--------------------------------------------------------------------------------
+シグマクシス　パワーポイントテンプレート　活用ガイド（4/4)
+
+オブジェクト・パーツ／表・グラフについて
+
+オブジェクトは出来るだけシンプルかつフラットな形に揃え、色もカラーパレットから選択
+表・グラフ「何を伝えたいグラフか」を明記し、カラーを使い分け、フラットでシンプルなつくりを心がける 
+
+
+
+キーメッセージを決めて、カラーや太さをコントロールする強調したい部分に強調色である「Dynamic Orange」を指し、そのほかの要素に意味を持たせて差別化したい時には、グレースケールを順番に使用する 
+
+別の情報ソースから引用を行う場合は、必ず出所を明示すること表やグラフ、テキスト、写真などの著作物を、別の情報ソースからそのまま引用した場合の記載例「出所：（引用元の書籍、頁数、著者名あるいは資料名、資料年度　　　　　WEBサイトの場合はサイト名、URL、運営者を明記）」※資料作成における引用ルールの詳細については以下のページを参照くださいプロジェクト情報の取り扱い ： https://cms51.sigmaxyz.com/rules-and-guide/information-security/information-security-10/
+
+
+出所：「Pulp and paper towards 2010, an executive summary 1994」
+　　　　URL：https://www.fao.org/faostat/
+　　　　Food and Agriculture Organization
+
+
+COLOR ANALYSIS (Shape Colors Detected):
+--------------------------------------------------------------------------------
+Shape 4: Theme color type: SCHEME (2)
+
+
+================================================================================
+SPECIAL SECTION: CONFIDENTIALITY LEVEL REQUIREMENTS
+================================================================================
+
+
+From SLIDE 2 (Guide 3/4):
+
+Four Confidentiality Master Slides are built into the template.
+Select the appropriate master slide BEFORE creating your content.
+
+LEVEL 0 - PUBLIC (公開):
+  Footer Text: "Copyright SIGMAXYZ Inc. all rights reserved."
+  Use Case: Documents intended for public or general distribution
+
+LEVEL 1 - CONFIDENTIAL (機密):
+  Footer Text: "Copyright SIGMAXYZ Inc. all rights reserved. / Confidential"
+  Use Case: Internal documents with standard confidentiality
+
+LEVEL 1b - INTERNAL USE ONLY (社外秘):
+  Footer Text: "Copyright SIGMAXYZ Inc. all rights reserved. / Internal Use Only"
+  Use Case: Documents not to be shared externally, for internal use only
+
+LEVEL 2 - STRICTLY CONFIDENTIAL (厳秘):
+  Footer Text: "Copyright SIGMAXYZ Inc. all rights reserved. / Strictly Confidential"
+  Use Case: Highly sensitive internal documents
+
+IMPLEMENTATION:
+1. Identify document classification BEFORE starting
+2. Go to Master Slide view
+3. Select the master matching your classification
+4. Create content - footer automatically applies
+5. No manual footer entry needed
+
+Japanese Classification Names:
+  - 公開 (Public)
+  - 機密 (Confidential)
+  - 社外秘 (Internal Use Only / Not for External Distribution)
+  - 厳秘 (Strictly Confidential)
+
+================================================================================
+SPECIAL SECTION: COLOR PALETTE DETAILS
+================================================================================
+
+
+From SLIDE 2 (Guide 3/4):
+
+PRIMARY COLOR PALETTE:
+1. White - Background and neutral spaces
+2. Black - Primary text and structure
+3. Dynamic Orange - SIGMAXYZ logo orange color
+   - Use for emphasis and highlights
+   - Primary accent color for the entire template
+
+ADDITIONAL COLORS:
+- Template includes extended color palette beyond the 3 primary colors
+- When adding colors to designs, apply them in LEFT-TO-RIGHT order from palette
+- Maintain visual hierarchy through strategic color use
+
+USAGE RULES:
+- Base colors (White/Black/Orange) are core to all designs
+- Expansion colors should follow palette order for consistency
+- Dynamic Orange is the ONLY accent color for emphasis
+- Other elements should use grayscale progression for differentiation
+- Never mix accent colors - reserve Dynamic Orange for critical emphasis only
+
+DESIGN PRINCIPLE:
+Colors support the key message:
+1. Define the key message first
+2. Use color and thickness to highlight the message
+3. Apply Dynamic Orange to the most important elements
+4. Use grayscale sequence for supporting elements
+5. Maintain visual clarity and message hierarchy
+
+================================================================================
+SPECIAL SECTION: CITATION RULES FROM SLIDE 3
+================================================================================
+
+
+From SLIDE 3 (Guide 4/4):
+
+MANDATORY CITATION RULE:
+When using charts, graphs, tables, text, or images from external sources,
+you MUST include source attribution.
+
+CITATION FORMAT (Japanese):
+出所：（引用元の書籍、頁数、著者名あるいは資料名、資料年度
+      WEBサイトの場合はサイト名、URL、運営者を明記）
+
+CITATION FORMAT (English Translation):
+Source: (For books: publication title, page number, author name or 
+         resource name, year of publication
+         For websites: website name, URL, organization/operator)
+
+EXAMPLE FROM TEMPLATE:
+出所：「Pulp and paper towards 2010, an executive summary 1994」
+      URL：https://www.fao.org/faostat/
+      Food and Agriculture Organization
+
+ELEMENT CITATION REQUIREMENTS:
+- Tables and graphs from external sources - CITE
+- Text and quotes from external sources - CITE
+- Photographs and images from external sources - CITE
+- Charts and diagrams from external sources - CITE
+- Any information not originally created - CITE
+
+DETAILED CITATION RULES:
+For comprehensive citation rules and information security guidelines,
+reference: https://cms51.sigmaxyz.com/rules-and-guide/information-security/information-security-10/
+
+BEST PRACTICE:
+Always cite external sources clearly. It demonstrates:
+1. Academic/professional integrity
+2. Respect for intellectual property
+3. Credibility of the document
+4. Compliance with company policy
+
+================================================================================
+EXTRACTION COMPLETE - END OF DOCUMENT
+================================================================================
