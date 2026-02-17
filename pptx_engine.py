@@ -182,13 +182,17 @@ def add_objects_to_slide(slide, objects: list[dict]):
             tf = txBox.text_frame
             tf.word_wrap = True
             tf.clear()
-            p = tf.paragraphs[0]
-            p.text = obj.get("text", "")
-            p.alignment = PP_ALIGN.LEFT
-            if p.runs:
-                run = p.runs[0]
-                run.font.size  = Pt(obj.get("font_size", 11))
-                run.font.color.rgb = RGBColor.from_string(obj.get("font_color", "404040"))
+            font_sz = Pt(obj.get("font_size", 11))
+            font_clr = RGBColor.from_string(obj.get("font_color", "404040"))
+            lines = obj.get("text", "").split("\n")
+            for i, line in enumerate(lines):
+                p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+                p.text = line
+                p.alignment = PP_ALIGN.LEFT
+                if p.runs:
+                    run = p.runs[0]
+                    run.font.size  = font_sz
+                    run.font.color.rgb = font_clr
 
 # ─── 画像生成 (Gemini) ───────────────────────────────
 def generate_image_gemini(prompt: str, model: str = "gemini-3-pro-image-preview") -> bytes | None:
