@@ -517,6 +517,29 @@ document.getElementById('btnCopyJSON').addEventListener('click', () => {
     }
 });
 
+// ==================== スクリーンショット ====================
+
+document.getElementById('btnScreenshot').addEventListener('click', async () => {
+    const btn = document.getElementById('btnScreenshot');
+    btn.disabled = true;
+    btn.textContent = '📸 撮影中...';
+    
+    try {
+        const result = await captureCanvasScreenshot();
+        if (result.success) {
+            alert(`✅ スクリーンショットを保存しました\n\nファイル: ${result.filename}`);
+            btn.textContent = '📸 スクリーンショット';
+        } else {
+            alert(`❌ エラー: ${result.error}`);
+        }
+    } catch (err) {
+        alert(`❌ エラー: ${err.message}`);
+    }
+    
+    btn.disabled = false;
+    btn.textContent = '📸 スクリーンショット';
+});
+
 // ==================== JSON インポート ====================
 
 document.getElementById('btnLoadJSON').addEventListener('click', () => {
