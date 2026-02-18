@@ -1,0 +1,19 @@
+{
+  "title": "AI PPT生成の仕組み説明",
+  "description": "AI + 人間協働で PPTX を段階的に生成するシステムの構造とスキル化戦略",
+  "template": "sx_proposal",
+  "slides": [
+    {
+      "index": 0,
+      "type": "content",
+      "title": "AIコンテキスト制約への対応：スキル化戦略",
+      "note": "Tier 1 → Recipe → Tier 2 に分離した理由"
+    },
+    {
+      "index": 1,
+      "type": "content",
+      "title": "AI + 人間協働：3層フロー",
+      "note": "各段階の処理と成果物"
+    }
+  ]
+}

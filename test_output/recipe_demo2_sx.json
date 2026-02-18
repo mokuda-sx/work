@@ -1,0 +1,63 @@
+{
+  "template": "sx_proposal",
+  "type": "content",
+  "title": "AI + 人間協働：段階的生成パイプライン",
+  "subtitle": "3つのステップで、複雑な PPTX 生成を確実に実現",
+  "objects": [
+    {
+      "type": "box",
+      "left": 0.5,
+      "top": 4.0,
+      "width": 2.5,
+      "height": 1.0,
+      "text": "Tier 1\n既存品\n（Outline）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    },
+    {
+      "type": "arrow",
+      "left": 3.05,
+      "top": 4.4,
+      "width": 0.4,
+      "height": 0.1,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 3.9,
+      "top": 4.0,
+      "width": 2.5,
+      "height": 1.0,
+      "text": "Tier 2\n新方式\n（ビジュアル）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    },
+    {
+      "type": "arrow",
+      "left": 6.45,
+      "top": 4.4,
+      "width": 0.4,
+      "height": 0.1,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 7.3,
+      "top": 4.0,
+      "width": 2.5,
+      "height": 1.0,
+      "text": "Tier 3\n完成向かい方\n（Output）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11
+    }
+  ],
+  "body_area": {
+    "left": 0.5,
+    "top": 1.5,
+    "width": 12.3,
+    "height": 5.3
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "template": "sx_proposal",
+  "type": "content",
+  "title": "AI デジタルツイン：パイプライン",
+  "subtitle": "Canvas で見える座標 = PPTX に配置される座標（完全一致）",
+  "objects": [
+    {
+      "type": "box",
+      "left": 0.5,
+      "top": 3.5,
+      "width": 3.9,
+      "height": 1.5,
+      "text": "入力\n（情報出し）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 12
+    },
+    {
+      "type": "box",
+      "left": 4.6,
+      "top": 3.5,
+      "width": 3.9,
+      "height": 1.5,
+      "text": "処理\n（カスタマイズ）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 12
+    },
+    {
+      "type": "box",
+      "left": 8.7,
+      "top": 3.5,
+      "width": 3.9,
+      "height": 1.5,
+      "text": "出力\n（完成向かい方）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 12
+    }
+  ],
+  "body_area": {
+    "left": 0.5,
+    "top": 1.5,
+    "width": 12.3,
+    "height": 5.3
+  }
+}

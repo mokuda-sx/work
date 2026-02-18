@@ -1,0 +1,179 @@
+{
+  "template": "sx_proposal",
+  "type": "content",
+  "title": "提案価値のマトリックス分析",
+  "subtitle": "市場機会 × 実装難度で優先順位を判定",
+  "objects": [
+    {
+      "type": "box",
+      "left": 2.7969999999999997,
+      "top": 1.545,
+      "width": 3.1799999999999997,
+      "height": 0.4,
+      "text": "高",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 5.976999999999999,
+      "top": 1.545,
+      "width": 3.1799999999999997,
+      "height": 0.4,
+      "text": "中",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 9.157,
+      "top": 1.545,
+      "width": 3.1799999999999997,
+      "height": 0.4,
+      "text": "低",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 2.045,
+      "width": 1.5,
+      "height": 0.7,
+      "text": "高機会",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 2.7969999999999997,
+      "top": 2.045,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "優先度1\n実装Go",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 5.976999999999999,
+      "top": 2.045,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "優先度2\n要検討",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 9.157,
+      "top": 2.045,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "保留\n将来オプション",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 2.745,
+      "width": 1.5,
+      "height": 0.7,
+      "text": "中機会",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 2.7969999999999997,
+      "top": 2.745,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "優先度2\n要検討",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 5.976999999999999,
+      "top": 2.745,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "中実装\n段階的",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 9.157,
+      "top": 2.745,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "スコープ外",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 3.445,
+      "width": 1.5,
+      "height": 0.7,
+      "text": "低機会",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 2.7969999999999997,
+      "top": 3.445,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "保留\n将来オプション",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 5.976999999999999,
+      "top": 3.445,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "スコープ外",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 9.157,
+      "top": 3.445,
+      "width": 3.1799999999999997,
+      "height": 0.7,
+      "text": "実施不要",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    }
+  ],
+  "body_area": {
+    "left": 0.997,
+    "top": 1.545,
+    "width": 11.34,
+    "height": 5.512
+  }
+}

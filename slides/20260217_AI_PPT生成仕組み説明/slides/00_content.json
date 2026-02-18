@@ -1,0 +1,19 @@
+{
+  "index": 0,
+  "type": "content",
+  "title": "AIコンテキスト制約への対応：スキル化戦略",
+  "subtitle": "言語モデルの処理能力に合わせて、段階ごとに必要なスキルだけを読み込む設計",
+  "objects": [
+    {"type": "box", "text": "課題", "left": 1.0, "top": 1.55, "width": 1.5, "height": 0.45, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "", "left": 2.7, "top": 1.55, "width": 9.64, "height": 0.45, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
+    {"type": "text", "text": "言語モデルの「一度に処理できる情報量の上限」（コンテキストウィンドウ制約）への対応が必須", "left": 2.9, "top": 1.55, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333", "v_align": "middle"},
+    
+    {"type": "box", "text": "問題", "left": 1.0, "top": 2.05, "width": 1.5, "height": 0.45, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "", "left": 2.7, "top": 2.05, "width": 9.64, "height": 0.45, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
+    {"type": "text", "text": "全知識を一度に読み込む → コンテキスト枯渇 → 品質低下・矛盾・誤り増加", "left": 2.9, "top": 2.05, "width": 9.44, "height": 0.45, "font_size": 12, "font_color": "333333", "v_align": "middle"},
+    
+    {"type": "box", "text": "対応", "left": 1.0, "top": 2.55, "width": 1.5, "height": 2.85, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 12},
+    {"type": "box", "text": "", "left": 2.7, "top": 2.55, "width": 9.64, "height": 2.85, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
+    {"type": "text", "text": "スキル化 = AI生成を段階別ガイドで最適化する設計\n\n【段階1】構成設計ガイド (outline_guide.md)\n【段階2】意図設計ガイド (slide_recipe.md)\n【段階3】実装設計ガイド (critique_rubric.md)\n\n各段階で、その段階に必要なコンテキストだけを読み込む\n→ AI生成の品質と安定性を飛躍的に向上", "left": 2.9, "top": 2.7, "width": 9.44, "height": 2.55, "font_size": 12, "font_color": "333333", "v_align": "top"}
+  ]
+}

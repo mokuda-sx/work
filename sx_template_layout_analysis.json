@@ -1,0 +1,35 @@
+{
+  "slide_size": {
+    "width": 13.333333333333334,
+    "height": 7.5
+  },
+  "placeholders": {
+    "タイトル 7": {
+      "index": 0,
+      "left": 0.997,
+      "top": 0.459,
+      "width": 11.34,
+      "height": 0.3,
+      "right": 12.337,
+      "bottom": 0.759
+    },
+    "テキスト プレースホルダー 2": {
+      "index": 14,
+      "left": 0.997,
+      "top": 1.545,
+      "width": 11.34,
+      "height": 5.512,
+      "right": 12.337,
+      "bottom": 7.057
+    },
+    "サブタイトル 2": {
+      "index": 13,
+      "left": 0.997,
+      "top": 0.782,
+      "width": 11.34,
+      "height": 0.538,
+      "right": 12.336,
+      "bottom": 1.32
+    }
+  }
+}

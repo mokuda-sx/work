@@ -1,0 +1,60 @@
+{
+  "template": "sx_proposal",
+  "title": "AI生成の課題と解決策",
+  "subtitle": "",
+  "slide_size": {
+    "width": 13.333,
+    "height": 7.5
+  },
+  "body_area": {
+    "left": 0.997,
+    "top": 1.545,
+    "width": 11.34,
+    "height": 5.512
+  },
+  "objects": [
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 1.545,
+      "width": 11.34,
+      "height": 0.5,
+      "text": "AI生成の課題と解決策",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 2.15,
+      "width": 5.0,
+      "height": 1.8,
+      "text": "❌ 従来の課題\n\n・コンテキスト制限（4K tokens）\n・複数計画を一度に実装不可\n・品質ばらつき",
+      "fill_color": "ED7D31",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    },
+    {
+      "type": "box",
+      "left": 6.337,
+      "top": 2.15,
+      "width": 5.0,
+      "height": 1.8,
+      "text": "✅ 解決策（Tier化）\n\n・段階的なレシピ使用\n・各 Tier で品質保証\n・スケーラブルなパイプライン",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 10
+    },
+    {
+      "type": "text",
+      "left": 0.997,
+      "top": 4.1,
+      "width": 11.34,
+      "height": 2.457,
+      "text": "プロセス内に段階を組み込むことで、複雑なタスクでも安定した AI 生成が可能に\n\n・Tier 1: 基本と要件出し\n・Tier 2: テンプレートと配置\n・Tier 3: 最終調整と出力",
+      "font_color": "404040",
+      "font_size": 9
+    }
+  ]
+}

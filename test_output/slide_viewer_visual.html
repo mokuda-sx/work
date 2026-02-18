@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI生成スライド - ビジュアル確認</title>
+    <style>
+        {
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                    min-height: 100vh; padding: 40px 20px; }
+            
+            .container { max-width: 1300px; margin: 0 auto; }
+            
+            h1 { color: white; text-align: center; margin-bottom: 30px; font-size: 32px; }
+            
+            .slide-viewer {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                perspective: 1000px;
+            }
+            
+            .slide-card {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .slide-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 30px 90px rgba(0,0,0,0.4);
+            }
+            
+            .slide-header {
+                background: linear-gradient(135deg, #4472C4 0%, #2f5aa0 100%);
+                color: white;
+                padding: 20px;
+            }
+            
+            .slide-header h2 {
+                margin: 0 0 10px 0;
+                font-size: 18px;
+            }
+            
+            .slide-header p {
+                margin: 5px 0;
+                font-size: 13px;
+                opacity: 0.9;
+            }
+            
+            .slide-canvas {
+                aspect-ratio: 16/9;
+                background: #f9f9f9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                position: relative;
+                height: 500px;
+            }
+            
+            canvas {
+                max-width: 100%;
+                max-height: 100%;
+                box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+                background: white;
+            }
+            
+            .slide-controls {
+                padding: 20px;
+                background: #f5f5f5;
+                border-top: 1px solid #eee;
+                display: flex;
+                gap: 10px;
+            }
+            
+            button {
+                flex: 1;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 14px;
+                transition: all 0.2s;
+            }
+            
+            .btn-load {
+                background: #4472C4;
+                color: white;
+            }
+            
+            .btn-load:hover {
+                background: #2f5aa0;
+                transform: scale(1.02);
+            }
+            
+            .btn-load:active {
+                transform: scale(0.98);
+            }
+            
+            .slide-info {
+                padding: 20px;
+                background: #e3f2fd;
+                border-left: 4px solid #4472C4;
+                font-size: 12px;
+                color: #1565c0;
+            }
+            
+            .info-row {
+                display: flex;
+                justify-content: space-between;
+                margin: 8px 0;
+            }
+            
+            .status-bar {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            
+            .status-msg {
+                color: #4472C4;
+                font-weight: 600;
+            }
+            
+            .grid-lines {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: 
+                    linear-gradient(0deg, transparent 24%, rgba(255,0,0,.05) 25%, rgba(255,0,0,.05) 26%, transparent 27%, transparent 74%, rgba(255,0,0,.05) 75%, rgba(255,0,0,.05) 76%, transparent 77%, transparent),
+                    linear-gradient(90deg, transparent 24%, rgba(255,0,0,.05) 25%, rgba(255,0,0,.05) 26%, transparent 27%, transparent 74%, rgba(255,0,0,.05) 75%, rgba(255,0,0,.05) 76%, transparent 77%, transparent);
+                background-size: 50px 50px;
+                pointer-events: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 AI生成スライド - ビジュアル確認</h1>
+        
+        <div class="slide-viewer">
+            <!-- Slide 1: Tier1 -->
+            <div class="slide-card">
+                <div class="slide-header">
+                    <h2>📄 Slide 1: Tier1</h2>
+                    <p>AIコンテキスト制約への対応：スキル化戦略</p>
+                </div>
+                
+                <div class="slide-canvas" id="canvas-tier1-container">
+                    <div class="grid-lines"></div>
+                    <canvas id="canvasTier1" width="1280" height="720" style="border: 1px solid #ddd;"></canvas>
+                </div>
+                
+                <div class="slide-info">
+                    <strong>📊 構成情報</strong>
+                    <div class="info-row">
+                        <span>オブジェクト数:</span>
+                        <strong>6個</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>タイプ:</span>
+                        <strong>コンテンツスライド</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>ファイルサイズ:</span>
+                        <strong>1.3 KB</strong>
+                    </div>
+                </div>
+                
+                <div class="slide-controls">
+                    <button class="btn-load" onclick="renderTier1()">📥 レンダリング</button>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Tier2 -->
+            <div class="slide-card">
+                <div class="slide-header">
+                    <h2>📄 Slide 2: Tier2</h2>
+                    <p>AI + 人間協働：3層フロー</p>
+                </div>
+                
+                <div class="slide-canvas" id="canvas-tier2-container">
+                    <div class="grid-lines"></div>
+                    <canvas id="canvasTier2" width="1280" height="720" style="border: 1px solid #ddd;"></canvas>
+                </div>
+                
+                <div class="slide-info">
+                    <strong>📊 構成情報</strong>
+                    <div class="info-row">
+                        <span>オブジェクト数:</span>
+                        <strong>18個</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>タイプ:</span>
+                        <strong>3層フロー図解</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>ファイルサイズ:</span>
+                        <strong>4.3 KB</strong>
+                    </div>
+                </div>
+                
+                <div class="slide-controls">
+                    <button class="btn-load" onclick="renderTier2()">📥 レンダリング</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <p class="status-msg">✅ AI により2枚のスライドが自動設計されました</p>
+            <p style="margin-top: 10px; color: #666;">各スライドの「📥 レンダリング」ボタンをクリックすると、Canvas に配置が表示されます</p>
+        </div>
+    </div>
+    
+    <script>
+        // Tier1 データ
+        const TIER1_JSON = {"index": 1, "type": "content", "title": "AI\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u5236\u7d04\u3078\u306e\u5bfe\u5fdc\uff1a\u30b9\u30ad\u30eb\u5316\u6226\u7565", "subtitle": "Tier 1 \u2192 Recipe \u2192 Tier 2 \u306b\u5206\u96e2\u3057\u305f\u7406\u7531", "objects": [{"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 14, "height": 0.9, "left": 0.5, "text": "AI\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u5236\u7d04\u3078\u306e\u5bfe\u5fdc\n\u30b9\u30ad\u30eb\u5316\u6226\u7565", "top": 0.3, "type": "box", "width": 4.3}, {"font_color": "404040", "font_size": 11, "height": 0.4, "left": 0.5, "text": "Tier 1 \u2192 Recipe \u2192 Tier 2 \u306b\u5206\u96e2\u3057\u305f\u7406\u7531", "top": 1.3, "type": "text", "width": 4.3}, {"fill_color": "ED7D31", "font_color": "FFFFFF", "font_size": 12, "height": 0.5, "left": 0.5, "text": "\u274c \u5f93\u6765\u306e\u8ab2\u984c", "top": 2.0, "type": "box", "width": 1.9}, {"font_color": "404040", "font_size": 10, "height": 1.5, "left": 0.5, "text": "\u2022 \u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u5236\u7d04\n  (4K tokens)\n\n\u2022 \u8907\u96d1\u306a\u8a08\u753b\u3092\u4e00\u5ea6\u306b\n  \u5b9f\u88c5\u4e0d\u53ef\n\n\u2022 \u54c1\u8cea\u306e\u3070\u3089\u3064\u304d", "top": 2.6, "type": "text", "width": 1.9}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 12, "height": 0.5, "left": 3.3, "text": "\u2705 3\u5c64\u30d5\u30ed\u30fc\u5316", "top": 2.0, "type": "box", "width": 1.9}, {"font_color": "FFFFFF", "font_size": 10, "height": 1.5, "left": 3.3, "text": "\u2022 \u6bb5\u968e\u7684\u8a2d\u8a08\n  (Tier\u5316)\n\n\u2022 \u5404\u5c64\u3067\u6a5f\u80fd\u3092\u6700\u9069\u5316\n  (Recipe)\n\n\u2022 \u4e00\u8cab\u3057\u305f\u54c1\u8cea", "top": 2.6, "type": "text", "width": 1.9}]};
+        
+        // Tier2 データ
+        const TIER2_JSON = {"index": 1, "type": "content", "title": "AI + \u4eba\u9593\u5354\u50cd\uff1a3\u5c64\u30d5\u30ed\u30fc", "subtitle": "\u6bb5\u968e\u3054\u3068\u306b\u5fc5\u8981\u306a\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u3060\u3051\u3092\u8aad\u307f\u8fbc\u307e\u305b\u308b\u3053\u3068\u3067\u3001AI\u306e\u751f\u6210\u54c1\u8cea\u3092\u6700\u9069\u5316\u3059\u308b", "objects": [{"fill_color": "404040", "font_color": "FFFFFF", "font_size": 11, "height": 1.2, "left": 0.5, "text": "Tier 1\n\u69cb\u6210\u8a2d\u8a08", "top": 1.8, "type": "box", "width": 1.0}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11, "height": 0.8, "left": 1.7, "text": "outline_guide\n\u6307\u5b9a", "top": 1.8, "type": "box", "width": 1.4}, {"fill_color": "ED7D31", "height": 0.3, "left": 3.3, "top": 2.05, "type": "arrow", "width": 0.5}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11, "height": 0.8, "left": 4.0, "text": "AI\u304c\n\u69cb\u6210\u6848\u3092\n\u751f\u6210", "top": 1.8, "type": "box", "width": 1.4}, {"fill_color": "F2F2F2", "font_color": "333333", "font_size": 1, "height": 0.8, "left": 5.7, "text": "", "top": 1.8, "type": "box", "width": 6.5}, {"font_color": "333333", "font_size": 10, "height": 0.8, "left": 5.9, "text": "\u3010\u6210\u679c\u7269\u3011\u63d0\u6848\u66f8\u306e\u69cb\u6210\u30fb\u30b9\u30c8\u30fc\u30ea\u30fc\uff08\u30a2\u30a6\u30c8\u30e9\u30a4\u30f3\uff09", "top": 1.8, "type": "text", "v_align": "middle", "width": 6.1}, {"fill_color": "404040", "font_color": "FFFFFF", "font_size": 11, "height": 1.2, "left": 0.5, "text": "Recipe\n\u610f\u56f3\u8a2d\u8a08", "top": 3.2, "type": "box", "width": 1.0}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11, "height": 0.8, "left": 1.7, "text": "\u30d1\u30bf\u30fc\u30f3\n\u53c2\u7167\u4f5c\u54c1\n\u6307\u5b9a", "top": 3.2, "type": "box", "width": 1.4}, {"fill_color": "ED7D31", "height": 0.3, "left": 3.3, "top": 3.45, "type": "arrow", "width": 0.5}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11, "height": 0.8, "left": 4.0, "text": "AI\u304c\n\u8a73\u7d30\u914d\u7f6e\n\u3092\u63d0\u6848", "top": 3.2, "type": "box", "width": 1.4}, {"fill_color": "F2F2F2", "font_color": "333333", "font_size": 1, "height": 0.8, "left": 5.7, "text": "", "top": 3.2, "type": "box", "width": 6.5}, {"font_color": "333333", "font_size": 10, "height": 0.8, "left": 5.9, "text": "\u3010\u6210\u679c\u7269\u3011\u30b9\u30e9\u30a4\u30c9\u8a2d\u8a08\uff08\u30d1\u30bf\u30fc\u30f3\u30fb\u610f\u56f3\u30fb\u914d\u7f6e\u6848\uff09", "top": 3.2, "type": "text", "v_align": "middle", "width": 6.1}, {"fill_color": "404040", "font_color": "FFFFFF", "font_size": 11, "height": 1.2, "left": 0.5, "text": "Tier 2\n\u5b9f\u88c5\u8a2d\u8a08", "top": 4.6, "type": "box", "width": 1.0}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11, "height": 0.8, "left": 1.7, "text": "\u5ea7\u6a19\n\u8272\n\u30d5\u30a9\u30f3\u30c8\n\u6307\u5b9a", "top": 4.6, "type": "box", "width": 1.4}, {"fill_color": "ED7D31", "height": 0.3, "left": 3.3, "top": 4.85, "type": "arrow", "width": 0.5}, {"fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11, "height": 0.8, "left": 4.0, "text": "AI\u304c\nPPTX JSON\n\u3092\u751f\u6210", "top": 4.6, "type": "box", "width": 1.4}, {"fill_color": "F2F2F2", "font_color": "333333", "font_size": 1, "height": 0.8, "left": 5.7, "text": "", "top": 4.6, "type": "box", "width": 6.5}, {"font_color": "333333", "font_size": 10, "height": 0.8, "left": 5.9, "text": "\u3010\u6210\u679c\u7269\u3011PowerPoint JSON + PPTX", "top": 4.6, "type": "text", "v_align": "middle", "width": 6.1}]};
+        
+        // Canvas レンダリング共通関数
+        function drawSlide(canvas, slideData) {
+            const ctx = canvas.getContext('2d');
+            
+            // 背景クリア
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // DPI 調整 (Canvas: 96 DPI, PowerPoint: 96 DPI)
+            const dpiScale = 96 / 72;
+            const inchToPixel = dpiScale * 96; // 96 DPI で 1 inch = 96 pixels
+            
+            // オブジェクト描画
+            slideData.objects.forEach(obj => {
+                const x = obj.left * inchToPixel;
+                const y = obj.top * inchToPixel;
+                const w = obj.width * inchToPixel;
+                const h = obj.height * inchToPixel;
+                
+                if (obj.type === 'box' || (obj.type === 'arrow' && !obj.type.includes('-'))) {
+                    // 背景
+                    if (obj.fill_color) {
+                        ctx.fillStyle = '#' + (obj.fill_color || 'FFFFFF');
+                        ctx.fillRect(x, y, w, h);
+                    }
+                    
+                    // テキスト
+                    if (obj.text) {
+                        const fontSize = obj.font_size || 12;
+                        ctx.fillStyle = '#' + (obj.font_color || '000000');
+                        ctx.font = fontSize + 'px Arial';
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        
+                        const lines = obj.text.split('\n');
+                        const lineHeight = fontSize * 1.2;
+                        const startY = y + (h - (lines.length - 1) * lineHeight) / 2;
+                        
+                        lines.forEach((line, i) => {
+                            ctx.fillText(line, x + w / 2, startY + i * lineHeight);
+                        });
+                    }
+                }
+            });
+        }
+        
+        function renderTier1() {
+            const canvas = document.getElementById('canvasTier1');
+            console.log('Rendering Tier1...');
+            drawSlide(canvas, TIER1_JSON);
+            alert('✅ Tier1 スライドがレンダリングされました');
+        }
+        
+        function renderTier2() {
+            const canvas = document.getElementById('canvasTier2');
+            console.log('Rendering Tier2...');
+            drawSlide(canvas, TIER2_JSON);
+            alert('✅ Tier2 スライドがレンダリングされました');
+        }
+        
+        // ページロード時に自動レンダリング
+        window.addEventListener('load', () => {
+            renderTier1();
+            renderTier2();
+        });
+    </script>
+</body>
+</html>

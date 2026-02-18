@@ -1,0 +1,31 @@
+{
+  "index": 1,
+  "type": "content",
+  "title": "AI + 人間協働：3層フロー",
+  "subtitle": "段階ごとに必要なコンテキストだけを読み込ませることで、AIの生成品質を最適化する",
+  "objects": [
+    {"type": "box", "text": "Tier 1\n構成設計", "left": 0.5, "top": 1.8, "width": 1.0, "height": 1.2, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 11},
+    
+    {"type": "box", "text": "outline_guide\n指定", "left": 1.7, "top": 1.8, "width": 1.4, "height": 0.8, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "arrow", "left": 3.3, "top": 2.05, "width": 0.5, "height": 0.3, "fill_color": "ED7D31"},
+    {"type": "box", "text": "AIが\n構成案を\n生成", "left": 4.0, "top": 1.8, "width": 1.4, "height": 0.8, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "box", "text": "", "left": 5.7, "top": 1.8, "width": 6.5, "height": 0.8, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
+    {"type": "text", "text": "【成果物】提案書の構成・ストーリー（アウトライン）", "left": 5.9, "top": 1.8, "width": 6.1, "height": 0.8, "font_size": 10, "font_color": "333333", "v_align": "middle"},
+    
+    {"type": "box", "text": "Recipe\n意図設計", "left": 0.5, "top": 3.2, "width": 1.0, "height": 1.2, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 11},
+    
+    {"type": "box", "text": "パターン\n参照作品\n指定", "left": 1.7, "top": 3.2, "width": 1.4, "height": 0.8, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "arrow", "left": 3.3, "top": 3.45, "width": 0.5, "height": 0.3, "fill_color": "ED7D31"},
+    {"type": "box", "text": "AIが\n詳細配置\nを提案", "left": 4.0, "top": 3.2, "width": 1.4, "height": 0.8, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "box", "text": "", "left": 5.7, "top": 3.2, "width": 6.5, "height": 0.8, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
+    {"type": "text", "text": "【成果物】スライド設計（パターン・意図・配置案）", "left": 5.9, "top": 3.2, "width": 6.1, "height": 0.8, "font_size": 10, "font_color": "333333", "v_align": "middle"},
+    
+    {"type": "box", "text": "Tier 2\n実装設計", "left": 0.5, "top": 4.6, "width": 1.0, "height": 1.2, "fill_color": "404040", "font_color": "FFFFFF", "font_size": 11},
+    
+    {"type": "box", "text": "座標\n色\nフォント\n指定", "left": 1.7, "top": 4.6, "width": 1.4, "height": 0.8, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "arrow", "left": 3.3, "top": 4.85, "width": 0.5, "height": 0.3, "fill_color": "ED7D31"},
+    {"type": "box", "text": "AIが\nPPTX JSON\nを生成", "left": 4.0, "top": 4.6, "width": 1.4, "height": 0.8, "fill_color": "4472C4", "font_color": "FFFFFF", "font_size": 11},
+    {"type": "box", "text": "", "left": 5.7, "top": 4.6, "width": 6.5, "height": 0.8, "fill_color": "F2F2F2", "font_color": "333333", "font_size": 1},
+    {"type": "text", "text": "【成果物】PowerPoint JSON + PPTX", "left": 5.9, "top": 4.6, "width": 6.1, "height": 0.8, "font_size": 10, "font_color": "333333", "v_align": "middle"}
+  ]
+}

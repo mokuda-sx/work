@@ -1,0 +1,36 @@
+<!-- インポート用HTMLスニペット -->
+<script>
+// このスニペットをブラウザのコンソールで実行してください
+
+console.log("AI Generated Layout Import Script");
+console.log("================================");
+
+// test_output.json の内容をコピー＆ペースト
+const jsonText = `
+{
+  "index": 1,
+  "type": "content",
+  "title": "AI + 人間協働：3層フロー",
+  "subtitle": "段階ごとに必要なコンテキストだけを読み込ませることで、AIの生成品質を最適化する",
+  "objects": [
+    {"fill_color": "404040", "font_color": "FFFFFF", "font_size": 11, "height": 1.2, "left": 0.5, "text": "Tier 1\\n構成設計", "top": 1.8, "type": "box", "width": 1.0}
+  ]
+}
+`;
+
+// jsonInput テキストエリアに入力
+const jsonInput = document.getElementById('jsonInput');
+if (jsonInput) {
+    jsonInput.value = jsonText;
+    console.log("✓ JSON inserted into jsonInput textarea");
+    
+    // 自動的に読込ボタンをクリック
+    const loadBtn = document.getElementById('btnLoadJSON');
+    if (loadBtn) {
+        console.log("Click 'JSON Read' button to import...");
+        // loadBtn.click(); // 自動実行したい場合はコメント解除
+    }
+} else {
+    console.log("✗ jsonInput element not found");
+}
+</script>

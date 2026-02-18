@@ -1,0 +1,100 @@
+{
+  "type": "content",
+  "title": "AI生成の課題と解決策",
+  "subtitle": "❌ 従来の課題 vs ✅ 解決策（Tier化）",
+  "objects": [
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14,
+      "height": 0.6,
+      "left": 0.5,
+      "text": "AI生成の課題と解決策",
+      "top": 0.3,
+      "type": "box",
+      "width": 4.3
+    },
+    {
+      "fill_color": "ED7D31",
+      "font_color": "FFFFFF",
+      "font_size": 12,
+      "height": 0.5,
+      "left": 0.5,
+      "text": "❌ 従来の課題",
+      "top": 1.1,
+      "type": "box",
+      "width": 1.9
+    },
+    {
+      "font_color": "404040",
+      "font_size": 10,
+      "height": 0.3,
+      "left": 0.5,
+      "text": "• コンテキスト制約（4K tokens）",
+      "top": 1.7,
+      "type": "text",
+      "width": 1.9
+    },
+    {
+      "font_color": "404040",
+      "font_size": 10,
+      "height": 0.3,
+      "left": 0.5,
+      "text": "• 複雑な計画を一度に実装不可",
+      "top": 2.0,
+      "type": "text",
+      "width": 1.9
+    },
+    {
+      "font_color": "404040",
+      "font_size": 10,
+      "height": 0.3,
+      "left": 0.5,
+      "text": "• 品質のばらつき",
+      "top": 2.3,
+      "type": "text",
+      "width": 1.9
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 12,
+      "height": 0.5,
+      "left": 3.0,
+      "text": "✅ 解決策（Tier化）",
+      "top": 1.1,
+      "type": "box",
+      "width": 1.9
+    },
+    {
+      "font_color": "FFFFFF",
+      "font_size": 10,
+      "height": 0.3,
+      "left": 3.0,
+      "text": "• 段階的設計で最適化",
+      "top": 1.7,
+      "type": "text",
+      "width": 1.9
+    },
+    {
+      "font_color": "FFFFFF",
+      "font_size": 10,
+      "height": 0.3,
+      "left": 3.0,
+      "text": "• 各層で機能を分割",
+      "top": 2.0,
+      "type": "text",
+      "width": 1.9
+    },
+    {
+      "font_color": "FFFFFF",
+      "font_size": 10,
+      "height": 0.3,
+      "left": 3.0,
+      "text": "• 一貫した品質保証",
+      "top": 2.3,
+      "type": "text",
+      "width": 1.9
+    }
+  ]
+}

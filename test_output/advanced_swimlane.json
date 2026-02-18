@@ -1,0 +1,194 @@
+{
+  "template": "sx_proposal",
+  "type": "content",
+  "title": "AI + 人間協働：3層フロー",
+  "subtitle": "段階ごとに必要なコンテキストだけを読み込むことで、AIの生成品質を最適化する",
+  "objects": [
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 1.545,
+      "width": 1.6,
+      "height": 0.9,
+      "text": "Tier 1\n構成設計",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 2.797,
+      "top": 1.545,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "構成方針\nを決定",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "arrow",
+      "left": 5.9270000000000005,
+      "top": 1.845,
+      "width": 0.3,
+      "height": 0.3,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 6.027,
+      "top": 1.545,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "outline.json\n生成",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "arrow",
+      "left": 9.157,
+      "top": 1.845,
+      "width": 0.3,
+      "height": 0.3,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 9.257,
+      "top": 1.545,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "スライド\n構成確定",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 2.5949999999999998,
+      "width": 1.6,
+      "height": 0.9,
+      "text": "Recipe\n意図設計",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 2.797,
+      "top": 2.5949999999999998,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "スライド\nパターン選択",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "arrow",
+      "left": 5.9270000000000005,
+      "top": 2.895,
+      "width": 0.3,
+      "height": 0.3,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 6.027,
+      "top": 2.5949999999999998,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "レイアウト\nの設計",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "arrow",
+      "left": 9.157,
+      "top": 2.895,
+      "width": 0.3,
+      "height": 0.3,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 9.257,
+      "top": 2.5949999999999998,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "recipe.json\n生成",
+      "fill_color": "8FAADC",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 3.6449999999999996,
+      "width": 1.6,
+      "height": 0.9,
+      "text": "Tier 2\n実装設計",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "box",
+      "left": 2.797,
+      "top": 3.6449999999999996,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "色・フォント\n指定",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "arrow",
+      "left": 5.9270000000000005,
+      "top": 3.945,
+      "width": 0.3,
+      "height": 0.3,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 6.027,
+      "top": 3.6449999999999996,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "座標\n配置",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    },
+    {
+      "type": "arrow",
+      "left": 9.157,
+      "top": 3.945,
+      "width": 0.3,
+      "height": 0.3,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 9.257,
+      "top": 3.6449999999999996,
+      "width": 3.08,
+      "height": 0.9,
+      "text": "PPTX JSON\n生成",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14
+    }
+  ],
+  "body_area": {
+    "left": 0.997,
+    "top": 1.545,
+    "width": 11.34,
+    "height": 5.512
+  }
+}

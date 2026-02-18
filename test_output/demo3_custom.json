@@ -1,0 +1,77 @@
+{
+  "type": "content",
+  "title": "AI デジタルツイン：パイプライン",
+  "subtitle": "ビジュアルフィードバックで精度向上",
+  "objects": [
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14,
+      "height": 0.6,
+      "left": 0.5,
+      "text": "AI + 人間協働：デジタルツイン",
+      "top": 0.3,
+      "type": "box",
+      "width": 4.3
+    },
+    {
+      "font_color": "404040",
+      "font_size": 11,
+      "height": 0.4,
+      "left": 0.5,
+      "text": "Canvas で見ながら配置 → JSON 自動生成 → PPTX 完成",
+      "top": 1.1,
+      "type": "text",
+      "width": 4.3
+    },
+    {
+      "fill_color": "ED7D31",
+      "font_color": "FFFFFF",
+      "font_size": 10,
+      "height": 1.2,
+      "left": 0.5,
+      "text": "従来\n（テキストベース\n計算）",
+      "top": 1.8,
+      "type": "box",
+      "width": 1.3
+    },
+    {
+      "fill_color": "ED7D31",
+      "height": 0.3,
+      "left": 2.0,
+      "top": 2.2,
+      "type": "arrow",
+      "width": 0.5
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 10,
+      "height": 1.2,
+      "left": 2.7,
+      "text": "新方式\n（ビジュアル\nフィードバック）",
+      "top": 1.8,
+      "type": "box",
+      "width": 1.3
+    },
+    {
+      "fill_color": "4472C4",
+      "height": 0.3,
+      "left": 4.2,
+      "top": 2.2,
+      "type": "arrow",
+      "width": 0.5
+    },
+    {
+      "fill_color": "1F3864",
+      "font_color": "FFFFFF",
+      "font_size": 10,
+      "height": 1.2,
+      "left": 4.9,
+      "text": "完璧な\nレイアウト",
+      "top": 1.8,
+      "type": "box",
+      "width": 1.3
+    }
+  ]
+}

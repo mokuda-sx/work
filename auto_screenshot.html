@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>スライド自動キャプチャ</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 { color: #4472C4; text-align: center; }
+        .slide-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .slide-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .slide-box h2 { margin-top: 0; color: #4472C4; border-bottom: 2px solid #4472C4; padding-bottom: 10px; }
+        iframe { width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px; }
+        .status { padding: 20px; background: #e3f2fd; border-radius: 4px; margin-top: 20px; border-left: 4px solid #4472C4; }
+        .status strong { color: #4472C4; }
+        .info { background: #f0f0f0; padding: 10px; margin-top: 10px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 AI生成スライド - ビジュアル確認</h1>
+        
+        <div class="slide-container">
+            <div class="slide-box">
+                <h2>Slide 1: Tier1</h2>
+                <p><strong>タイトル:</strong> AIコンテキスト制約への対応：スキル化戦略</p>
+                <p><strong>オブジェクト:</strong> 6個</p>
+                <iframe id="iframe1" src="http://localhost:5000"></iframe>
+                <button onclick="loadTier1()" style="width: 100%; padding: 10px; margin-top: 10px; background: #4472C4; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">📥 Tier1 ロード</button>
+                <div class="info">このコンテンツ領域にTier1スライドがロードされます</div>
+            </div>
+            
+            <div class="slide-box">
+                <h2>Slide 2: Tier2</h2>
+                <p><strong>タイトル:</strong> AI + 人間協働：3層フロー</p>
+                <p><strong>オブジェクト:</strong> 18個</p>
+                <iframe id="iframe2" src="http://localhost:5000"></iframe>
+                <button onclick="loadTier2()" style="width: 100%; padding: 10px; margin-top: 10px; background: #4472C4; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">📥 Tier2 ロード</button>
+                <div class="info">このコンテンツ領域にTier2スライドがロードされます</div>
+            </div>
+        </div>
+        
+        <div class="status">
+            <strong>📋 使用方法:</strong><br>
+            1. 左の「📥 Tier1 ロード」ボタンをクリック → Canvas に Tier1 が表示されます<br>
+            2. 右の「📥 Tier2 ロード」ボタンをクリック → Canvas に Tier2 が表示されます<br>
+            3. それぞれのスライドをご確認ください
+        </div>
+    </div>
+    
+    <script>
+        // Tier1 JSON データ
+        const TIER1 = {
+            "index": 1,
+            "type": "content",
+            "title": "AIコンテキスト制約への対応：スキル化戦略",
+            "subtitle": "Tier 1 → Recipe → Tier 2 に分離した理由",
+            "objects": [
+                {
+                    "fill_color": "4472C4",
+                    "font_color": "FFFFFF",
+                    "font_size": 14,
+                    "height": 0.9,
+                    "left": 0.5,
+                    "text": "AIコンテキスト制約への対応\nスキル化戦略",
+                    "top": 0.3,
+                    "type": "box",
+                    "width": 4.3
+                },
+                {
+                    "font_color": "404040",
+                    "font_size": 11,
+                    "height": 0.4,
+                    "left": 0.5,
+                    "text": "Tier 1 → Recipe → Tier 2 に分離した理由",
+                    "top": 1.3,
+                    "type": "text",
+                    "width": 4.3
+                },
+                {
+                    "fill_color": "ED7D31",
+                    "font_color": "FFFFFF",
+                    "font_size": 12,
+                    "height": 0.5,
+                    "left": 0.5,
+                    "text": "❌ 従来の課題",
+                    "top": 2.0,
+                    "type": "box",
+                    "width": 1.9
+                },
+                {
+                    "font_color": "404040",
+                    "font_size": 10,
+                    "height": 1.5,
+                    "left": 0.5,
+                    "text": "• コンテキスト制約\n  (4K tokens)\n\n• 複雑な計画を一度に\n  実装不可\n\n• 品質のばらつき",
+                    "top": 2.6,
+                    "type": "text",
+                    "width": 1.9
+                },
+                {
+                    "fill_color": "4472C4",
+                    "font_color": "FFFFFF",
+                    "font_size": 12,
+                    "height": 0.5,
+                    "left": 3.3,
+                    "text": "✅ 3層フロー化",
+                    "top": 2.0,
+                    "type": "box",
+                    "width": 1.9
+                },
+                {
+                    "font_color": "FFFFFF",
+                    "font_size": 10,
+                    "height": 1.5,
+                    "left": 3.3,
+                    "text": "• 段階的設計\n  (Tier化)\n\n• 各層で機能を最適化\n  (Recipe)\n\n• 一貫した品質",
+                    "top": 2.6,
+                    "type": "text",
+                    "width": 1.9,
+                    "fill_color": "4472C4"
+                }
+            ]
+        };
+        
+        // Tier2 JSON データ
+        const TIER2 = {
+            "index": 1,
+            "type": "content",
+            "title": "AI + 人間協働：3層フロー",
+            "subtitle": "段階ごとに必要なコンテキストだけを読み込ませることで、AIの生成品質を最適化する",
+            "objects": [
+                {"fill_color":"404040","font_color":"FFFFFF","font_size":11,"height":1.2,"left":0.5,"text":"Tier 1\n構成設計","top":1.8,"type":"box","width":1.0},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":11,"height":0.8,"left":1.7,"text":"outline_guide\n指定","top":1.8,"type":"box","width":1.4},
+                {"fill_color":"ED7D31","height":0.3,"left":3.3,"top":2.05,"type":"arrow","width":0.5},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":11,"height":0.8,"left":4.0,"text":"AIが\n構成案を\n生成","top":1.8,"type":"box","width":1.4},
+                {"fill_color":"F2F2F2","font_color":"333333","font_size":9,"height":0.5,"left":0.5,"text":"定義","top":3.1,"type":"box","width":1.0},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":9,"height":0.5,"left":1.7,"text":"入力テンプレ","top":3.1,"type":"box","width":1.4},
+                {"fill_color":"ED7D31","height":0.3,"left":3.3,"top":3.35,"type":"arrow","width":0.5},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":9,"height":0.5,"left":4.0,"text":"スライド候補","top":3.1,"type":"box","width":1.4},
+                {"fill_color":"404040","font_color":"FFFFFF","font_size":11,"height":1.2,"left":0.5,"text":"Tier 2\nコンテンツ詳細","top":4.4,"type":"box","width":1.0},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":11,"height":0.8,"left":1.7,"text":"slide_recipe\n指定","top":4.4,"type":"box","width":1.4},
+                {"fill_color":"ED7D31","height":0.3,"left":3.3,"top":4.65,"type":"arrow","width":0.5},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":11,"height":0.8,"left":4.0,"text":"最終スライド\n生成","top":4.4,"type":"box","width":1.4},
+                {"font_color":"1F3864","font_size":9,"height":2.0,"left":5.7,"text":"各Tierでの処理：\n\nTier 1:\n- 構成設計\n- outline_guide で\n  コンテキスト制定\n\nTier 2:","top":1.8,"type":"text","width":1.5},
+                {"fill_color":"F2F2F2","font_color":"333333","font_size":9,"height":0.5,"left":0.5,"text":"成果物","top":3.1,"type":"box","width":1.0},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":9,"height":0.5,"left":1.7,"text":"レシピ&テンプ","top":3.1,"type":"box","width":1.4},
+                {"fill_color":"ED7D31","height":0.3,"left":3.3,"top":3.35,"type":"arrow","width":0.5},
+                {"fill_color":"4472C4","font_color":"FFFFFF","font_size":9,"height":0.5,"left":4.0,"text":"スライドJSON","top":3.1,"type":"box","width":1.4},
+                {"font_color":"404040","font_size":9,"height":0.6,"left":5.7,"text":"コンテキストを\n段階的に限定\nして品質UP","top":3.8,"type":"text","width":1.5}
+            ]
+        };
+        
+        function loadTier1() {
+            loadIntoIframe('iframe1', TIER1);
+        }
+        
+        function loadTier2() {
+            loadIntoIframe('iframe2', TIER2);
+        }
+        
+        function loadIntoIframe(iframeId, slideData) {
+            const iframe = document.getElementById(iframeId);
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            
+            // iframe 内で API を呼び出す
+            const script = document.createElement('script');
+            script.textContent = `
+                fetch('/api/load-json', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(${JSON.stringify(slideData)})
+                }).then(r => r.json()).then(data => {
+                    if (data.success) {
+                        console.log('ロード完了:', data);
+                    } else {
+                        console.error('エラー:', data.error);
+                    }
+                });
+            `;
+            
+            // シンプルな方法：iframe の src を再度設定
+            iframe.src = 'http://localhost:5000?';
+            
+            setTimeout(() => {
+                fetch('/api/load-json', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(slideData)
+                }).then(r => r.json()).then(data => {
+                    if (data.success) {
+                        alert(slideData.title + '\nロード完了！');
+                    }
+                });
+            }, 500);
+        }
+    </script>
+</body>
+</html>

@@ -250,16 +250,76 @@ def slugify(text: str) -> str:
     return re.sub(r"[\s_]+", "_", text)[:40].strip("_")
 
 
+def cmd_extract_pattern(analysis_path: Path, slide_idx: int):
+    """analysis.json から特定スライドのパターンを抽出"""
+    if not analysis_path.exists():
+        print(f"エラー: analysis.json が見つかりません: {analysis_path}")
+        sys.exit(1)
+    
+    analysis = json.loads(analysis_path.read_text(encoding="utf-8"))
+    slides = analysis.get("slides", [])
+    
+    if slide_idx >= len(slides):
+        print(f"エラー: スライド {slide_idx} は存在しません（全 {len(slides)} 枚）")
+        sys.exit(1)
+    
+    slide = slides[slide_idx]
+    shapes = slide.get("shapes", [])
+    
+    print(f"\n{'='*80}")
+    print(f"パターン抽出: {analysis_path.name} / スライド {slide_idx}")
+    print(f"タイトル: {slide.get('title', '(なし)')}")
+    print(f"{'='*80}\n")
+    
+    # 構造分析
+    print(f"オブジェクト数: {len(shapes)}")
+    print(f"レイアウト: {slide.get('layout_name', '不明')}\n")
+    
+    # 色の分布
+    colors = [s.get("fill_color") for s in shapes if "fill_color" in s]
+    if colors:
+        from collections import Counter
+        color_counts = Counter(colors)
+        print("使用色:")
+        for color, count in color_counts.most_common():
+            print(f"  #{color}: {count}個")
+        print()
+    
+    # オブジェクト一覧（座標・色・テキスト）
+    print("オブジェクト詳細:\n")
+    for i, shape in enumerate(shapes):
+        print(f"[{i}] {shape.get('name', '(名前なし)')}")
+        print(f"    type: {shape.get('shape_type', '不明')}")
+        print(f"    left: {shape.get('left', 0):.3f}, top: {shape.get('top', 0):.3f}")
+        print(f"    width: {shape.get('width', 0):.3f}, height: {shape.get('height', 0):.3f}")
+        if "fill_color" in shape:
+            print(f"    fill_color: #{shape['fill_color']}")
+        if "text" in shape:
+            print(f"    text: {shape['text']}")
+        if "font_sizes" in shape:
+            print(f"    font_sizes: {shape['font_sizes']}")
+        print()
+
+
 def main():
     parser = argparse.ArgumentParser(description="参照PPTXを分析してライブラリに登録")
-    parser.add_argument("pptx", nargs="?", help="分析するPPTXファイルパス")
+    parser.add_argument("command", nargs="?", default="register", 
+                        help="コマンド: register（デフォルト）, extract-pattern, list")
+    parser.add_argument("pptx", nargs="?", help="分析するPPTXファイルパス or analysis.json")
     parser.add_argument("--id",           help="参照ID（省略時はファイル名から自動生成）")
     parser.add_argument("--family",       help="テンプレートファミリー（sx/jr等、省略時は親フォルダ名）")
     parser.add_argument("--no-thumbnail", action="store_true", help="サムネイル生成をスキップ")
-    parser.add_argument("--list",         action="store_true", help="登録済み一覧を表示")
+    parser.add_argument("--slide",        type=int, help="抽出するスライド番号（extract-pattern用）")
     args = parser.parse_args()
 
-    if args.list:
+    # コマンド判定（後方互換）
+    command = args.command
+    if command and Path(command).exists():
+        # 引数1がファイルパス → 旧形式（register）
+        args.pptx = command
+        command = "register"
+
+    if command == "list":
         index = load_index()
         if not index["refs"]:
             print("登録済みの参照作品はありません")
@@ -269,6 +329,18 @@ def main():
                 print(f"         {ref['source_file']}")
         return
 
+    if command == "extract-pattern":
+        if not args.pptx:
+            print("エラー: analysis.json のパスを指定してください")
+            parser.print_help()
+            sys.exit(1)
+        if args.slide is None:
+            print("エラー: --slide <番号> を指定してください")
+            sys.exit(1)
+        cmd_extract_pattern(Path(args.pptx), args.slide)
+        return
+
+    # register (デフォルト)
     if not args.pptx:
         parser.print_help()
         sys.exit(1)

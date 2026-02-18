@@ -1,0 +1,67 @@
+{
+  "type": "content",
+  "title": "AI + 人間協働：段階的生成パイプライン",
+  "subtitle": "3-Tier Architecture Flow",
+  "objects": [
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 14,
+      "height": 0.5,
+      "left": 0.5,
+      "text": "AI + 人間協働：段階的生成パイプライン",
+      "top": 0.2,
+      "type": "box",
+      "width": 4.3
+    },
+    {
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 1.0,
+      "left": 0.5,
+      "text": "Tier 1\n構成設計\n(Outline)",
+      "top": 1.0,
+      "type": "box",
+      "width": 1.5
+    },
+    {
+      "fill_color": "ED7D31",
+      "height": 0.2,
+      "left": 2.2,
+      "top": 1.4,
+      "type": "arrow",
+      "width": 0.4
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 1.0,
+      "left": 2.8,
+      "text": "Tier 2\nコンテンツ詳細\n(Content)",
+      "top": 1.0,
+      "type": "box",
+      "width": 1.5
+    },
+    {
+      "fill_color": "ED7D31",
+      "height": 0.2,
+      "left": 4.5,
+      "top": 1.4,
+      "type": "arrow",
+      "width": 0.4
+    },
+    {
+      "fill_color": "1F3864",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 1.0,
+      "left": 5.1,
+      "text": "出力\n最終PPTX\n(Output)",
+      "top": 1.0,
+      "type": "box",
+      "width": 1.5
+    }
+  ]
+}

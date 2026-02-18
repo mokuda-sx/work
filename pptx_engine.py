@@ -170,19 +170,33 @@ def add_objects_to_slide(slide, objects: list[dict]):
                 shape.text_frame._txBody.bodyPr.set("anchor", "ctr" if v_align == "middle" else "b")
             if text:
                 tf.clear()
-                p = tf.paragraphs[0]
-                p.text = text
-                p.alignment = PP_ALIGN.CENTER
-                run = p.runs[0] if p.runs else p.add_run()
-                run.font.size  = Pt(obj.get("font_size", 12))
-                run.font.color.rgb = RGBColor.from_string(obj.get("font_color", "FFFFFF"))
-                run.font.bold  = obj.get("bold", True)
+                # 改行で段落を分割し、各行に統一されたフォントサイズを適用
+                lines = text.split("\n")
+                font_size = Pt(obj.get("font_size", 12))
+                font_color = RGBColor.from_string(obj.get("font_color", "FFFFFF"))
+                font_bold = obj.get("bold", True)
+                
+                for line_idx, line in enumerate(lines):
+                    if line_idx == 0:
+                        p = tf.paragraphs[0]
+                    else:
+                        p = tf.add_paragraph()
+                    p.text = line
+                    p.alignment = PP_ALIGN.CENTER
+                    
+                    # この段落内の全 run にフォントサイズを適用
+                    for run in p.runs:
+                        run.font.size = font_size
+                        run.font.color.rgb = font_color
+                        run.font.bold = font_bold
 
         elif obj_type == "arrow":
+            print(f"[DEBUG] Creating arrow at ({left.inches:.2f}\", {top.inches:.2f}\") size {width.inches:.2f}\"x{height.inches:.2f}\"")
             shape = slide.shapes.add_shape(MSO_AUTO_SHAPE_TYPE.RIGHT_ARROW, left, top, width, height)
             shape.fill.solid()
             shape.fill.fore_color.rgb = RGBColor.from_string(obj.get("fill_color", "ED7D31"))
             shape.line.fill.background()
+            print(f"[DEBUG] Arrow shape created: {shape.name}")
 
         elif obj_type == "text":
             txBox = slide.shapes.add_textbox(left, top, width, height)
@@ -202,8 +216,8 @@ def add_objects_to_slide(slide, objects: list[dict]):
                 p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
                 p.text = line
                 p.alignment = PP_ALIGN.LEFT
-                if p.runs:
-                    run = p.runs[0]
+                # この段落内の全 run にフォントサイズを適用
+                for run in p.runs:
                     run.font.size  = font_sz
                     run.font.color.rgb = font_clr
                     run.font.bold = font_bold

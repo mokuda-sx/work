@@ -1,0 +1,41 @@
+{
+  "index": 0,
+  "type": "content",
+  "title": "AIコンテキスト制約への対応：スキル化戦略",
+  "message": "言語モデルの処理能力に合わせて、段階ごとに必要なスキルだけを読み込む設計",
+  "pattern": "row_label_content",
+  "tone": "explanation",
+  "body_points": [
+    "言語モデル(Claude等)には一度に処理できる情報量に上限がある",
+    "全知識を一度に読み込むとコンテキスト枯渇で品質が低下",
+    "段階別スキル化により、各段階のコンテキスト負荷を最適化"
+  ],
+  "visual": {
+    "type": "three_row_explanation",
+    "rows": [
+      {
+        "label": "課題",
+        "content": "最新言語モデルには「一度に処理できる情報量の上限」がある（コンテキストウィンドウ制約）"
+      },
+      {
+        "label": "問題",
+        "content": "全知識を一度に読み込む → コンテキスト枯渇 → 品質低下・矛盾・誤り増加"
+      },
+      {
+        "label": "対応",
+        "content": [
+          "【Tier 1】 outline_guide.md ～提案書全体の構成・ストーリー設計ルール",
+          "【Recipe】 slide_recipe.md + 参照作品 ～スライドパターン・設計意図・参照適応",
+          "【Tier 2】 critique_rubric.md + template guide ～座標・色・フォント・品質基準",
+          "→ 各段階のコンテキスト最適化で安定したAI生成を実現"
+        ]
+      }
+    ],
+    "emphasis": "equal"
+  },
+  "reference": {
+    "ref_id": "sx_ai_callcenter",
+    "ref_slide": 3,
+    "adaptation": "参照スライドのrow_label_content構造（左ラベル + 右コンテンツ）を踏襲"
+  }
+}

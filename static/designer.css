@@ -1,0 +1,246 @@
+/* designer.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #4472C4 0%, #1F3864 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+}
+
+/* キャンバス領域 */
+.canvas-area {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.canvas-controls {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-add {
+    background: #4472C4;
+    color: white;
+}
+
+.btn-add:hover {
+    background: #1F3864;
+}
+
+.btn-primary {
+    background: #4472C4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1F3864;
+}
+
+.btn-secondary {
+    background: #8FAADC;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #4472C4;
+}
+
+.btn-danger {
+    background: #C55A11;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #A03D00;
+}
+
+.canvas-container {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: white;
+}
+
+#slideCanvas {
+    display: block;
+    cursor: crosshair;
+    max-width: 100%;
+    height: auto;
+}
+
+.canvas-info {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* プロパティパネル */
+.properties-panel {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.panel-header {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4472C4;
+    margin-bottom: 15px;
+}
+
+.panel-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.panel-section h3 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4472C4;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="color"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4472C4;
+    box-shadow: 0 0 0 2px rgba(68, 114, 196, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+/* カラーパレット */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.color-swatch {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+}
+
+.color-swatch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 2px #4472C4;
+}
+
+/* まとめ */
+.panel-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* レスポンシブ */
+@media (max-width: 1200px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .properties-panel {
+        max-height: none;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "index": 1,
+  "type": "content",
+  "title": "AI + 人間協働：3層フロー",
+  "message": "段階ごとに必要なコンテキストだけを読み込ませることで、AIの生成品質を最適化する",
+  "pattern": "swimlane_process",
+  "tone": "progression",
+  "body_points": [
+    "Tier 1：提案書の構成・ストーリー設計ルール（outline_guide）を指定し、AIが論理的なアウトラインを生成",
+    "Recipe：スライドパターン・設計意図・参照作品を指定し、AIがスライド意図と具体的な配置案を生成",
+    "Tier 2：座標・色・フォント・品質基準を指定し、AIがテンプレート準拠のPowerPoint JSON を生成"
+  ],
+  "visual": {
+    "labels": ["Tier 1\n構成設計", "Recipe\n意図設計", "Tier 2\n実装設計"],
+    "emphasis": "equal"
+  },
+  "reference": {
+    "ref_id": "sx_ai_callcenter",
+    "ref_slide": 4,
+    "adaptation": "参照スライドのスイムレーン構造（複数並行フェーズ）を踏襲し、Tier1→Recipe→Tier2の段階的フローを表現"
+  }
+}

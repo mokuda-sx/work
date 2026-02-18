@@ -1,0 +1,87 @@
+{
+  "template": "sx_proposal",
+  "title": "AI デジタルツイン：パイプライン",
+  "subtitle": "CoTier Architecture Flow",
+  "slide_size": {
+    "width": 13.333,
+    "height": 7.5
+  },
+  "body_area": {
+    "left": 0.997,
+    "top": 1.545,
+    "width": 11.34,
+    "height": 5.512
+  },
+  "objects": [
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 1.545,
+      "width": 11.34,
+      "height": 0.4,
+      "text": "AI + 人間協働：段階的生成パイプライン",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 12
+    },
+    {
+      "type": "box",
+      "left": 1.2,
+      "top": 2.1,
+      "width": 2.5,
+      "height": 1.6,
+      "text": "入力\n（情報出し）\n\nPrompt",
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 9
+    },
+    {
+      "type": "arrow",
+      "left": 3.8,
+      "top": 2.85,
+      "width": 0.5,
+      "height": 0.1,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 4.4,
+      "top": 2.1,
+      "width": 2.5,
+      "height": 1.6,
+      "text": "処理\n（カスタマイズ）\n\nCanvas",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 9
+    },
+    {
+      "type": "arrow",
+      "left": 7.0,
+      "top": 2.85,
+      "width": 0.5,
+      "height": 0.1,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 7.6,
+      "top": 2.1,
+      "width": 2.5,
+      "height": 1.6,
+      "text": "出力\n（完成向かい方）\n\nPPTX",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 9
+    },
+    {
+      "type": "text",
+      "left": 1.2,
+      "top": 3.9,
+      "width": 10.337,
+      "height": 1.657,
+      "text": "各ステップで人間が確認・調整できる設計\nCanvas デザイナー中心のワークフロー：見たままが最終出力",
+      "font_color": "404040",
+      "font_size": 9
+    }
+  ]
+}

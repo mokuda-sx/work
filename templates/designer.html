@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Layout Designer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='designer.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+            <h1>📐 Slide Layout Designer</h1>
+            <p>PPTX スライド（Tier 2実装設計）用 JSON 生成ツール</p>
+        </div>
+
+        <div class="main-layout">
+            <!-- キャンバス領域 -->
+            <div class="canvas-area">
+                <div class="canvas-controls">
+                    <button id="btnAddBox" class="btn btn-add">+ 四角</button>
+                    <button id="btnAddArrowRight" class="btn btn-add">→ 矢印</button>
+                    <button id="btnAddArrowLeft" class="btn btn-add">← 矢印</button>
+                    <button id="btnAddLine" class="btn btn-add">— 直線</button>
+                    <button id="btnAddCircle" class="btn btn-add">◯ 円</button>
+                    <button id="btnAddText" class="btn btn-add">+ テキスト</button>
+                    <button id="btnClear" class="btn btn-danger">クリア</button>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="slideCanvas" width="1280" height="720"></canvas>
+                </div>
+                <div class="canvas-info">
+                    幅: 12.8 インチ × 高さ: 7.2 インチ (96 DPI)
+                </div>
+            </div>
+
+            <!-- プロパティパネル -->
+            <div class="properties-panel">
+                <div class="panel-header">プロパティ</div>
+
+                <!-- スライド情報 -->
+                <div class="panel-section">
+                    <h3>スライド情報</h3>
+                    <div class="form-group">
+                        <label>タイトル</label>
+                        <input type="text" id="slideTitle" placeholder="スライドタイトル" value="AI + 人間協働：3層フロー">
+                    </div>
+                    <div class="form-group">
+                        <label>サブタイトル</label>
+                        <input type="text" id="slideSubtitle" placeholder="サブタイトル" value="段階ごとに必要なコンテキストだけを読み込ませることで、AIの生成品質を最適化する">
+                    </div>
+                </div>
+
+                <!-- 選択オブジェクトのプロパティ -->
+                <div class="panel-section" id="objectProperties" style="display: none;">
+                    <h3>選択オブジェクト</h3>
+                    
+                    <!-- テキスト内容 -->
+                    <div class="form-group" id="textContentGroup" style="display: none;">
+                        <label>テキスト</label>
+                        <textarea id="objText" placeholder="テキスト内容"></textarea>
+                    </div>
+
+                    <!-- 位置とサイズ -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Left (in)</label>
+                            <input type="number" id="objLeft" step="0.1" min="0" max="12.8">
+                        </div>
+                        <div class="form-group">
+                            <label>Top (in)</label>
+                            <input type="number" id="objTop" step="0.1" min="0" max="7.2">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Width (in)</label>
+                            <input type="number" id="objWidth" step="0.1" min="0.1" max="12.8">
+                        </div>
+                        <div class="form-group">
+                            <label>Height (in)</label>
+                            <input type="number" id="objHeight" step="0.1" min="0.1" max="7.2">
+                        </div>
+                    </div>
+
+                    <!-- 色とフォント -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>背景色</label>
+                            <input type="color" id="objFillColor" value="#FFFFFF">
+                        </div>
+                        <div class="form-group">
+                            <label>文字色</label>
+                            <input type="color" id="objFontColor" value="#000000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>フォントサイズ</label>
+                            <input type="number" id="objFontSize" min="6" max="36" value="12">
+                        </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>水平配置</label>
+                            <select id="objHalign">
+                                <option value="left">Left</option>
+                                <option value="center" selected>Center</option>
+                                <option value="right">Right</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>垂直配置</label>
+                            <select id="objValign">
+                                <option value="top">Top</option>
+                                <option value="middle" selected>Middle</option>
+                                <option value="bottom">Bottom</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- フォントサイズプリセット -->
+                    <div class="form-group">
+                        <label>プリセット</label>
+                        <div class="button-group" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                            <button class="btn btn-secondary" onclick="setFontSize(9)" style="font-size: 9px;">9pt</button>
+                            <button class="btn btn-secondary" onclick="setFontSize(12)" style="font-size: 12px;">12pt</button>
+                            <button class="btn btn-secondary" onclick="setFontSize(14)" style="font-size: 14px;">14pt</button>
+                        </div>
+                    </div>
+
+                    <button id="btnDeleteObject" class="btn btn-danger" style="width: 100%; margin-top: 10px;">削除</button>
+                </div>
+
+                <!-- プリセット色 -->
+                <div class="panel-section">
+                    <h3>カラーパレット</h3>
+                    <div class="color-grid">
+                        <div class="color-swatch" style="background: #404040;" title="Neutral Dark" onclick="setColor('#404040')"></div>
+                        <div class="color-swatch" style="background: #8FAADC;" title="Tier1 Light" onclick="setColor('#8FAADC')"></div>
+                        <div class="color-swatch" style="background: #4472C4;" title="Tier2 Mid" onclick="setColor('#4472C4')"></div>
+                        <div class="color-swatch" style="background: #1F3864;" title="Tier3 Dark" onclick="setColor('#1F3864')"></div>
+                        <div class="color-swatch" style="background: #ED7D31;" title="Accent Orange" onclick="setColor('#ED7D31')"></div>
+                        <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #ccc;" title="White" onclick="setColor('#FFFFFF')"></div>
+                    </div>
+                </div>
+
+                <!-- エクスポート -->
+                <div class="panel-section">
+                    <h3>エクスポート</h3>
+                    <button id="btnExportJSON" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">📥 JSON 生成</button>
+                    <button id="btnCopyJSON" class="btn btn-secondary" style="width: 100%;">📋 コピー</button>
+                </div>
+
+                <!-- JSON 入力（インポート）-->
+                <div class="panel-section">
+                    <h3>インポート</h3>
+                    <textarea id="jsonInput" placeholder="スライド JSON を貼り付けて読込"></textarea>
+                    <button id="btnLoadJSON" class="btn btn-secondary" style="width: 100%; margin-top: 10px;">📤 JSON 読込</button>
+                </div>
+
+                <!-- JSON 出力 -->
+                <div class="panel-section">
+                    <h3>JSON 出力</h3>
+                    <textarea id="jsonOutput" readonly placeholder="JSON がここに表示されます"></textarea>
+                    <a id="jsonDownload" href="#" class="btn btn-secondary" style="display: block; text-align: center; margin-top: 10px;">⬇️ ダウンロード</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='designer.js') }}"></script>
+</body>
+</html>

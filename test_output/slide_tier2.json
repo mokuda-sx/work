@@ -1,0 +1,197 @@
+{
+  "index": 1,
+  "type": "content",
+  "title": "AI + 人間協働：3層フロー",
+  "subtitle": "段階ごとに必要なコンテキストだけを読み込ませることで、AIの生成品質を最適化する",
+  "objects": [
+    {
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 1.2,
+      "left": 0.5,
+      "text": "Tier 1\n構成設計",
+      "top": 1.8,
+      "type": "box",
+      "width": 1.0
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 0.8,
+      "left": 1.7,
+      "text": "outline_guide\n指定",
+      "top": 1.8,
+      "type": "box",
+      "width": 1.4
+    },
+    {
+      "fill_color": "ED7D31",
+      "height": 0.3,
+      "left": 3.3,
+      "top": 2.05,
+      "type": "arrow",
+      "width": 0.5
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 0.8,
+      "left": 4.0,
+      "text": "AIが\n構成案を\n生成",
+      "top": 1.8,
+      "type": "box",
+      "width": 1.4
+    },
+    {
+      "fill_color": "F2F2F2",
+      "font_color": "333333",
+      "font_size": 1,
+      "height": 0.8,
+      "left": 5.7,
+      "text": "",
+      "top": 1.8,
+      "type": "box",
+      "width": 6.5
+    },
+    {
+      "font_color": "333333",
+      "font_size": 10,
+      "height": 0.8,
+      "left": 5.9,
+      "text": "【成果物】提案書の構成・ストーリー（アウトライン）",
+      "top": 1.8,
+      "type": "text",
+      "v_align": "middle",
+      "width": 6.1
+    },
+    {
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 1.2,
+      "left": 0.5,
+      "text": "Recipe\n意図設計",
+      "top": 3.2,
+      "type": "box",
+      "width": 1.0
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 0.8,
+      "left": 1.7,
+      "text": "パターン\n参照作品\n指定",
+      "top": 3.2,
+      "type": "box",
+      "width": 1.4
+    },
+    {
+      "fill_color": "ED7D31",
+      "height": 0.3,
+      "left": 3.3,
+      "top": 3.45,
+      "type": "arrow",
+      "width": 0.5
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 0.8,
+      "left": 4.0,
+      "text": "AIが\n詳細配置\nを提案",
+      "top": 3.2,
+      "type": "box",
+      "width": 1.4
+    },
+    {
+      "fill_color": "F2F2F2",
+      "font_color": "333333",
+      "font_size": 1,
+      "height": 0.8,
+      "left": 5.7,
+      "text": "",
+      "top": 3.2,
+      "type": "box",
+      "width": 6.5
+    },
+    {
+      "font_color": "333333",
+      "font_size": 10,
+      "height": 0.8,
+      "left": 5.9,
+      "text": "【成果物】スライド設計（パターン・意図・配置案）",
+      "top": 3.2,
+      "type": "text",
+      "v_align": "middle",
+      "width": 6.1
+    },
+    {
+      "fill_color": "404040",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 1.2,
+      "left": 0.5,
+      "text": "Tier 2\n実装設計",
+      "top": 4.6,
+      "type": "box",
+      "width": 1.0
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 0.8,
+      "left": 1.7,
+      "text": "座標\n色\nフォント\n指定",
+      "top": 4.6,
+      "type": "box",
+      "width": 1.4
+    },
+    {
+      "fill_color": "ED7D31",
+      "height": 0.3,
+      "left": 3.3,
+      "top": 4.85,
+      "type": "arrow",
+      "width": 0.5
+    },
+    {
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 11,
+      "height": 0.8,
+      "left": 4.0,
+      "text": "AIが\nPPTX JSON\nを生成",
+      "top": 4.6,
+      "type": "box",
+      "width": 1.4
+    },
+    {
+      "fill_color": "F2F2F2",
+      "font_color": "333333",
+      "font_size": 1,
+      "height": 0.8,
+      "left": 5.7,
+      "text": "",
+      "top": 4.6,
+      "type": "box",
+      "width": 6.5
+    },
+    {
+      "font_color": "333333",
+      "font_size": 10,
+      "height": 0.8,
+      "left": 5.9,
+      "text": "【成果物】PowerPoint JSON + PPTX",
+      "top": 4.6,
+      "type": "text",
+      "v_align": "middle",
+      "width": 6.1
+    }
+  ]
+}

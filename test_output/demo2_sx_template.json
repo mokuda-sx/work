@@ -1,0 +1,87 @@
+{
+  "template": "sx_proposal",
+  "title": "AI + 人間協働：段階的生成パイプライン",
+  "subtitle": "",
+  "slide_size": {
+    "width": 13.333,
+    "height": 7.5
+  },
+  "body_area": {
+    "left": 0.997,
+    "top": 1.545,
+    "width": 11.34,
+    "height": 5.512
+  },
+  "objects": [
+    {
+      "type": "box",
+      "left": 0.997,
+      "top": 1.545,
+      "width": 11.34,
+      "height": 0.45,
+      "text": "AI + 人間協働：段階的生成パイプライン",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 13
+    },
+    {
+      "type": "box",
+      "left": 1.2,
+      "top": 2.2,
+      "width": 3.2,
+      "height": 1.5,
+      "text": "既存品\n（Outline）\n\nPrompt + Context",
+      "fill_color": "ED7D31",
+      "font_color": "FFFFFF",
+      "font_size": 9
+    },
+    {
+      "type": "arrow",
+      "left": 4.5,
+      "top": 2.95,
+      "width": 0.6,
+      "height": 0.1,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 5.2,
+      "top": 2.2,
+      "width": 3.2,
+      "height": 1.5,
+      "text": "新方式\n（ビジュアル\nフィードバック）",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 9
+    },
+    {
+      "type": "arrow",
+      "left": 8.5,
+      "top": 2.95,
+      "width": 0.6,
+      "height": 0.1,
+      "fill_color": "ED7D31"
+    },
+    {
+      "type": "box",
+      "left": 9.2,
+      "top": 2.2,
+      "width": 2.137,
+      "height": 1.5,
+      "text": "完成向かい方\n（Output）\n\nPPTX",
+      "fill_color": "4472C4",
+      "font_color": "FFFFFF",
+      "font_size": 9
+    },
+    {
+      "type": "text",
+      "left": 1.2,
+      "top": 3.9,
+      "width": 10.337,
+      "height": 1.657,
+      "text": "Canvas で見える座標 = PPTX に配置される座標（完全一致）\nこれにより、配置計算エラーを完全に排除し、見たままの PPTX を生成可能に",
+      "font_color": "404040",
+      "font_size": 9
+    }
+  ]
+}
